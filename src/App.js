@@ -3,10 +3,11 @@ import Header from "./layout/Header";
 import MainBody from "./layout/MainBody";
 import Footer from "./layout/Footer";
 import { createGlobalStyle } from "styled-components";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   html {
-  --color-primary: #1a2438;
+  --color-primary: #151d38;
   }
   * {
     margin: 0;
@@ -28,12 +29,14 @@ const GridWrapper = styled.div`
 
 function App() {
   return (
-    <GridWrapper>
-      <GlobalStyle />
-      <Header />
-      <MainBody />
-      <Footer />
-    </GridWrapper>
+    <Router>
+      <GridWrapper>
+        <GlobalStyle />
+        <Header />
+        <MainBody />
+        <Footer />
+      </GridWrapper>
+    </Router>
   );
 }
 

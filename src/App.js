@@ -8,6 +8,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 const GlobalStyle = createGlobalStyle`
   html {
   --color-primary: #151d38;
+  --font-primary: 'Raleway', sans-serif;
   }
   * {
     margin: 0;
@@ -19,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 const GridWrapper = styled.div`
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 300px 1fr 50px;
+  grid-template-rows: 280px 1fr 75px;
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"

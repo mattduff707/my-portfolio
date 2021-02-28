@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import TextGradient from "../TextGradient";
 
 const NavWrapper = styled.nav`
   //border: 2px yellow solid;
@@ -12,32 +13,45 @@ const NavUl = styled.ul`
   // border: green 2px solid;
   list-style: none;
 `;
-const LinkContainer = styled.li`
-  padding: 10px;
-  width: 100px;
-  background-color: blue;
-  margin: 0px 20px;
-  text-align: center;
-`;
 
 const StyledLink = styled(NavLink)`
-  color: red;
   text-decoration: none;
+  padding: 0px 20px;
+  margin: 0px 20px;
+  transition: box-shadow 400ms ease 0s;
+  box-shadow: 0px 0px 0px #22315d;
+  &:hover {
+    transition: box-shadow 150ms ease 0s;
+    box-shadow: 0px 3px 0px #22315d;
+  }
+`;
+const LinkContainer = styled.li`
+  padding: 10px;
+  text-align: center;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  letter-spacing: 1px;
 `;
 
 const Nav = () => {
   return (
     <NavWrapper>
       <NavUl>
-        <LinkContainer>
-          <StyledLink to="/">Overview</StyledLink>
-        </LinkContainer>
-        <LinkContainer>
-          <StyledLink to="/about">About</StyledLink>
-        </LinkContainer>
-        <LinkContainer>
-          <StyledLink to="/projects">Projects</StyledLink>
-        </LinkContainer>
+        <StyledLink to="/">
+          <LinkContainer>
+            <TextGradient size="1.2rem">Overview</TextGradient>
+          </LinkContainer>
+        </StyledLink>
+        <StyledLink to="/about">
+          <LinkContainer>
+            <TextGradient size="1.2rem">About</TextGradient>
+          </LinkContainer>
+        </StyledLink>
+        <StyledLink to="/projects">
+          <LinkContainer>
+            <TextGradient size="1.2rem">Projects</TextGradient>
+          </LinkContainer>
+        </StyledLink>
       </NavUl>
     </NavWrapper>
   );

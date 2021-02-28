@@ -22,7 +22,7 @@ const StyledLink = styled(NavLink)`
   box-shadow: 0px 0px 0px #22315d;
   &:hover {
     transition: box-shadow 150ms ease 0s;
-    box-shadow: 0px 3px 0px #22315d;
+    box-shadow: 0px 3px 0px #4247d6;
   }
 `;
 const LinkContainer = styled.li`
@@ -39,17 +39,17 @@ const Nav = () => {
       <NavUl>
         <StyledLink to="/">
           <LinkContainer>
-            <TextGradient size="1.2rem">Overview</TextGradient>
+            <TextGradient size="1.3rem">Overview</TextGradient>
           </LinkContainer>
         </StyledLink>
         <StyledLink to="/about">
           <LinkContainer>
-            <TextGradient size="1.2rem">About</TextGradient>
+            <TextGradient size="1.3rem">About</TextGradient>
           </LinkContainer>
         </StyledLink>
         <StyledLink to="/projects">
           <LinkContainer>
-            <TextGradient size="1.2rem">Projects</TextGradient>
+            <TextGradient size="1.3rem">Projects</TextGradient>
           </LinkContainer>
         </StyledLink>
       </NavUl>

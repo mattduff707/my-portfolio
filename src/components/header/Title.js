@@ -16,7 +16,7 @@ const StyledContainer = styled.div`
 const Title = () => {
   return (
     <StyledContainer>
-      <TextGradient tag="h1" size="3rem">
+      <TextGradient tag="h1" size="3rem" padding="0px 0px 15px 0px">
         Matthew Duffy
       </TextGradient>
       <TextGradient tag="h2">Web Developer</TextGradient>

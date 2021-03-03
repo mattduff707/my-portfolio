@@ -6,7 +6,7 @@ import About from "../components/body/About";
 import Projects from "../components/body/Projects";
 
 const StyledMain = styled.main`
-  background-color: var(--color-primary);
+  //background-color: var(--color-primary);
   height: 100%;
   width: 100%;
   grid-area: main;

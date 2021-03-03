@@ -4,16 +4,16 @@ import Nav from "../components/header/Nav";
 import Title from "../components/header/Title";
 
 const StyledHeader = styled.header`
-  background-color: var(--color-primary);
+  //background-color: var(--color-primary);
   height: 100%;
   width: 100%;
-  border-bottom: 2px solid #22315d;
+  border-bottom: 3px solid #22315d;
   box-shadow: 0px 1px 5px black;
   grid-area: header;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 20px;
+
   z-index: 1;
 `;
 

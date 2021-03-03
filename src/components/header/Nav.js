@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import TextGradient from "../TextGradient";
 
 const NavWrapper = styled.nav`
   //border: 2px yellow solid;
@@ -14,44 +13,71 @@ const NavUl = styled.ul`
   list-style: none;
 `;
 
-const StyledLink = styled(NavLink)`
-  text-decoration: none;
-  padding: 0px 20px;
-  margin: 0px 20px;
+const Li = styled.li`
+  height: 60px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: box-shadow 400ms ease 0s;
-  box-shadow: 0px 0px 0px #22315d;
+  box-shadow: 0px 0px 0px #fb8986;
+
   &:hover {
-    transition: box-shadow 150ms ease 0s;
-    box-shadow: 0px 3px 0px #4247d6;
+    transition: box-shadow 200ms ease 0s;
+    box-shadow: 0px 3px 0px #fee140;
   }
 `;
-const LinkContainer = styled.li`
-  padding: 10px;
+
+// const Wrapper = styled.div`
+//   height: 100%;
+//   width: 100%;
+// `;
+
+const ListLink = styled(NavLink)`
+  color: #fb8986;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   text-align: center;
   font-family: var(--font-primary);
   font-weight: bold;
+  font-size: 1.3rem;
   letter-spacing: 1px;
+  transition: color 400ms ease 0s;
+
+  &:hover {
+    transition: color 650ms ease 0s;
+    color: #fee140;
+  }
 `;
+
+const active = {
+  color: "#fee140",
+  boxShadow: "0px 3px 0px #fb8986",
+};
 
 const Nav = () => {
   return (
     <NavWrapper>
       <NavUl>
-        <StyledLink to="/">
-          <LinkContainer>
-            <TextGradient size="1.3rem">Overview</TextGradient>
-          </LinkContainer>
-        </StyledLink>
-        <StyledLink to="/about">
-          <LinkContainer>
-            <TextGradient size="1.3rem">About</TextGradient>
-          </LinkContainer>
-        </StyledLink>
-        <StyledLink to="/projects">
-          <LinkContainer>
-            <TextGradient size="1.3rem">Projects</TextGradient>
-          </LinkContainer>
-        </StyledLink>
+        <Li>
+          <ListLink activeStyle={active} exact to="/">
+            Overview
+          </ListLink>
+        </Li>
+        <Li>
+          <ListLink activeStyle={active} to="/about">
+            About
+          </ListLink>
+        </Li>
+        <Li>
+          <ListLink activeStyle={active} to="/projects">
+            Projects
+          </ListLink>
+        </Li>
       </NavUl>
     </NavWrapper>
   );

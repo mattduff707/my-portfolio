@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
   --color-primary: #151d38;
   --font-primary: 'Raleway', sans-serif;
   }
+  body {
+    background-color: var(--color-primary)
+  }
   * {
     margin: 0;
     padding: 0;

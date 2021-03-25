@@ -7,8 +7,8 @@ const StyledHeader = styled.header`
   //background-color: var(--color-primary);
   height: 100%;
   width: 100%;
-  border-bottom: 3px solid #22315d;
-  box-shadow: 0px 1px 5px black;
+  border-bottom: 3px solid var(--color-secondary);
+  box-shadow: 0px 1px 15px var(--color-shadow);
   grid-area: header;
   display: flex;
   flex-direction: column;

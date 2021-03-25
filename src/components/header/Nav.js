@@ -42,7 +42,7 @@ const ListLink = styled(NavLink)`
   align-items: center;
   text-decoration: none;
   text-align: center;
-  font-family: var(--font-primary);
+  font-family: var(--font-family-primary);
   font-weight: bold;
   font-size: 1.3rem;
   letter-spacing: 1px;

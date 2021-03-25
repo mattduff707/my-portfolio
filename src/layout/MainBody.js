@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Overview from "../components/body/Overview";
 import About from "../components/body/About";
 import Projects from "../components/body/Projects";
+import DuffyWebBrain from "../components/body/DuffyWebBrain";
 
 const StyledMain = styled.main`
   //background-color: var(--color-primary);
@@ -22,8 +23,11 @@ const MainBody = () => {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/projects">
+        <Route exact path="/projects">
           <Projects />
+        </Route>
+        <Route path="/projects/duffy-web-brain">
+          <DuffyWebBrain />
         </Route>
       </Switch>
     </StyledMain>

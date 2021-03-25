@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   //background-color: var(--color-primary);
-  border-top: 3px solid #22315d;
-  box-shadow: 0px -1px 5px black;
+  border-top: 3px solid var(--color-secondary);
+  box-shadow: 0px -1px 15px var(--color-shadow);
   height: 100%;
   width: 100%;
   grid-area: footer;

@@ -7,11 +7,16 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   html {
-  --color-primary: #151d38;
-  --font-primary: 'Raleway', sans-serif;
+  --color-primary: hsl(226, 45%, 15%);
+  --color-secondary: hsl(225, 46%, 25%);
+  --color-alternative: hsl(225, 46%, 60%);
+  --color-shadow: hsl(226, 45%, 5%);
+  --color-text-primary: hsl(51, 99%, 62%);
+  --color-text-secondary: hsl(2, 94%, 75%);
+  --font-family-primary: 'Raleway', sans-serif;
   }
   body {
-    background-color: var(--color-primary)
+    background-color: var(--color-primary);
   }
   * {
     margin: 0;

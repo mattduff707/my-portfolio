@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 const GridWrapper = styled.div`
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 250px 1fr 75px;
+  grid-template-rows: 220px 1fr 50px;
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"

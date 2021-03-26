@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const NavWrapper = styled.nav`
-  //border: 2px yellow solid;
+  /* border: 2px yellow solid; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,11 +27,6 @@ const Li = styled.li`
     box-shadow: 0px 3px 0px #fee140;
   }
 `;
-
-// const Wrapper = styled.div`
-//   height: 100%;
-//   width: 100%;
-// `;
 
 const ListLink = styled(NavLink)`
   color: #fb8986;

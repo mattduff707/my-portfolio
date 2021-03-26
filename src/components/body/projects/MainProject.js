@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ListItem = styled.li`
   padding: 20px;
-  max-width: 600px;
+  max-width: 500px;
 `;
 const Wrapper = styled.div`
   border: var(--color-secondary) 2px solid;

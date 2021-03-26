@@ -3,8 +3,8 @@ import styled from "styled-components";
 import TextGradient from "../TextGradient";
 
 const StyledContainer = styled.div`
-  // border: 2px red solid;
-  padding: 20px 0px;
+  /* border: 2px red solid; */
+  padding: 20px 0px 10px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;

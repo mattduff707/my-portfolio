@@ -7,14 +7,20 @@ const ListItem = styled.li`
   max-width: 600px;
 `;
 const Wrapper = styled.div`
-  border: var(--color-secondary) 1px solid;
+  border: var(--color-secondary) 2px solid;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px #fff;
   box-shadow: 0 0 8px var(--color-shadow);
   padding: 20px;
 `;
 const ProjectTitle = styled.h3`
-  color: var(--color-text-secondary);
+  background-color: var(--color-text-secondary);
+
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 1.8rem;
   font-family: var(--font-family-primary);
   display: inline-block;
@@ -27,7 +33,7 @@ const ProjectSubTitle = styled.h4`
   padding-bottom: 10px;
 `;
 const Description = styled.p`
-  color: #fee140;
+  color: var(--color-text-primary);
   line-height: 1.5;
   padding-bottom: 15px;
 `;

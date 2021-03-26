@@ -2,14 +2,13 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const NavWrapper = styled.nav`
-  //border: 2px yellow solid;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 const NavUl = styled.ul`
   display: flex;
-  // border: green 2px solid;
+
   list-style: none;
 `;
 
@@ -24,17 +23,12 @@ const Li = styled.li`
 
   &:hover {
     transition: box-shadow 200ms ease 0s;
-    box-shadow: 0px 3px 0px #fee140;
+    box-shadow: 0px 3px 0px var(--color-text-primary);
   }
 `;
 
-// const Wrapper = styled.div`
-//   height: 100%;
-//   width: 100%;
-// `;
-
 const ListLink = styled(NavLink)`
-  color: #fb8986;
+  color: var(--color-text-secondary);
   height: 100%;
   width: 100%;
   display: flex;
@@ -50,12 +44,12 @@ const ListLink = styled(NavLink)`
 
   &:hover {
     transition: color 650ms ease 0s;
-    color: #fee140;
+    color: var(--color-text-primary);
   }
 `;
 
 const active = {
-  color: "#fee140",
+  color: "var(--color-text-primary)",
   boxShadow: "0px 3px 0px #fb8986",
 };
 

@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   --color-secondary: hsl(225, 46%, 25%);
   --color-alternative: hsl(225, 46%, 60%);
   --color-shadow: hsl(226, 45%, 5%);
-  --color-text-primary: hsl(51, 99%, 62%);
+  --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
   --font-family-primary: 'Raleway', sans-serif;
   }

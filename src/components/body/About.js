@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import ContentContainer from "./about/ContentContainer";
 
@@ -55,15 +55,6 @@ const About = () => {
     return activeKeyVal;
   };
 
-  const getKey = (arr) => {
-    const keyStr = arr
-      .map(([key, value]) => {
-        return key;
-      })
-      .toString();
-    return keyStr;
-  };
-
   const makeFalse = (arr) => {
     const newArr = arr.map((obj) => {
       if (obj.active) {
@@ -94,43 +85,35 @@ const About = () => {
     return newArr;
   };
 
-  const findActiveVal = (arr, key) => {
-    const active = arr[key];
-    return active;
-  };
-
-  // const incrementKey = (keyStr) => {
-  //   const newKey = parseInt(keyStr) + 1;
-  //   return newKey;
-  // };
-  // const decrementKey = (keyStr) => {
-  //   const newKey = parseInt(keyStr) - 1;
-  //   return newKey;
-  // };
-
-  const newActive = (arr, newKey) => {
-    // const activeKeyVal = returnActiveKeyVal(arr);
-    // const activeKey = getKey(activeKeyVal);
+  //Creates memoized newActive callback function
+  // ! more learning required on this topic
+  const newActive = useCallback((arr, newKey) => {
     const allFalseArr = makeFalse(arr);
-    // const newKey = mathFunc(activeKey);
     const newArr = makeTrue(allFalseArr, newKey);
+    return newArr;
+  }, []);
+
+  const defaultActive = (arr, key) => {
+    const newArr = makeTrue(arr, key);
     return newArr;
   };
 
   const defaultKey = 0;
   const [activeKey, setActiveKey] = useState(defaultKey);
-  const [activeObj, setActiveObj] = useState(newActive(devObj, activeKey));
+  const [activeObj, setActiveObj] = useState(defaultActive(devObj, activeKey));
   const [activeContent, setActiveContent] = useState(
     returnActiveKeyVal(activeObj)
   );
 
+  //sets activeContent to the  activeKey whenever the key changes
   useEffect(() => {
-    setActiveContent(returnActiveKeyVal(activeObj));
-  }, [activeObj]);
+    setActiveContent(returnActiveKeyVal(newActive(activeObj, activeKey)));
+  }, [activeKey, activeObj, newActive]);
 
-  // useEffect(() => {
-  //   setActiveKey(getKey(returnActiveKeyVal(activeObj)));
-  // }, [activeObj]);
+  //Sets active key back to default when toggling between Dev object and Person Obj
+  useEffect(() => {
+    setActiveKey(defaultKey);
+  }, [activeObj]);
 
   const handleChange = (e) => {
     setActiveObj(() =>

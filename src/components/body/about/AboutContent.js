@@ -1,11 +1,22 @@
 import styled from "styled-components";
 
-const AboutContent = ({ title, subtitle, text }) => {
+// todo:
+// * Toggle: developer / person
+// ? Developer: Self Taught, Why I got into Web Development, Ambitions?
+// ! Person: Lifting, Travel, Music, Tennis
+
+const AboutContent = ({ activeContent }) => {
   return (
     <>
-      <StyledTitle>{title}</StyledTitle>
-      <StyledSubTitle>{subtitle}</StyledSubTitle>
-      <StyledText>{text}</StyledText>
+      {activeContent.map(([key, value]) => {
+        return (
+          <div key={value.title}>
+            <StyledTitle>{value.title}</StyledTitle>
+            <StyledSubTitle>{value.subtitle}</StyledSubTitle>
+            <StyledText>{value.text}</StyledText>
+          </div>
+        );
+      })}
     </>
   );
 };

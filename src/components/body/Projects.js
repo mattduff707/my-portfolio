@@ -4,6 +4,7 @@ import MainProject from "./projects/MainProject";
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 100%;
   max-width: 2500px;
   margin: 0px auto;
   padding: 0px 50px;
@@ -12,10 +13,11 @@ const Wrapper = styled.div`
 `;
 const ProjectList = styled.ul`
   list-style: none;
-  padding: 50px;
-  display: inline-flex;
+  padding: 20px 50px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 `;
 
 const Projects = () => {
@@ -29,6 +31,7 @@ const Projects = () => {
           linkToDetails={"s"}
           linkToGitHub={"s"}
         />
+        <MainProject />
         <MainProject />
         <MainProject />
       </ProjectList>

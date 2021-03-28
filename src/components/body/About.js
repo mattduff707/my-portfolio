@@ -1,51 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import ContentContainer from "./about/ContentContainer";
+import { aboutData } from "../../constants";
 
 const About = () => {
+  const { devObj, personObj } = aboutData;
   const person = "person";
   const developer = "developer";
-  const devObj = [
-    {
-      active: false,
-      title: "Self Taught Developer",
-      subtitle: "The journey so far...",
-      text: "Self taught dev yo",
-    },
-    {
-      active: false,
-      title: "Why I got into Web Development",
-      subtitle: "A computer nerd finds his passion",
-      text: "I didn't even know it was an option...",
-    },
-    {
-      active: false,
-      title: "My ambitions",
-      subtitle: "What I want to achieve",
-      text: "I plan to achieve this...",
-    },
-  ];
-
-  const personObj = [
-    {
-      active: false,
-      title: "Person Taught Developer",
-      subtitle: "The journey so far...",
-      text: "Self taught dev yo",
-    },
-    {
-      active: false,
-      title: "Person I got into Web Development",
-      subtitle: "A computer nerd finds his passion",
-      text: "I didn't even know it was an option...",
-    },
-    {
-      active: false,
-      title: "Person ambitions",
-      subtitle: "What I want to achieve",
-      text: "I plan to achieve this...",
-    },
-  ];
 
   const returnActiveKeyVal = (obj) => {
     const activeKeyVal = Object.entries(obj).filter(([key, value]) => {
@@ -85,7 +46,7 @@ const About = () => {
     return newArr;
   };
 
-  //Creates memoized newActive callback function
+  //Creates memoized newActive callback function. Fixes linting error on useEffect dependencies
   // ! more learning required on this topic
   const newActive = useCallback((arr, newKey) => {
     const allFalseArr = makeFalse(arr);
@@ -188,7 +149,7 @@ const About = () => {
 const ComponentWrapper = styled.section`
   width: 100%;
   display: grid;
-  grid-template-rows: 140px 1fr;
+  grid-template-rows: 120px 1fr;
   grid-template-areas:
     "toggleKeys"
     "aboutContent";
@@ -196,18 +157,23 @@ const ComponentWrapper = styled.section`
 
 const FormWrapper = styled.form`
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 350px;
+  align-items: center;
   padding-top: 10px;
+  width: 100%;
 `;
 const ToggleWrapper = styled.div`
-  border: 2px solid var(--color-alternative);
+  border: 2px solid var(--color-secondary);
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px var(--color-shadow);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  width: 50%;
+  position: relative;
+
+  margin: 0px 10px;
+  width: 160px;
+  height: 50px;
 `;
 const ToggleLabel = styled.label`
   font-family: var(--font-family-primary);
@@ -216,14 +182,15 @@ const ToggleLabel = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
+  padding: 10px 20px;
+  width: 100%;
   color: ${(props) =>
     props.active ? "var(--color-text-primary)" : "var(--color-alternative)"};
 `;
 const Radio = styled.input`
-  padding-right: 10px;
+  position: absolute;
+  visibility: hidden;
 `;
 const ContentContainerWrapper = styled.div`
   display: flex;

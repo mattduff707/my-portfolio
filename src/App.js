@@ -9,11 +9,14 @@ const GlobalStyle = createGlobalStyle`
   html {
   --color-primary: hsl(226, 45%, 15%);
   --color-secondary: hsl(225, 46%, 25%);
-  --color-alternative: hsl(225, 46%, 60%);
-  --color-shadow: hsl(226, 45%, 5%);
+  --color-alternative: hsl(225, 46%, 70%);
+  --color-shadow: hsl(226, 45%, 3%);
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
   --font-family-primary: 'Raleway', sans-serif;
+  --font-family-secondary: 'Khula', sans-serif;
+  
+
   }
   body {
     background-color: var(--color-primary);
@@ -28,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
 const GridWrapper = styled.div`
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 220px 1fr 50px;
+  grid-template-rows: 200px 1fr 50px;
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"

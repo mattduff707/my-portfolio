@@ -34,8 +34,10 @@ const ProjectSubTitle = styled.h4`
 `;
 const Description = styled.p`
   color: var(--color-text-primary);
+  font-size: 1.1rem;
   line-height: 1.5;
   padding-bottom: 15px;
+  font-family: var(--font-family-secondary);
 `;
 
 const Icon = styled.i`
@@ -82,10 +84,9 @@ const MainProject = () => {
         <ProjectTitle>Duffy Web Brain</ProjectTitle>
         <ProjectSubTitle>Personal docs for note-taking</ProjectSubTitle>
         <Description>
-          This project was a game changer for my web dev learning. Throughout
-          most of my self education I had not been utilizing any solid note
-          taking methodology. Learning in the IDE just wasn't cutting it, So I
-          made my own solution!
+          Throughout most of my self education I had not been utilizing any
+          solid note taking methodology. Learning in the IDE just wasn't cutting
+          it, So I made my own solution!
         </Description>
         <LinkBtn to="/projects/duffy-web-brain">
           <BtnContent>

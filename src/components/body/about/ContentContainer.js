@@ -1,44 +1,28 @@
 import AboutContent from "./AboutContent";
 import styled from "styled-components";
 
-const ContentContainer = ({
-  activeObj,
-  activeContent,
-  incrementKey,
-  decrementKey,
-}) => {
-  // const returnActiveKeyVal = (obj) => {
-  //   const activeKeyVal = Object.entries(obj).filter(([key, value]) => {
-  //     return value.active;
-  //   });
-
-  //   return activeKeyVal;
-  // };
-
-  // const [activeAbout, setActiveAbout] = useState(returnActiveKeyVal(activeObj));
-
-  // useEffect(() => {
-  //   setActiveAbout(returnActiveKeyVal(activeObj));
-  // }, [activeObj]);
-
-  // const handleClick = (e) => {
-  //   setActiveAbout(() => {
-  //     const currentKey = activeAbout.key;
-  //   });
-  // };
+const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
+  const currentImage = activeContent[0][1].picture;
+  const path = "../../../../public/images/";
+  const imagePath = path + currentImage;
+  console.log(imagePath);
 
   return (
     <>
-      <PictureContainer></PictureContainer>
+      <PictureContainer>
+        <Picture picture={imagePath}>
+          <img alt="test" />
+        </Picture>
+      </PictureContainer>
       <Connector />
       <AboutContentContainer>
         <AboutContent activeContent={activeContent} />
         <ButtonWrapper>
           <ArrowButton onClick={decrementKey}>
-            <i className="fas fa-angle-left"></i>
+            <Icon className="fas fa-angle-left"></Icon>
           </ArrowButton>
           <ArrowButton onClick={incrementKey}>
-            <i className="fas fa-angle-right"></i>
+            <Icon className="fas fa-angle-right"></Icon>
           </ArrowButton>
         </ButtonWrapper>
       </AboutContentContainer>
@@ -48,15 +32,20 @@ const ContentContainer = ({
 
 const PictureContainer = styled.div`
   width: 600px;
-  height: 600px;
+  height: 500px;
   border: 2px solid var(--color-secondary);
-  box-shadow: 0 0 8px var(--color-shadow);
-  border-radius: 50%;
+  box-shadow: 0px 0px 15px var(--color-shadow);
+  border-radius: 20px;
   z-index: 1;
+`;
+const Picture = styled.div`
+  background: url(${(props) => props.picture});
+  width: 100%;
+  height: 100%;
 `;
 const Connector = styled.div`
   height: 10px;
-  width: 300px;
+  width: 200px;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   border-top: 2px solid var(--color-secondary);
   border-bottom: 2px solid var(--color-secondary);
@@ -64,9 +53,9 @@ const Connector = styled.div`
 `;
 const AboutContentContainer = styled.article`
   width: 600px;
-  height: 600px;
+  height: 500px;
   border: 2px solid var(--color-secondary);
-  box-shadow: 0 0 8px var(--color-shadow);
+  box-shadow: 0px 0px 15px var(--color-shadow);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -77,10 +66,19 @@ const AboutContentContainer = styled.article`
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
   width: 100%;
 `;
 const ArrowButton = styled.button`
   margin: 10px 20px;
+  width: 60px;
+  padding: 0px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  box-shadow: 0 0 8px var(--color-shadow);
+  border-radius: 20px;
+`;
+const Icon = styled.i`
+  font-size: 4rem;
+  color: var(--color-alternative);
 `;
 export default ContentContainer;

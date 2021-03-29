@@ -2,17 +2,12 @@ import AboutContent from "./AboutContent";
 import styled from "styled-components";
 
 const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
-  const currentImage = activeContent[0][1].picture;
-  const path = "../../../../public/images/";
-  const imagePath = path + currentImage;
-  console.log(imagePath);
-
   return (
     <>
       <PictureContainer>
-        <Picture picture={imagePath}>
-          <img alt="test" />
-        </Picture>
+        <Gradient>
+          <Image src={activeContent[0][1].picture} alt="test" />
+        </Gradient>
       </PictureContainer>
       <Connector />
       <AboutContentContainer>
@@ -37,11 +32,16 @@ const PictureContainer = styled.div`
   box-shadow: 0px 0px 15px var(--color-shadow);
   border-radius: 20px;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-const Picture = styled.div`
-  background: url(${(props) => props.picture});
+const Gradient = styled.div`
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+`;
+const Image = styled.img`
   width: 100%;
-  height: 100%;
+  display: block;
 `;
 const Connector = styled.div`
   height: 10px;

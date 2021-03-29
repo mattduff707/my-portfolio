@@ -2,11 +2,20 @@ import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import ContentContainer from "./about/ContentContainer";
 import { aboutData } from "../../constants";
+import testPic from "../../images/backgroundUs.jpeg";
+import testPicTwo from "../../images/image0.jpeg";
+import testPicThree from "../../images/image1.jpeg";
 
 const About = () => {
   const { devObj, personObj } = aboutData;
   const person = "person";
   const developer = "developer";
+
+  const makeImgArr = (...imgs) => {
+    const newArr = [...imgs];
+    return newArr;
+  };
+  console.log(makeImgArr(testPic, testPicTwo, testPicThree));
 
   const returnActiveKeyVal = (obj) => {
     const activeKeyVal = Object.entries(obj).filter(([key, value]) => {
@@ -25,7 +34,7 @@ const About = () => {
         };
         return newObj;
       } else {
-        return obj;
+        return { ...obj };
       }
     });
     return newArr;
@@ -40,7 +49,7 @@ const About = () => {
         };
         return newObj;
       } else {
-        return obj;
+        return { ...obj };
       }
     });
     return newArr;
@@ -65,6 +74,7 @@ const About = () => {
   const [activeContent, setActiveContent] = useState(
     returnActiveKeyVal(activeObj)
   );
+  const [activeImg, setActiveImg] = useState();
 
   //sets activeContent to the  activeKey whenever the key changes
   useEffect(() => {
@@ -109,7 +119,7 @@ const About = () => {
     <ComponentWrapper>
       <FormWrapper>
         <ToggleWrapper>
-          <ToggleLabel htmlFor="about-developer">
+          <ToggleLabel devObj={activeObj} htmlFor="about-developer">
             Developer
             <Radio
               type="radio"
@@ -136,6 +146,7 @@ const About = () => {
       </FormWrapper>
       <ContentContainerWrapper>
         <ContentContainer
+          testPic={testPic}
           activeObj={activeObj}
           activeContent={activeContent}
           incrementKey={incrementKey}

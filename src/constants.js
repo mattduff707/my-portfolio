@@ -1,3 +1,7 @@
+import testPic from "./images/backgroundUs.jpeg";
+import testPicTwo from "./images/image0.jpeg";
+import testPicThree from "./images/image1.jpeg";
+
 export const aboutData = {
   devObj: [
     {
@@ -5,21 +9,21 @@ export const aboutData = {
       title: "Self Taught Developer",
       subtitle: "The journey so far...",
       text: "Self taught dev yo",
-      picture: "backgroundUs.jpeg",
+      picture: testPic,
     },
     {
       active: false,
       title: "Why I got into Web Development",
       subtitle: "A computer nerd finds his passion",
       text: "I didn't even know it was an option...",
-      picture: "image0.jpeg",
+      picture: testPicTwo,
     },
     {
       active: false,
       title: "My ambitions",
       subtitle: "What I want to achieve",
       text: "I plan to achieve this...",
-      picture: "image1.jpeg",
+      picture: testPicThree,
     },
   ],
   personObj: [

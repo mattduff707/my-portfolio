@@ -74,7 +74,7 @@ const About = () => {
   const [activeContent, setActiveContent] = useState(
     returnActiveKeyVal(activeObj)
   );
-  const [activeImg, setActiveImg] = useState();
+  const [activeTag, setActiveTag] = useState(developer);
 
   //sets activeContent to the  activeKey whenever the key changes
   useEffect(() => {
@@ -94,6 +94,7 @@ const About = () => {
         ? newActive(personObj, defaultKey)
         : null
     );
+    setActiveTag(() => e.target.value);
   };
 
   const incrementKey = () => {
@@ -117,64 +118,107 @@ const About = () => {
 
   return (
     <ComponentWrapper>
-      <FormWrapper>
-        <ToggleWrapper>
-          <ToggleLabel devObj={activeObj} htmlFor="about-developer">
-            Developer
-            <Radio
-              type="radio"
-              id="about-developer"
-              value={developer}
-              name="about-toggle"
-              onChange={handleChange}
-            />
-          </ToggleLabel>
-        </ToggleWrapper>
-        <ToggleWrapper>
-          <ToggleLabel htmlFor="about-person">
-            Person
-            <Radio
-              type="radio"
-              id="about-person"
-              value={person}
-              name="about-toggle"
-              // checked={activeKey === person}
-              onChange={handleChange}
-            />
-          </ToggleLabel>
-        </ToggleWrapper>
-      </FormWrapper>
-      <ContentContainerWrapper>
-        <ContentContainer
-          testPic={testPic}
-          activeObj={activeObj}
-          activeContent={activeContent}
-          incrementKey={incrementKey}
-          decrementKey={decrementKey}
-        />
-      </ContentContainerWrapper>
+      <HeaderContainer>
+        {/* <HeaderWrapper> */}
+        <Header>About me</Header>
+        {/* </HeaderWrapper> */}
+      </HeaderContainer>
+      <StyledWrapper>
+        <ToggleContainer>
+          <ToggleWrapper isActive={activeTag === developer}>
+            <ToggleLabel htmlFor="about-developer">
+              Developer
+              <Radio
+                checked={activeTag === developer}
+                type="radio"
+                id="about-developer"
+                value={developer}
+                name="about-toggle"
+                onChange={handleChange}
+              />
+            </ToggleLabel>
+          </ToggleWrapper>
+          <ToggleWrapper isActive={activeTag === person}>
+            <ToggleLabel htmlFor="about-person">
+              Person
+              <Radio
+                checked={activeTag === person}
+                type="radio"
+                id="about-person"
+                value={person}
+                name="about-toggle"
+                onChange={handleChange}
+              />
+            </ToggleLabel>
+          </ToggleWrapper>
+        </ToggleContainer>
+        <ContentContainerWrapper>
+          <ContentContainer
+            testPic={testPic}
+            activeObj={activeObj}
+            activeContent={activeContent}
+            incrementKey={incrementKey}
+            decrementKey={decrementKey}
+          />
+        </ContentContainerWrapper>
+      </StyledWrapper>
     </ComponentWrapper>
   );
 };
 
 const ComponentWrapper = styled.section`
-  width: 100%;
-  display: grid;
-  grid-template-rows: 120px 1fr;
-  grid-template-areas:
-    "toggleKeys"
-    "aboutContent";
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-const FormWrapper = styled.form`
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 50px;
+`;
+const HeaderWrapper = styled.div`
+  padding: 10px 40px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px var(--color-shadow);
+`;
+const Header = styled.h3`
+  font-family: var(--font-family-primary);
+  font-size: 2rem;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+const StyledWrapper = styled.div`
+  border: 3px solid var(--color-secondary);
+  box-shadow: 0px 0px 8px var(--color-shadow);
+  border-radius: 25px;
+  width: 85%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const ToggleContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
   width: 100%;
+  padding: 50px 0px;
+  //border: 4px solid yellow;
 `;
 const ToggleWrapper = styled.div`
   border: 2px solid var(--color-secondary);
+  border-color: ${(props) =>
+    props.isActive ? "var(--color-text-primary)" : "var(--color-secondary)"};
+  color: ${(props) =>
+    props.isActive
+      ? "var(--color-text-secondary)"
+      : "var(--color-alternative)"};
   border-radius: 10px;
   box-shadow: 0px 0px 8px var(--color-shadow);
   display: flex;
@@ -196,8 +240,6 @@ const ToggleLabel = styled.label`
   text-align: center;
   padding: 10px 20px;
   width: 100%;
-  color: ${(props) =>
-    props.active ? "var(--color-text-primary)" : "var(--color-alternative)"};
 `;
 const Radio = styled.input`
   position: absolute;
@@ -207,6 +249,9 @@ const ContentContainerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 75%;
+  width: 75%;
 `;
 
 export default About;

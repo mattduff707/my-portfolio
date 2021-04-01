@@ -1,21 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import ContentContainer from "./about/ContentContainer";
 import { aboutData } from "../../constants";
-import testPic from "../../images/backgroundUs.jpeg";
-import testPicTwo from "../../images/image0.jpeg";
-import testPicThree from "../../images/image1.jpeg";
+import PageHeader from "../PageHeader";
 
 const About = () => {
   const { devObj, personObj } = aboutData;
   const person = "person";
   const developer = "developer";
-
-  const makeImgArr = (...imgs) => {
-    const newArr = [...imgs];
-    return newArr;
-  };
-  console.log(makeImgArr(testPic, testPicTwo, testPicThree));
 
   const returnActiveKeyVal = (obj) => {
     const activeKeyVal = Object.entries(obj).filter(([key, value]) => {
@@ -118,73 +110,111 @@ const About = () => {
 
   return (
     <ComponentWrapper>
-      <HeaderContainer>
-        {/* <HeaderWrapper> */}
-        <Header>About me</Header>
-        {/* </HeaderWrapper> */}
-      </HeaderContainer>
       <StyledWrapper>
-        <ToggleContainer>
-          <ToggleWrapper isActive={activeTag === developer}>
-            <ToggleLabel htmlFor="about-developer">
-              Developer
-              <Radio
-                checked={activeTag === developer}
-                type="radio"
-                id="about-developer"
-                value={developer}
-                name="about-toggle"
-                onChange={handleChange}
-              />
-            </ToggleLabel>
-          </ToggleWrapper>
-          <ToggleWrapper isActive={activeTag === person}>
-            <ToggleLabel htmlFor="about-person">
-              Person
-              <Radio
-                checked={activeTag === person}
-                type="radio"
-                id="about-person"
-                value={person}
-                name="about-toggle"
-                onChange={handleChange}
-              />
-            </ToggleLabel>
-          </ToggleWrapper>
-        </ToggleContainer>
-        <ContentContainerWrapper>
-          <ContentContainer
-            testPic={testPic}
-            activeObj={activeObj}
-            activeContent={activeContent}
-            incrementKey={incrementKey}
-            decrementKey={decrementKey}
-          />
-        </ContentContainerWrapper>
+        <PageHeader>About Me</PageHeader>
+        <FadeDiv>
+          <ToggleContainer>
+            <ToggleWrapper isActive={activeTag === developer}>
+              <ToggleLabel htmlFor="about-developer">
+                Developer
+                <Radio
+                  checked={activeTag === developer}
+                  type="radio"
+                  id="about-developer"
+                  value={developer}
+                  name="about-toggle"
+                  onChange={handleChange}
+                />
+              </ToggleLabel>
+            </ToggleWrapper>
+            <ToggleWrapper isActive={activeTag === person}>
+              <ToggleLabel htmlFor="about-person">
+                Person
+                <Radio
+                  checked={activeTag === person}
+                  type="radio"
+                  id="about-person"
+                  value={person}
+                  name="about-toggle"
+                  onChange={handleChange}
+                />
+              </ToggleLabel>
+            </ToggleWrapper>
+          </ToggleContainer>
+          <ContentContainerWrapper>
+            <ContentContainer
+              activeObj={activeObj}
+              activeContent={activeContent}
+              incrementKey={incrementKey}
+              decrementKey={decrementKey}
+            />
+          </ContentContainerWrapper>
+        </FadeDiv>
       </StyledWrapper>
     </ComponentWrapper>
   );
 };
+
+const growHeight = keyframes`
+  from {
+    height: 0px;
+  }
+  to {
+    height: 90%
+  }
+`;
+const fadeIn = keyframes`
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+`;
 
 const ComponentWrapper = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+`;
+
+const StyledWrapper = styled.div`
+  border: 3px solid var(--color-secondary);
+  box-shadow: 0px 0px 8px var(--color-shadow);
+  border-radius: 25px;
+  width: 90%;
+  height: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  animation: ${growHeight} 900ms 1 200ms ease;
+  animation-fill-mode: forwards;
+`;
+const FadeDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  animation: ${fadeIn} 500ms 1 800ms ease;
+  animation-fill-mode: forwards;
 `;
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
-  padding-top: 50px;
+  border-bottom: 3px solid var(--color-secondary);
+  border-right: 3px solid var(--color-secondary);
+  border-left: 3px solid var(--color-secondary);
+  border-radius: 0px 0px 25px 25px;
+  padding: 10px 30px;
 `;
-const HeaderWrapper = styled.div`
-  padding: 10px 40px;
-  border: 2px solid var(--color-secondary);
-  border-radius: 20px;
-  box-shadow: 0px 0px 8px var(--color-shadow);
-`;
+
 const Header = styled.h3`
   font-family: var(--font-family-primary);
   font-size: 2rem;
@@ -193,22 +223,12 @@ const Header = styled.h3`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-const StyledWrapper = styled.div`
-  border: 3px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  border-radius: 25px;
-  width: 85%;
-  height: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 const ToggleContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 50px 0px;
+  padding: 25px 0px;
   //border: 4px solid yellow;
 `;
 const ToggleWrapper = styled.div`

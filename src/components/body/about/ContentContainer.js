@@ -77,6 +77,5 @@ const ButtonWrapper = styled.div`
 
 const Icon = styled.i`
   font-size: 4rem;
-  color: var(--color-alternative);
 `;
 export default ContentContainer;

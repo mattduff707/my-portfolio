@@ -1,4 +1,4 @@
-import testPic from "./images/backgroundUs.jpeg";
+import testPic from "./images/backgroundUs.jpg";
 import testPicTwo from "./images/image0.jpeg";
 import testPicThree from "./images/image1.jpeg";
 

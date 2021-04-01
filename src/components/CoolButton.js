@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const CoolButton = ({ children, className, handleClick, margin, tag }) => {
+const CoolButton = ({
+  children,
+  className,
+  handleClick,
+  margin,
+  padding,
+  fontSize,
+}) => {
   return (
-    <Btn margin={margin} onClick={handleClick}>
+    <Btn margin={margin} padding={padding} onClick={handleClick}>
       <Shadow></Shadow>
       <Edge></Edge>
-      <Front className={className}>{children}</Front>
+      <Front padding={padding} fontSize={fontSize} className={className}>
+        {children}
+      </Front>
     </Btn>
   );
 };
@@ -45,8 +54,9 @@ const Front = styled.span`
   position: relative;
   border: 2px solid var(--color-secondary);
   border-radius: 12px;
-  font-size: 1.25rem;
-  color: white;
+  padding: ${(props) => props.padding};
+  font-size: ${(props) => props.fontSize};
+
   background-color: var(--color-primary);
   //background: hsl(345deg 100% 47%);
   will-change: transform;
@@ -62,9 +72,12 @@ const Btn = styled.button`
   outline-offset: 4px;
   transition: filter 250ms;
   margin: ${(props) => props.margin};
+  color: var(--color-alternative);
 
   &:hover {
     filter: brightness(110%);
+    color: var(--color-text-secondary);
+    transition: color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
   }
   &:hover ${Front} {
     transform: translateY(-6px);

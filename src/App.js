@@ -15,8 +15,6 @@ const GlobalStyle = createGlobalStyle`
   --color-text-secondary: hsl(2, 94%, 75%);
   --font-family-primary: 'Raleway', sans-serif;
   --font-family-secondary: 'Khula', sans-serif;
-  
-
   }
   body {
     background-color: var(--color-primary);

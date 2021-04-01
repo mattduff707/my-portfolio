@@ -1,15 +1,37 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import MainProject from "./projects/MainProject";
+import PageHeader from "../PageHeader";
+
+const growHeight = keyframes`
+  from {
+    height: 0px;
+  }
+  to {
+    height: 90%
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  max-width: 2500px;
-  margin: 0px auto;
-  padding: 0px 50px;
+
   display: flex;
   justify-content: center;
+  align-items: center;
+`;
+const StyledWrapper = styled.div`
+  border: 3px solid var(--color-secondary);
+  box-shadow: 0px 0px 8px var(--color-shadow);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 0%;
+  overflow: hidden;
+  animation: ${growHeight} 900ms 1 200ms ease;
+  animation-fill-mode: forwards;
 `;
 const ProjectList = styled.ul`
   list-style: none;
@@ -23,18 +45,21 @@ const ProjectList = styled.ul`
 const Projects = () => {
   return (
     <Wrapper>
-      <ProjectList>
-        <MainProject
-          title={"s"}
-          subTitle={"s"}
-          description={"s"}
-          linkToDetails={"s"}
-          linkToGitHub={"s"}
-        />
-        <MainProject />
-        <MainProject />
-        <MainProject />
-      </ProjectList>
+      <StyledWrapper>
+        <PageHeader>My Projects</PageHeader>
+        <ProjectList>
+          <MainProject
+            title={"s"}
+            subTitle={"s"}
+            description={"s"}
+            linkToDetails={"s"}
+            linkToGitHub={"s"}
+          />
+          <MainProject />
+          <MainProject />
+          <MainProject />
+        </ProjectList>
+      </StyledWrapper>
     </Wrapper>
   );
 };

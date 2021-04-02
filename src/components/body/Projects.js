@@ -1,16 +1,9 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import MainProject from "./projects/MainProject";
 import PageHeader from "../PageHeader";
-
-const growHeight = keyframes`
-  from {
-    height: 0px;
-  }
-  to {
-    height: 90%
-  }
-`;
+import AnimatedWrapper from "../animation/AnimatedWrapper";
+import FadeContent from "../animation/FadeContent";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -20,19 +13,17 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const StyledWrapper = styled.div`
-  border: 3px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  height: 0%;
-  overflow: hidden;
-  animation: ${growHeight} 900ms 1 200ms ease;
-  animation-fill-mode: forwards;
-`;
+// const StyledWrapper = styled(motion.div)`
+//   border: 3px solid var(--color-secondary);
+//   box-shadow: 0px 0px 8px var(--color-shadow);
+//   border-radius: 25px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   width: 90%;
+//   height: 0%;
+//   overflow: hidden;
+// `;
 const ProjectList = styled.ul`
   list-style: none;
   padding: 20px 50px;
@@ -45,21 +36,23 @@ const ProjectList = styled.ul`
 const Projects = () => {
   return (
     <Wrapper>
-      <StyledWrapper>
+      <AnimatedWrapper>
         <PageHeader>My Projects</PageHeader>
-        <ProjectList>
-          <MainProject
-            title={"s"}
-            subTitle={"s"}
-            description={"s"}
-            linkToDetails={"s"}
-            linkToGitHub={"s"}
-          />
-          <MainProject />
-          <MainProject />
-          <MainProject />
-        </ProjectList>
-      </StyledWrapper>
+        <FadeContent>
+          <ProjectList>
+            <MainProject
+              title={"s"}
+              subTitle={"s"}
+              description={"s"}
+              linkToDetails={"s"}
+              linkToGitHub={"s"}
+            />
+            <MainProject />
+            <MainProject />
+            <MainProject />
+          </ProjectList>
+        </FadeContent>
+      </AnimatedWrapper>
     </Wrapper>
   );
 };

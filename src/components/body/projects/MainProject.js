@@ -1,16 +1,7 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CoolButton from "../../CoolButton";
-
-const fadeIn = keyframes`
-  from {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
-`;
 
 const ListItem = styled.li`
   padding: 20px;
@@ -23,9 +14,6 @@ const Wrapper = styled.div`
   box-shadow: 0 0 8px var(--color-shadow);
   padding: 20px;
   overflow: hidden;
-  opacity: 0;
-  animation: ${fadeIn} 1s 1 800ms ease;
-  animation-fill-mode: forwards;
 `;
 const ProjectTitle = styled.h3`
   background-color: var(--color-text-secondary);
@@ -53,43 +41,6 @@ const Description = styled.p`
   padding-bottom: 15px;
   font-family: var(--font-family-secondary);
 `;
-
-// const Icon = styled.i`
-//   font-size: 18px;
-//   padding: 0px 5px;
-// `;
-
-// const LinkBtn = styled(Link)`
-//   font-family: var(--font-family-primary);
-//   font-weight: bolder;
-//   position: relative;
-//   background-color: var(--color-primary);
-//   border: 2px solid var(--color-secondary);
-//   border-radius: 16px;
-//   box-shadow: 0 0 3px var(--color-shadow);
-//   padding: 8px 20px;
-//   color: var(--color-alternative);
-//   margin-right: 10px;
-//   display: inline-block;
-//   text-decoration: none;
-//   transition: border-color 500ms ease;
-//   transition: color 500ms ease;
-//   &:hover,
-//   &:focus {
-//     transition: border-color 500ms ease;
-//     border-color: var(--color-text-primary);
-//   }
-//   &:hover ${Icon}, &:focus ${Icon} {
-//     transition: color 500ms ease;
-//     color: var(--color-text-secondary);
-//   }
-// `;
-// const BtnContent = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   font-size: 16px;
-// `;
 
 const buttonPadding = "5px 10px";
 const buttonFontSize = "1rem";

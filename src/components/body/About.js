@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import ContentContainer from "./about/ContentContainer";
 import { aboutData } from "../../constants";
 import PageHeader from "../PageHeader";
+import AnimatedWrapper from "../animation/AnimatedWrapper";
+import FadeContent from "../animation/FadeContent";
 
 const About = () => {
   const { devObj, personObj } = aboutData;
@@ -110,9 +112,9 @@ const About = () => {
 
   return (
     <ComponentWrapper>
-      <StyledWrapper>
+      <AnimatedWrapper>
         <PageHeader>About Me</PageHeader>
-        <FadeDiv>
+        <FadeContent>
           <ToggleContainer>
             <ToggleWrapper isActive={activeTag === developer}>
               <ToggleLabel htmlFor="about-developer">
@@ -149,28 +151,11 @@ const About = () => {
               decrementKey={decrementKey}
             />
           </ContentContainerWrapper>
-        </FadeDiv>
-      </StyledWrapper>
+        </FadeContent>
+      </AnimatedWrapper>
     </ComponentWrapper>
   );
 };
-
-const growHeight = keyframes`
-  from {
-    height: 0px;
-  }
-  to {
-    height: 90%
-  }
-`;
-const fadeIn = keyframes`
-  from {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
-`;
 
 const ComponentWrapper = styled.section`
   height: 100%;
@@ -180,49 +165,6 @@ const ComponentWrapper = styled.section`
   justify-content: center;
 `;
 
-const StyledWrapper = styled.div`
-  border: 3px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  border-radius: 25px;
-  width: 90%;
-  height: 0%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-
-  animation: ${growHeight} 900ms 1 200ms ease;
-  animation-fill-mode: forwards;
-`;
-const FadeDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  animation: ${fadeIn} 500ms 1 800ms ease;
-  animation-fill-mode: forwards;
-`;
-
-const HeaderContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  border-bottom: 3px solid var(--color-secondary);
-  border-right: 3px solid var(--color-secondary);
-  border-left: 3px solid var(--color-secondary);
-  border-radius: 0px 0px 25px 25px;
-  padding: 10px 30px;
-`;
-
-const Header = styled.h3`
-  font-family: var(--font-family-primary);
-  font-size: 2rem;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
 const ToggleContainer = styled.div`
   display: flex;
   justify-content: center;

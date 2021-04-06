@@ -111,49 +111,45 @@ const About = () => {
   };
 
   return (
-    <ComponentWrapper>
-      <AnimatedWrapper>
-        <PageHeader>About Me</PageHeader>
-        <FadeContent>
-          <ToggleContainer>
-            <ToggleWrapper isActive={activeTag === developer}>
-              <ToggleLabel htmlFor="about-developer">
-                Developer
-                <Radio
-                  checked={activeTag === developer}
-                  type="radio"
-                  id="about-developer"
-                  value={developer}
-                  name="about-toggle"
-                  onChange={handleChange}
-                />
-              </ToggleLabel>
-            </ToggleWrapper>
-            <ToggleWrapper isActive={activeTag === person}>
-              <ToggleLabel htmlFor="about-person">
-                Person
-                <Radio
-                  checked={activeTag === person}
-                  type="radio"
-                  id="about-person"
-                  value={person}
-                  name="about-toggle"
-                  onChange={handleChange}
-                />
-              </ToggleLabel>
-            </ToggleWrapper>
-          </ToggleContainer>
-          <ContentContainerWrapper>
-            <ContentContainer
-              activeObj={activeObj}
-              activeContent={activeContent}
-              incrementKey={incrementKey}
-              decrementKey={decrementKey}
+    <AnimatedWrapper>
+      <PageHeader>About Me</PageHeader>
+      <ToggleContainer>
+        <ToggleWrapper isActive={activeTag === developer}>
+          <ToggleLabel htmlFor="about-developer">
+            Developer
+            <Radio
+              checked={activeTag === developer}
+              type="radio"
+              id="about-developer"
+              value={developer}
+              name="about-toggle"
+              onChange={handleChange}
             />
-          </ContentContainerWrapper>
-        </FadeContent>
-      </AnimatedWrapper>
-    </ComponentWrapper>
+          </ToggleLabel>
+        </ToggleWrapper>
+        <ToggleWrapper isActive={activeTag === person}>
+          <ToggleLabel htmlFor="about-person">
+            Person
+            <Radio
+              checked={activeTag === person}
+              type="radio"
+              id="about-person"
+              value={person}
+              name="about-toggle"
+              onChange={handleChange}
+            />
+          </ToggleLabel>
+        </ToggleWrapper>
+      </ToggleContainer>
+      <ContentContainerWrapper>
+        <ContentContainer
+          activeObj={activeObj}
+          activeContent={activeContent}
+          incrementKey={incrementKey}
+          decrementKey={decrementKey}
+        />
+      </ContentContainerWrapper>
+    </AnimatedWrapper>
   );
 };
 
@@ -212,7 +208,7 @@ const ContentContainerWrapper = styled.div`
   align-items: center;
 
   height: 75%;
-  width: 75%;
+  width: 90%;
 `;
 
 export default About;

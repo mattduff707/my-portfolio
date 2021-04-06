@@ -50,7 +50,6 @@ const ListLink = styled(NavLink)`
 
 const active = {
   color: "var(--color-text-primary)",
-  boxShadow: "0px 3px 0px #fb8986",
 };
 
 const Nav = () => {

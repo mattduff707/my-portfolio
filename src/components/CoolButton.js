@@ -29,7 +29,7 @@ const Shadow = styled.span`
   border-radius: 12px;
   background: hsl(0deg 0% 0% / 0.25);
   will-change: transform;
-  transform: translateY(2px);
+  transform: translateY(4px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 `;
 
@@ -87,10 +87,10 @@ const Btn = styled.button`
     transform: translateY(-2px);
     transition: transform 34ms;
   }
-  &:hover ${Shadow} {
+  /* &:hover ${Shadow} {
     transform: translateY(4px);
     transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-  }
+  } */
   &:active ${Shadow} {
     transform: translateY(1px);
     transition: transform 34ms;

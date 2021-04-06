@@ -45,7 +45,7 @@ const Description = styled.p`
 const buttonPadding = "5px 10px";
 const buttonFontSize = "1rem";
 
-const MainProject = () => {
+const ProjectCard = () => {
   return (
     <ListItem>
       <Wrapper>
@@ -71,4 +71,4 @@ const MainProject = () => {
   );
 };
 
-export default MainProject;
+export default ProjectCard;

@@ -1,29 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import MainProject from "./projects/MainProject";
+import ProjectCard from "./projects/ProjectCard";
 import PageHeader from "../PageHeader";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
-import FadeContent from "../animation/FadeContent";
 
 const Projects = () => {
   return (
     <Wrapper>
       <AnimatedWrapper>
         <PageHeader>My Projects</PageHeader>
-        <FadeContent>
-          <ProjectList>
-            <MainProject
-              title={"s"}
-              subTitle={"s"}
-              description={"s"}
-              linkToDetails={"s"}
-              linkToGitHub={"s"}
-            />
-            <MainProject />
-            <MainProject />
-            <MainProject />
-          </ProjectList>
-        </FadeContent>
+        <ProjectList>
+          <ProjectCard
+            title={"s"}
+            subTitle={"s"}
+            description={"s"}
+            linkToDetails={"s"}
+            linkToGitHub={"s"}
+          />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </ProjectList>
       </AnimatedWrapper>
     </Wrapper>
   );

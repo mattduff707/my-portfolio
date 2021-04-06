@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Overview from "../components/body/Overview";
 import About from "../components/body/About";
 import Projects from "../components/body/Projects";
-import DuffyWebBrain from "../components/body/DuffyWebBrain";
+import ProjectDetails from "../components/body/projects/ProjectDetails";
+import { AnimatePresence } from "framer-motion";
 
 const StyledMain = styled.main`
   //background-color: var(--color-primary);
@@ -14,22 +15,17 @@ const StyledMain = styled.main`
 `;
 
 const MainBody = () => {
+  const location = useLocation();
   return (
     <StyledMain>
-      <Switch>
-        <Route exact path="/">
-          <Overview />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route exact path="/projects">
-          <Projects />
-        </Route>
-        <Route path="/projects/duffy-web-brain">
-          <DuffyWebBrain />
-        </Route>
-      </Switch>
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.pathname}>
+          <Route exact path="/" component={Overview} />
+          <Route path="/about" component={About} />
+          <Route exact path="/projects" component={Projects} />
+          <Route path="/projects/duffy-web-brain" component={ProjectDetails} />
+        </Switch>
+      </AnimatePresence>
     </StyledMain>
   );
 };

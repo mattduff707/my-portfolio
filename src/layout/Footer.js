@@ -8,6 +8,7 @@ const StyledFooter = styled.footer`
   height: 100%;
   width: 100%;
   grid-area: footer;
+  z-index: 1;
 `;
 
 const Footer = () => {

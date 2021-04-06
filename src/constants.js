@@ -47,3 +47,84 @@ export const aboutData = {
     },
   ],
 };
+
+export const projectsData = [
+  {
+    path: "/projects/duffy-web-brain",
+    title: "Duffy Web Brain",
+    subtitle: "Personal notes app",
+    stack: ["React", "Gatsbyjs", "PrismJs"],
+    description:
+      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
+    slides: [
+      {
+        title: "Overview",
+        content: "I made this project for this reason...",
+        picture: testPic,
+      },
+      {
+        title: "Core Functionality",
+        content: "This is some of the logic I programmed and how the app works",
+        picture: testPicTwo,
+      },
+      {
+        title: "Spotlight",
+        content:
+          "This is the feature I am most proud of... This is the biggest challenge I overcame",
+        picture: testPicThree,
+      },
+    ],
+  },
+  {
+    path: "/projects/duffy-web-brain",
+    title: "Duffy Web Brain",
+    subtitle: "Personal notes app",
+    stack: ["React", "Gatsbyjs", "PrismJs"],
+    description:
+      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
+    slides: [
+      {
+        title: "Overview",
+        content: "I made this project for this reason...",
+        picture: testPic,
+      },
+      {
+        title: "Core Functionality",
+        content: "This is some of the logic I programmed and how the app works",
+        picture: testPicTwo,
+      },
+      {
+        title: "Spotlight",
+        content:
+          "This is the feature I am most proud of... This is the biggest challenge I overcame",
+        picture: testPicThree,
+      },
+    ],
+  },
+  {
+    path: "/projects/duffy-web-brain",
+    title: "Duffy Web Brain",
+    subtitle: "Personal notes app",
+    stack: ["React", "Gatsbyjs", "PrismJs"],
+    description:
+      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
+    slides: [
+      {
+        title: "Overview",
+        content: "I made this project for this reason...",
+        picture: testPic,
+      },
+      {
+        title: "Core Functionality",
+        content: "This is some of the logic I programmed and how the app works",
+        picture: testPicTwo,
+      },
+      {
+        title: "Spotlight",
+        content:
+          "This is the feature I am most proud of... This is the biggest challenge I overcame",
+        picture: testPicThree,
+      },
+    ],
+  },
+];

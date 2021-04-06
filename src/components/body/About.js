@@ -4,7 +4,6 @@ import ContentContainer from "./about/ContentContainer";
 import { aboutData } from "../../constants";
 import PageHeader from "../PageHeader";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
-import FadeContent from "../animation/FadeContent";
 
 const About = () => {
   const { devObj, personObj } = aboutData;
@@ -152,13 +151,6 @@ const About = () => {
     </AnimatedWrapper>
   );
 };
-
-const ComponentWrapper = styled.section`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 
 const ToggleContainer = styled.div`
   display: flex;

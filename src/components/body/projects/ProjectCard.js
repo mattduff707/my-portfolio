@@ -34,7 +34,7 @@ const ProjectSubTitle = styled.h4`
   font-size: 1rem;
   padding-bottom: 10px;
 `;
-const Description = styled.p`
+const Content = styled.p`
   color: var(--color-text-primary);
   font-size: 1.1rem;
   line-height: 1.5;
@@ -45,18 +45,14 @@ const Description = styled.p`
 const buttonPadding = "5px 10px";
 const buttonFontSize = "1rem";
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, subtitle, path, description }) => {
   return (
     <ListItem>
       <Wrapper>
-        <ProjectTitle>Duffy Web Brain</ProjectTitle>
-        <ProjectSubTitle>Personal docs for note-taking</ProjectSubTitle>
-        <Description>
-          Throughout most of my self education I had not been utilizing any
-          solid note taking methodology. Learning in the IDE just wasn't cutting
-          it, So I made my own solution!
-        </Description>
-        <Link to="/projects/duffy-web-brain" style={{ marginRight: "10px" }}>
+        <ProjectTitle>{title}</ProjectTitle>
+        <ProjectSubTitle>{subtitle}</ProjectSubTitle>
+        <Content>{description}</Content>
+        <Link to={path} style={{ marginRight: "10px" }}>
           <CoolButton padding={buttonPadding} fontSize={buttonFontSize}>
             Details <i className="fas fa-arrow-right"></i>
           </CoolButton>

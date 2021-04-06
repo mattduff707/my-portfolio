@@ -23,7 +23,9 @@ const MainBody = () => {
           <Route exact path="/" component={Overview} />
           <Route path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
-          <Route path="/projects/duffy-web-brain" component={ProjectDetails} />
+          <Route path="/projects/duffy-web-brain">
+            <ProjectDetails />
+          </Route>
         </Switch>
       </AnimatePresence>
     </StyledMain>

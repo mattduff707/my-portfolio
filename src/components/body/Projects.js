@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ProjectCard from "./projects/ProjectCard";
 import PageHeader from "../PageHeader";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
+import { projectsData } from "../../constants";
 
 const Projects = () => {
   return (
@@ -10,7 +11,7 @@ const Projects = () => {
       <AnimatedWrapper>
         <PageHeader>My Projects</PageHeader>
         <ProjectList>
-          <ProjectCard
+          {/* <ProjectCard
             title={"s"}
             subTitle={"s"}
             description={"s"}
@@ -19,7 +20,18 @@ const Projects = () => {
           />
           <ProjectCard />
           <ProjectCard />
-          <ProjectCard />
+          <ProjectCard /> */}
+          {projectsData.map((project, index) => {
+            return (
+              <ProjectCard
+                key={project.title + index}
+                title={project.title}
+                subtitle={project.subtitle}
+                description={project.description}
+                path={project.path}
+              />
+            );
+          })}
         </ProjectList>
       </AnimatedWrapper>
     </Wrapper>

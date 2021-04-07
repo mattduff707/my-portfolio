@@ -183,6 +183,7 @@ const ToggleLabel = styled.label`
   font-family: var(--font-family-primary);
   font-weight: bolder;
   font-size: 1.2rem;
+  letter-spacing: 2px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,7 +4,8 @@ import TextGradient from "../TextGradient";
 
 const StyledContainer = styled.div`
   /* border: 2px red solid; */
-  padding: 20px 0px 0px 0px;
+  padding: 0px 30px 0px 30px;
+  border-right: 2px solid var(--color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +22,7 @@ const Subtitle = styled.h2`
 const Title = () => {
   return (
     <StyledContainer>
-      <TextGradient tag="h1" size="2.5rem" padding="0px 0px 15px 0px">
+      <TextGradient tag="h1" size="2.0rem" padding="0px 0px 15px 0px">
         Matthew Duffy
       </TextGradient>
       <Subtitle>Web Developer</Subtitle>

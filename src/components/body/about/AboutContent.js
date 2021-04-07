@@ -10,16 +10,22 @@ const AboutContent = ({ activeContent }) => {
     <>
       {activeContent.map(([key, value]) => {
         return (
-          <div key={value.title}>
+          <Wrapper key={value.title}>
             <StyledTitle>{value.title}</StyledTitle>
-            <StyledSubTitle>{value.subtitle}</StyledSubTitle>
             <StyledText>{value.text}</StyledText>
-          </div>
+          </Wrapper>
         );
       })}
     </>
   );
 };
+const Wrapper = styled.article`
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+`;
 
 const StyledTitle = styled.h3`
   font-family: var(--font-family-primary);
@@ -29,15 +35,14 @@ const StyledTitle = styled.h3`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-`;
-const StyledSubTitle = styled.h4`
-  color: var(--color-alternative);
-  font-size: 1.5rem;
-  font-family: var(--font-family-primary);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--color-secondary);
 `;
 const StyledText = styled.p`
   color: var(--color-text-primary);
   font-family: var(--font-family-secondary);
+  font-size: 1.3rem;
+  text-indent: 40px;
 `;
 
 export default AboutContent;

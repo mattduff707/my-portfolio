@@ -11,8 +11,8 @@ const StyledHeader = styled.header`
   box-shadow: 0px 1px 15px var(--color-shadow);
   grid-area: header;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 
   z-index: 1;
 `;

@@ -7,8 +7,12 @@ export const aboutData = {
     {
       active: false,
       title: "Self Taught Developer",
-      subtitle: "The journey so far...",
-      text: "Self taught dev yo",
+      text: `I embarked on this self learning journey about 2 years ago while working as a strength coach in Chicago.
+         A regular in my weekly strength classes helped plant the idea of web development as a new career for me, himself being a full-stack software developer.
+         Soon after that I eagerly started my first lessons online through sources like: .
+          Since then we have continued a great friendship and often link up online to discuss all things life and of course, code!
+          
+           It is through this influence that I find myself always holding myself to the highest standard of programming that I am capable of.`,
       picture: testPic,
     },
     {
@@ -29,9 +33,11 @@ export const aboutData = {
   personObj: [
     {
       active: false,
-      title: "Person Taught Developer",
-      subtitle: "The journey so far...",
-      text: "Self taught dev yo",
+      title: "Strength Training",
+      text: `I've been an avid strength training enthusiast for about 5 years now (With a year-long pause due to COVID-19).
+         In fact I worked as a strength coach in Chicago for just over a year.
+          It was during my time as a trainer that I caught wind of web development as a career from one of my clients, and the rest is history.
+           Though I no longer pursue strength training as a career, it will likely forever be a passionate hobby of mine.`,
     },
     {
       active: false,

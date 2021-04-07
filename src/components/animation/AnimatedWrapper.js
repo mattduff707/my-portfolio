@@ -7,7 +7,7 @@ const variants = {
     height: "0%",
   },
   enter: {
-    height: "90%",
+    height: "95%",
     transition: { duration: 1, delay: 0.1, delayChildren: 0.75 },
   },
   bottomEnter: {

@@ -9,10 +9,9 @@ export const aboutData = {
       title: "Self Taught Developer",
       text: `I embarked on this self learning journey about 2 years ago while working as a strength coach in Chicago.
          A regular in my weekly strength classes helped plant the idea of web development as a new career for me, himself being a full-stack software developer.
-         Soon after that I eagerly started my first lessons online through sources like: .
-          Since then we have continued a great friendship and often link up online to discuss all things life and of course, code!
-          
-           It is through this influence that I find myself always holding myself to the highest standard of programming that I am capable of.`,
+         Soon after that I eagerly started my first lessons online through sources like: FreeCodeCamp, PluralSight, and Dev blogs.
+          Since then we have continued a great friendship and often link up online to discuss all things life and of course, code.
+           It is through this influence that I always hold myself to the highest standard of programming that I am capable of!`,
       picture: testPic,
     },
     {
@@ -134,3 +133,23 @@ export const projectsData = [
     ],
   },
 ];
+
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
+export const device = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktop})`,
+};

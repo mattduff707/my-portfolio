@@ -12,6 +12,7 @@ const StyledMain = styled.main`
   height: 100%;
   width: 100%;
   grid-area: main;
+  overflow: hidden;
 `;
 
 const MainBody = () => {

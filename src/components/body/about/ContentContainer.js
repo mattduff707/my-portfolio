@@ -16,10 +16,10 @@ const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
       <AboutContentContainer>
         <AboutContent activeContent={activeContent} />
         <ButtonWrapper>
-          <ArrowButton margin={"0px 20px"} handleClick={decrementKey}>
+          <ArrowButton handleClick={decrementKey}>
             <Icon className="fas fa-angle-left"></Icon>
           </ArrowButton>
-          <ArrowButton margin={"0px 20px"} handleClick={incrementKey}>
+          <ArrowButton handleClick={incrementKey}>
             <Icon className="fas fa-angle-right"></Icon>
           </ArrowButton>
         </ButtonWrapper>
@@ -48,6 +48,7 @@ const Image = styled.img`
   object-fit: cover;
   display: block;
   border-radius: 20px;
+  border: 3px solid var(--color-secondary);
 `;
 const Connector = styled.div`
   height: 10px;
@@ -72,7 +73,10 @@ const AboutContentContainer = styled.article`
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 20px 20px 0px;
+  border-top: 2px solid var(--color-secondary);
 `;
 
 const Icon = styled.i`

@@ -35,7 +35,7 @@ const StyledTitle = styled.h3`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-bottom: 2px solid var(--color-secondary);
 `;
 const StyledText = styled.p`

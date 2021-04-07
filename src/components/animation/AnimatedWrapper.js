@@ -4,33 +4,45 @@ import { motion } from "framer-motion";
 
 const variants = {
   initial: {
-    height: "0%",
+    transform: "translateY(-100%)",
+  },
+  bottomInitial: {
+    transform: "translateY(100%)",
   },
   enter: {
-    height: "95%",
-    transition: { duration: 1, delay: 0.1, delayChildren: 0.75 },
+    transform: "translateY(0%)",
+    transition: { duration: 1, delay: 0.1, delayChildren: 1 },
   },
   bottomEnter: {
-    height: "95%",
-    transition: { duration: 1, delay: 0.1, delayChildren: 0.75 },
+    transform: "translateY(0%)",
+    transition: { duration: 1, delay: 0.1, delayChildren: 1 },
   },
-  exit: { height: "0%", transition: { duration: 1, delay: 0.1 } },
+  exit: {
+    transform: "translateY(-100%)",
+    transition: { duration: 1, delay: 0.1 },
+  },
+  bottomExit: {
+    transform: "translateY(100%)",
+    transition: { duration: 1, delay: 0.1 },
+  },
 };
 const childVariants = {
   initial: { opacity: 0 },
+  bottomInitial: { opacity: 0 },
   enter: { opacity: 1 },
   bottomEnter: { opacity: 1 },
   exit: { opacity: 0 },
+  bottomExit: { opacity: 0 },
 };
 
 const AnimatedWrapper = ({ children, tag, bottom }) => {
   if (bottom) {
     return (
       <StyledWrapperBottom
-        initial="initial"
+        initial="bottomInitial"
         animate="bottomEnter"
         as={tag}
-        exit="exit"
+        exit="bottomExit"
         variants={variants}
       >
         <FadeWrapper variants={childVariants}>{children}</FadeWrapper>
@@ -56,11 +68,13 @@ const StyledWrapper = styled(motion.div)`
   box-shadow: 0px 0px 8px var(--color-shadow);
   border-radius: 0px 0px 25px 25px;
   width: 90%;
+  height: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   margin: 0px auto;
+  position: relative;
 `;
 const StyledWrapperBottom = styled(StyledWrapper)`
   border: 3px solid var(--color-secondary);

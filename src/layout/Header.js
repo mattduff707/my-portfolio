@@ -9,12 +9,13 @@ const StyledHeader = styled.header`
   width: 100%;
   border-bottom: 3px solid var(--color-secondary);
   box-shadow: 0px 1px 15px var(--color-shadow);
+  background-color: var(--color-primary);
   grid-area: header;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
-  z-index: 1;
+  z-index: 100;
+  position: relative;
 `;
 
 const Header = () => {

@@ -31,8 +31,8 @@ const childVariants = {
   bottomInitial: { opacity: 0 },
   enter: { opacity: 1 },
   bottomEnter: { opacity: 1 },
-  exit: { opacity: 0 },
-  bottomExit: { opacity: 0 },
+  exit: { opacity: 0, transition: { delay: 0.2 } },
+  bottomExit: { opacity: 0, transition: { delay: 0.2 } },
 };
 
 const AnimatedWrapper = ({ children, tag, bottom }) => {

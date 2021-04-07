@@ -42,10 +42,10 @@ const Edge = styled.span`
   border-radius: 12px;
   background: linear-gradient(
     to left,
-    hsl(226 45% 16%) 0%,
-    hsl(226 45% 32%) 8%,
-    hsl(226 45% 32%) 92%,
-    hsl(226 45% 16%) 100%
+    hsl(226 45% 11%) 0%,
+    hsl(226 45% 27%) 8%,
+    hsl(226 45% 27%) 92%,
+    hsl(226 45% 11%) 100%
   );
 `;
 
@@ -56,12 +56,13 @@ const Front = styled.span`
   border-radius: 12px;
   padding: ${(props) => props.padding};
   font-size: ${(props) => props.fontSize};
-
+  color: var(--color-alternative);
   background-color: var(--color-primary);
-  //background: hsl(345deg 100% 47%);
   will-change: transform;
   transform: translateY(-4px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1),
+    color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
+    border 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 `;
 const Btn = styled.button`
   position: relative;
@@ -70,27 +71,20 @@ const Btn = styled.button`
   padding: 0;
   cursor: pointer;
   outline-offset: 4px;
-  transition: filter 250ms;
   margin: ${(props) => props.margin};
-  color: var(--color-alternative);
 
-  &:hover {
-    filter: brightness(110%);
-    color: var(--color-text-secondary);
-    transition: color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-  }
   &:hover ${Front} {
     transform: translateY(-6px);
-    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+    color: var(--color-text-primary);
+    border-color: var(--color-text-secondary);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
+      border-color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
   }
   &:active ${Front} {
     transform: translateY(-2px);
     transition: transform 34ms;
   }
-  /* &:hover ${Shadow} {
-    transform: translateY(4px);
-    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-  } */
+
   &:active ${Shadow} {
     transform: translateY(1px);
     transition: transform 34ms;

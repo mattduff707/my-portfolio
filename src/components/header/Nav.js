@@ -5,6 +5,7 @@ const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 20px;
 `;
 const NavUl = styled.ul`
   display: flex;

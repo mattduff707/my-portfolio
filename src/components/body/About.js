@@ -4,6 +4,7 @@ import ContentContainer from "./about/ContentContainer";
 import { aboutData } from "../../constants";
 import PageHeader from "../PageHeader";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
+import CoolToggle from "../CoolToggle";
 
 const About = () => {
   const { devObj, personObj } = aboutData;
@@ -113,32 +114,42 @@ const About = () => {
     <AnimatedWrapper>
       <PageHeader>About Me</PageHeader>
       <ToggleContainer>
-        <ToggleWrapper isActive={activeTag === developer}>
-          <ToggleLabel htmlFor="about-developer">
-            Developer
-            <Radio
-              checked={activeTag === developer}
-              type="radio"
-              id="about-developer"
-              value={developer}
-              name="about-toggle"
-              onChange={handleChange}
-            />
-          </ToggleLabel>
-        </ToggleWrapper>
-        <ToggleWrapper isActive={activeTag === person}>
-          <ToggleLabel htmlFor="about-person">
-            Person
-            <Radio
-              checked={activeTag === person}
-              type="radio"
-              id="about-person"
-              value={person}
-              name="about-toggle"
-              onChange={handleChange}
-            />
-          </ToggleLabel>
-        </ToggleWrapper>
+        <CoolToggle
+          isActive={activeTag === developer}
+          htmlFor="about-developer"
+          padding={"10px 10px"}
+          fontSize={"1.3rem"}
+          width={"160px"}
+          margin={"0px 10px 0px 0px"}
+        >
+          Developer
+          <Radio
+            checked={activeTag === developer}
+            type="radio"
+            id="about-developer"
+            value={developer}
+            name="about-toggle"
+            onChange={handleChange}
+          />
+        </CoolToggle>
+        <CoolToggle
+          isActive={activeTag === person}
+          htmlFor="about-person"
+          padding={"10px 10px"}
+          fontSize={"1.3rem"}
+          width={"160px"}
+          margin={"0px 0px 0px 10px"}
+        >
+          Person
+          <Radio
+            checked={activeTag === person}
+            type="radio"
+            id="about-person"
+            value={person}
+            name="about-toggle"
+            onChange={handleChange}
+          />
+        </CoolToggle>
       </ToggleContainer>
       <ContentContainerWrapper>
         <ContentContainer
@@ -160,37 +171,7 @@ const ToggleContainer = styled.div`
   padding: 25px 0px;
   //border: 4px solid yellow;
 `;
-const ToggleWrapper = styled.div`
-  border: 2px solid var(--color-secondary);
-  border-color: ${(props) =>
-    props.isActive ? "var(--color-text-primary)" : "var(--color-secondary)"};
-  color: ${(props) =>
-    props.isActive
-      ? "var(--color-text-secondary)"
-      : "var(--color-alternative)"};
-  border-radius: 10px;
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 
-  margin: 0px 10px;
-  width: 160px;
-  height: 50px;
-`;
-const ToggleLabel = styled.label`
-  font-family: var(--font-family-primary);
-  font-weight: bolder;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px 20px;
-  width: 100%;
-`;
 const Radio = styled.input`
   position: absolute;
   visibility: hidden;

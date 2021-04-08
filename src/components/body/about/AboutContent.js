@@ -41,8 +41,9 @@ const StyledTitle = styled.h3`
 const StyledText = styled.p`
   color: var(--color-text-primary);
   font-family: var(--font-family-secondary);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-indent: 40px;
+  line-height: 2.2;
 `;
 
 export default AboutContent;

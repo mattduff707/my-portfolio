@@ -10,8 +10,8 @@ export const aboutData = {
       text: `I embarked on this self learning journey about 2 years ago while working as a strength coach in Chicago.
          A regular in my weekly strength classes helped plant the idea of web development as a new career for me, himself being a full-stack software developer.
          Soon after that I eagerly started my first lessons online through sources like: FreeCodeCamp, PluralSight, and Dev blogs.
-          Since then we have continued a great friendship and often link up online to discuss all things life and of course, code.
-           It is through this influence that I always hold myself to the highest standard of programming that I am capable of!`,
+         Since then we have continued a great friendship and often link up online to discuss all things life and of course, code.         
+         It is through this influence that I always hold myself to the highest standard of programming that I am capable of!`,
       picture: testPic,
     },
     {

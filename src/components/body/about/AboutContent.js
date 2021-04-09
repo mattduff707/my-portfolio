@@ -24,26 +24,26 @@ const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1.8;
 `;
 
 const StyledTitle = styled.h3`
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
-  font-size: 2rem;
+  font-size: var(--font-size-heading);
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 2px solid var(--color-secondary);
 `;
 const StyledText = styled.p`
   color: var(--color-text-primary);
   font-family: var(--font-family-secondary);
-  font-size: 1.4rem;
+  font-size: var(--font-size-content);
   text-indent: 40px;
-  line-height: 2.2;
+  line-height: 2.3;
 `;
 
 export default AboutContent;

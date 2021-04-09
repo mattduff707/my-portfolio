@@ -114,13 +114,10 @@ const About = () => {
     <AnimatedWrapper>
       <PageHeader>About Me</PageHeader>
       <ToggleContainer>
-        <CoolToggle
+        <StyledCoolToggle
           isActive={activeTag === developer}
           htmlFor="about-developer"
-          padding={"10px 10px"}
-          fontSize={"1.3rem"}
-          width={"160px"}
-          margin={"0px 10px 0px 0px"}
+          margin={"0px 10px"}
         >
           Developer
           <Radio
@@ -131,14 +128,11 @@ const About = () => {
             name="about-toggle"
             onChange={handleChange}
           />
-        </CoolToggle>
-        <CoolToggle
+        </StyledCoolToggle>
+        <StyledCoolToggle
           isActive={activeTag === person}
           htmlFor="about-person"
-          padding={"10px 10px"}
-          fontSize={"1.3rem"}
-          width={"160px"}
-          margin={"0px 0px 0px 10px"}
+          margin={"0px 10px"}
         >
           Person
           <Radio
@@ -149,7 +143,7 @@ const About = () => {
             name="about-toggle"
             onChange={handleChange}
           />
-        </CoolToggle>
+        </StyledCoolToggle>
       </ToggleContainer>
       <ContentContainerWrapper>
         <ContentContainer
@@ -172,6 +166,12 @@ const ToggleContainer = styled.div`
   //border: 4px solid yellow;
 `;
 
+const StyledCoolToggle = styled(CoolToggle)`
+  font-size: var(--toggle-font-size);
+  width: var(--toggle-button-width);
+  padding: var(--toggle-button-padding);
+`;
+
 const Radio = styled.input`
   position: absolute;
   visibility: hidden;
@@ -182,7 +182,7 @@ const ContentContainerWrapper = styled.div`
   align-items: center;
 
   height: 75%;
-  width: 90%;
+  width: 95%;
 `;
 
 export default About;

@@ -14,8 +14,8 @@ const NavUl = styled.ul`
 `;
 
 const Li = styled.li`
-  height: 60px;
-  width: 160px;
+  height: var(--link-container-height);
+  width: var(--link-container-width);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ const ListLink = styled(NavLink)`
   text-align: center;
   font-family: var(--font-family-primary);
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: var(--font-size-nav);
   letter-spacing: 1px;
   transition: color 400ms ease 0s;
 

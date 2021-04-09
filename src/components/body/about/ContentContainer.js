@@ -3,7 +3,8 @@ import styled from "styled-components";
 import CoolButton from "../../CoolButton";
 
 const ArrowButton = styled(CoolButton)`
-  padding: 5px 15px;
+  width: var(--arrow-button-width);
+  font-size: var(--arrow-font-size);
 `;
 
 const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
@@ -68,18 +69,18 @@ const AboutContentContainer = styled.article`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 10px 0px;
 `;
 const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 20px 0px;
+  padding: 15px 20px 5px;
   border-top: 2px solid var(--color-secondary);
 `;
 
 const Icon = styled.i`
-  font-size: 4rem;
+  /* font-size: 4rem; */
 `;
 export default ContentContainer;

@@ -4,9 +4,12 @@ import MainBody from "./layout/MainBody";
 import Footer from "./layout/Footer";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router } from "react-router-dom";
+import { device } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
   html {
+
+  //color
   --color-primary: hsl(226, 45%, 15%);
   --color-secondary: hsl(225, 46%, 25%);
   --color-alternative: hsl(225, 46%, 70%);
@@ -15,7 +18,93 @@ const GlobalStyle = createGlobalStyle`
   --color-text-secondary: hsl(2, 94%, 75%);
   --font-family-primary: 'Raleway', sans-serif;
   --font-family-secondary: 'Khula', sans-serif;
+  
+
+  //page grid
+  --grid-size: 100px 1fr 50px;
+
+  // header title
+  --font-size-name: 1.5rem;
+  --font-size-subtitle: 1.1rem;
+
+
+  //nav
+  --font-size-nav: 1rem;
+  --link-container-width: 120px;
+  --link-container-height: 40px;
+
+    // content
+  --font-size-content: 1rem;
+
+      //headings
+  --font-size-heading: 1.5rem;
+
+    //arrow buttons
+  --arrow-font-size: 2rem;
+  --arrow-button-width: 60px;
+  --arrow-button-wrapper-padding: 0px ;
+
+    //About Toggle
+  --toggle-font-size: 1rem;
+  --toggle-button-width: 120px;
+  --toggle-button-padding: 5px 5px;
+
+  //About content container
+  --about-content-direction: column;
+
+  @media ${device.laptop} {
+    
   }
+
+  @media ${device.laptopL} {
+    --font-size-content: 1.2rem
+  }
+
+  @media ${device.desktop} {
+  --grid-size: 120px 1fr 50px;
+
+  --font-size-name: 2rem;
+  --font-size-subtitle: 1.4rem;
+
+  --font-size-nav: 1.2rem;
+  --link-container-width: 140px;
+  --link-container-height: 50px;
+
+  --font-size-content: 1.4rem;
+
+  --font-size-heading: 1.8rem;
+
+  --arrow-font-size: 3rem;
+  --arrow-button-width: 60px;
+
+
+  --toggle-font-size: 1.2rem;
+  --toggle-button-width: 160px;
+  --toggle-button-padding: 10px 10px;
+  }
+  @media ${device.desktopL} {
+    
+
+
+
+    --font-size-nav: 1.3rem;
+  --link-container-width: 160px;
+  --link-container-height: 60px;
+
+ 
+
+  --font-size-heading: 2.2rem;
+
+  --arrow-font-size: 4rem;
+  --arrow-button-width: 80px;
+
+
+  }
+
+
+
+
+
   body {
     background-color: var(--color-primary);
   }
@@ -24,12 +113,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  }
 `;
 
 const GridWrapper = styled.div`
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 130px 1fr 50px;
+  grid-template-rows: var(--grid-size);
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import TextGradient from "../TextGradient";
 
 const StyledContainer = styled.div`
   /* border: 2px red solid; */
@@ -13,18 +12,26 @@ const StyledContainer = styled.div`
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
 `;
+const Name = styled.h1`
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0px 0px 5px 0px;
+  font-size: var(--font-size-name);
+`;
 
 const Subtitle = styled.h2`
   color: var(--color-alternative);
-  font-size: 1.3rem;
+  font-size: var(--font-size-subtitle);
 `;
 
 const Title = () => {
   return (
     <StyledContainer>
-      <TextGradient tag="h1" size="2.0rem" padding="0px 0px 15px 0px">
+      <Name tag="h1" size="2.0rem" padding="0px 0px 15px 0px">
         Matthew Duffy
-      </TextGradient>
+      </Name>
       <Subtitle>Web Developer</Subtitle>
     </StyledContainer>
   );

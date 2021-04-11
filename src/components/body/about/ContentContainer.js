@@ -30,7 +30,7 @@ const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
 };
 
 const PictureContainer = styled.div`
-  width: 45%;
+  width: 47.5%;
   height: 100%;
   max-height: 100%;
   padding: 20px;
@@ -41,6 +41,9 @@ const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
@@ -53,14 +56,17 @@ const Image = styled.img`
 `;
 const Connector = styled.div`
   height: 10px;
-  width: 10%;
+  width: 5%;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   border-top: 2px solid var(--color-secondary);
   border-bottom: 2px solid var(--color-secondary);
   box-shadow: 0 0 8px var(--color-shadow);
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 const AboutContentContainer = styled.article`
-  width: 45%;
+  width: 47.5%;
   height: 100%;
   border: 2px solid var(--color-secondary);
   box-shadow: 0px 0px 15px var(--color-shadow);
@@ -70,6 +76,19 @@ const AboutContentContainer = styled.article`
   align-items: center;
   justify-content: space-between;
   padding: 10px 0px;
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+  @media (max-width: 720px) {
+    width: 95%;
+    height: auto;
+  }
+  @media (max-width: 500px) {
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    padding-bottom: 0px;
+  }
 `;
 const ButtonWrapper = styled.div`
   display: flex;

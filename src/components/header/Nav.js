@@ -6,6 +6,9 @@ const NavWrapper = styled.nav`
   justify-content: center;
   align-items: center;
   margin-left: 20px;
+  @media (max-width: 1024px) {
+    margin-left: 0;
+  }
 `;
 const NavUl = styled.ul`
   display: flex;

@@ -24,6 +24,10 @@ const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 500px) {
+    padding: 0px 5px;
+  }
 `;
 
 const StyledTitle = styled.h3`
@@ -37,6 +41,10 @@ const StyledTitle = styled.h3`
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--color-secondary);
+  text-align: center;
+  @media (max-width: 1440px) {
+    padding-bottom: 5px;
+  }
 `;
 const StyledText = styled.p`
   color: var(--color-text-primary);
@@ -44,6 +52,12 @@ const StyledText = styled.p`
   font-size: var(--font-size-content);
   text-indent: 40px;
   line-height: 2.3;
+  @media (max-width: 1440px) {
+    line-height: 1.8;
+  }
+  @media (max-width: 1024px) {
+    padding-bottom: 20px;
+  }
 `;
 
 export default AboutContent;

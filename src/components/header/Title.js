@@ -11,6 +11,10 @@ const StyledContainer = styled.div`
   align-items: center;
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
+  @media (max-width: 1024px) {
+    border-right: none;
+    padding-top: 10px;
+  }
 `;
 const Name = styled.h1`
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);

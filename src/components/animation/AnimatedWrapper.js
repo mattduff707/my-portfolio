@@ -68,13 +68,21 @@ const StyledWrapper = styled(motion.div)`
   box-shadow: 0px 0px 8px var(--color-shadow);
   border-radius: 0px 0px 25px 25px;
   width: 90%;
-  height: 95%;
+  height: 97%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+
   margin: 0px auto;
   position: relative;
+  @media (max-width: 720px) {
+    width: 95%;
+  }
+  @media (max-width: 500px) {
+    height: auto;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
 `;
 const StyledWrapperBottom = styled(StyledWrapper)`
   border: 3px solid var(--color-secondary);

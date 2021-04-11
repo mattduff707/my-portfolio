@@ -183,6 +183,12 @@ const ContentContainerWrapper = styled.div`
 
   height: 75%;
   width: 95%;
+  @media (max-width: 1024px) {
+    align-items: flex-start;
+  }
+  @media (max-width: 500px) {
+    height: 80%;
+  }
 `;
 
 export default About;

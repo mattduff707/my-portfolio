@@ -30,7 +30,8 @@ const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
 };
 
 const PictureContainer = styled.div`
-  width: 47.5%;
+  /* width: 47.5%; */
+  flex: 1 1;
   height: 100%;
   max-height: 100%;
   padding: 20px;
@@ -56,7 +57,7 @@ const Image = styled.img`
 `;
 const Connector = styled.div`
   height: 10px;
-  width: 5%;
+  width: var(--connector-length);
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   border-top: 2px solid var(--color-secondary);
   border-bottom: 2px solid var(--color-secondary);
@@ -66,7 +67,8 @@ const Connector = styled.div`
   }
 `;
 const AboutContentContainer = styled.article`
-  width: 47.5%;
+  /* width: 47.5%; */
+  flex: 1 1;
   height: 100%;
   border: 2px solid var(--color-secondary);
   box-shadow: 0px 0px 15px var(--color-shadow);

@@ -64,13 +64,14 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
-  padding-top: 40px;
+  padding-top: 20px;
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 90%;
 `;
 
 const StackContainer = styled.div`
@@ -80,8 +81,8 @@ const StackContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1 1;
   padding: 10px 20px;
-  width: 300px;
 `;
 
 const StackHeader = styled.h3`
@@ -123,17 +124,17 @@ const Icon = styled.i`
 
 const Image = styled.img`
   width: 100%;
-  max-width: 600px;
   height: auto;
   border-radius: 50%;
   border: 4px solid var(--color-secondary);
   box-shadow: 0px 0px 15px var(--color-shadow);
   z-index: 1;
+  flex: 1 1;
 `;
 
 const Connector = styled.div`
-  height: ${(props) => (props.vertical ? "80px" : `12px`)};
-  width: ${(props) => (props.vertical ? "12px" : `80px`)};
+  height: ${(props) => (props.vertical ? "var(--connector-length)" : `12px`)};
+  width: ${(props) => (props.vertical ? "12px" : `var(--connector-length)`)};
   box-shadow: 0 0 8px var(--color-shadow);
   ${(props) => {
     if (props.vertical) {

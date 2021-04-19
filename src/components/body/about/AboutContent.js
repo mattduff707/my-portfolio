@@ -52,6 +52,7 @@ const StyledText = styled.p`
   font-size: var(--font-size-content);
   text-indent: 40px;
   line-height: 2.3;
+
   @media (max-width: 1440px) {
     line-height: 1.8;
   }

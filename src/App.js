@@ -48,6 +48,9 @@ const GlobalStyle = createGlobalStyle`
   --toggle-button-width: 120px;
   --toggle-button-padding: 5px 5px;
 
+  // Connector
+  --connector-length: 40px;
+
   @media (max-width: 500px) {
   --link-container-width: 110px;
   --link-container-height: 50px;
@@ -72,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
   --link-container-width: 140px;
   --link-container-height: 50px;
 
-  --font-size-content: 1.3rem;
+  --font-size-content: 1.2rem;
 
   --font-size-heading: 1.8rem;
 

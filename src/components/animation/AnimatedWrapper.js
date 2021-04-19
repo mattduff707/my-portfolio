@@ -72,8 +72,8 @@ const StyledWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin: 0px auto;
+  padding: 0px 30px;
   position: relative;
   @media (max-width: 720px) {
     width: 95%;

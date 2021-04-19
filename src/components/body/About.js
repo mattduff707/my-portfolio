@@ -10,6 +10,7 @@ const About = () => {
   const { devObj, personObj } = aboutData;
   const person = "person";
   const developer = "developer";
+  const defaultKey = 0;
 
   const returnActiveKeyVal = (obj) => {
     const activeKeyVal = Object.entries(obj).filter(([key, value]) => {
@@ -62,7 +63,6 @@ const About = () => {
     return newArr;
   };
 
-  const defaultKey = 0;
   const [activeKey, setActiveKey] = useState(defaultKey);
   const [activeObj, setActiveObj] = useState(defaultActive(devObj, activeKey));
   const [activeContent, setActiveContent] = useState(

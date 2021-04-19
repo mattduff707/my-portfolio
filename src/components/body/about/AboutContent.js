@@ -47,7 +47,7 @@ const StyledTitle = styled.h3`
   }
 `;
 const StyledText = styled.p`
-  color: var(--color-text-primary);
+  color: var(--color-alternative);
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-content);
   text-indent: 40px;

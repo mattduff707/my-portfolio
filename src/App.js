@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   //color
   --color-primary: hsl(226, 45%, 15%);
   --color-secondary: hsl(225, 46%, 25%);
-  --color-alternative: hsl(225, 46%, 70%);
+  --color-alternative: hsl(225, 46%, 85%);
   --color-shadow: hsl(226, 45%, 3%);
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
@@ -49,7 +49,7 @@ const GlobalStyle = createGlobalStyle`
   --toggle-button-padding: 5px 5px;
 
   @media (max-width: 500px) {
-    --link-container-width: 110px;
+  --link-container-width: 110px;
   --link-container-height: 50px;
   }
   @media ${device.laptop} {

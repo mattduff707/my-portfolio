@@ -172,6 +172,7 @@ const StyledCoolToggle = styled(CoolToggle)`
   padding: var(--toggle-button-padding);
 `;
 
+// Test for accessibility
 const Radio = styled.input`
   position: absolute;
   visibility: hidden;
@@ -180,7 +181,7 @@ const ContentContainerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /* border: 2px solid yellow; */
   height: 75%;
   width: 95%;
   @media (max-width: 1024px) {

@@ -13,7 +13,11 @@ const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
       <PictureContainer>
         <Image src={activeContent[0][1].picture} alt="test" />
       </PictureContainer>
-      <Connector />
+      <ConnectorContainer>
+        <Connector />
+        <Connector />
+        <Connector />
+      </ConnectorContainer>
       <AboutContentContainer>
         <AboutContent activeContent={activeContent} />
         <ButtonWrapper>
@@ -30,8 +34,8 @@ const ContentContainer = ({ activeContent, incrementKey, decrementKey }) => {
 };
 
 const PictureContainer = styled.div`
-  /* width: 47.5%; */
-  flex: 1 1;
+  width: 50%;
+  /* flex: 1 1; */
   height: 100%;
   max-height: 100%;
   padding: 20px;
@@ -55,6 +59,12 @@ const Image = styled.img`
   border-radius: 20px;
   border: 3px solid var(--color-secondary);
 `;
+const ConnectorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+`;
 const Connector = styled.div`
   height: 10px;
   width: var(--connector-length);
@@ -67,8 +77,8 @@ const Connector = styled.div`
   }
 `;
 const AboutContentContainer = styled.article`
-  /* width: 47.5%; */
-  flex: 1 1;
+  width: 50%;
+  /* flex: 1 1; */
   height: 100%;
   border: 2px solid var(--color-secondary);
   box-shadow: 0px 0px 15px var(--color-shadow);

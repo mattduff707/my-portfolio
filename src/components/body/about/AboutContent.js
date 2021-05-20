@@ -24,6 +24,7 @@ const Wrapper = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
 
   @media (max-width: 500px) {
     padding: 0px 5px;

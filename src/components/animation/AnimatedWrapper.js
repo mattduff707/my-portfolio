@@ -67,13 +67,14 @@ const StyledWrapper = styled(motion.div)`
   border-top: none;
   box-shadow: 0px 0px 8px var(--color-shadow);
   border-radius: 0px 0px 25px 25px;
-  width: 90%;
+  width: 95%;
   height: 97%;
+  max-height: 97%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
-  padding: 0px 30px;
+  padding: 0px 10px;
   position: relative;
   @media (max-width: 720px) {
     width: 95%;
@@ -96,6 +97,7 @@ const FadeWrapper = styled(motion.div)`
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow-y: hidden;
 `;
 
 export default AnimatedWrapper;

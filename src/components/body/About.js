@@ -181,7 +181,7 @@ const ContentContainerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid yellow; */
+  border: 2px solid yellow;
   height: 75%;
   width: 95%;
   @media (max-width: 1024px) {

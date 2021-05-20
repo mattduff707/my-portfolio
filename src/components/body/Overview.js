@@ -9,7 +9,7 @@ const Overview = () => {
     <AnimatedWrapper>
       <PageHeader>Overview</PageHeader>
       <Wrapper>
-        <FlexContainer>
+        <FlexContainer center>
           <StackContainer>
             <StackHeader>Stack</StackHeader>
             <StackList>
@@ -31,11 +31,11 @@ const Overview = () => {
               </StackListItem>
             </StackList>
           </StackContainer>
+          <Connector left />
           <ImageWrapper>
-            <Connector left />
             <Image src={picture} alt="Matt duffy looking like michael cera" />
-            <Connector />
           </ImageWrapper>
+          <Connector />
           <StackContainer>
             <StackHeader>Skills</StackHeader>
             <StackList>
@@ -45,17 +45,23 @@ const Overview = () => {
             </StackList>
           </StackContainer>
         </FlexContainer>
-        <Connector vertical />
-        <DescriptionContainer>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            nihil distinctio vitae incidunt perferendis quod officiis voluptates
-            dicta? Ducimus aut perferendis culpa amet officiis iure architecto
-            nihil corporis, vero sapiente. Cupiditate nisi totam voluptatibus
-            atque iusto deleniti et, enim ratione id quisquam. Laboriosam sequi
-            harum ullam! Voluptatum laboriosam officiis nesciunt exercitationem,
-          </Text>
-        </DescriptionContainer>
+        <FlexContainer column>
+          <Connector vertical />
+          <DescriptionContainer>
+            <h2 style={{ fontSize: "30px" }}>Matthew Duffy</h2>
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur nihil distinctio vitae incidunt perferendis quod
+              officiis voluptates dicta? Ducimus aut perferendis culpa amet
+              officiis iure architecto nihil corporis, vero sapiente. Cupiditate
+              nisi totam voluptatibus atque iusto deleniti et, enim ratione id
+              quisquam. Laboriosam sequi harum ullam! Voluptatum laboriosam
+              officiis nesciunt exercitationem Lorem, ipsum dolor sit amet
+              consectetur adipisicing elit. Velit, harum. Voluptatem ratione
+              odit molestiae enim provident fugiat! Est, illum neque!
+            </Text>
+          </DescriptionContainer>
+        </FlexContainer>
       </Wrapper>
     </AnimatedWrapper>
   );
@@ -66,21 +72,24 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   padding-top: 20px;
+  border: 2px solid yellow;
 `;
 
 const FlexContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: ${(props) => (props.column ? "column" : "row")};
+  justify-content: ${(props) => (props.center ? "center" : "flex-start")};
   align-items: center;
-  width: 100%;
 
-  /* border: 2px solid yellow; */
+  height: 50%;
+  width: 100%;
+  border: 2px solid blue;
 `;
 
 const StackContainer = styled.div`
-  width: 30%;
   border: 2px solid var(--color-secondary);
   border-radius: 20px;
   box-shadow: 0px 0px 15px var(--color-shadow);
@@ -88,7 +97,9 @@ const StackContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10px 20px;
-  flex: 1 2;
+  //flex: 1 2 150px;
+  width: 250px;
+  height: 100%;
 `;
 
 const StackHeader = styled.h3`
@@ -121,7 +132,6 @@ const Icon = styled.i`
   height: auto;
   margin-right: 8px;
   text-align: center;
-
   background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -131,14 +141,16 @@ const Icon = styled.i`
 const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
-  max-width: 800px;
-  height: auto;
+  //flex: 1 2 150px;
+  max-width: 500px;
+  height: 100%;
+  border: 2px solid red;
+  flex-shrink: 3;
 `;
 const Image = styled.img`
   display: block;
   width: 100%;
-  flex: 2 1;
-  height: auto;
+  height: 100%;
   border-radius: 50%;
   border: 4px solid var(--color-secondary);
   box-shadow: 0px 0px 15px var(--color-shadow);
@@ -148,6 +160,8 @@ const Image = styled.img`
 const Connector = styled.div`
   height: ${(props) => (props.vertical ? "var(--connector-length)" : `12px`)};
   width: ${(props) => (props.vertical ? "12px" : `var(--connector-length)`)};
+  /* flex: 1 10; */
+  align-self: center;
   box-shadow: 0 0 8px var(--color-shadow);
   ${(props) => {
     if (props.vertical) {
@@ -173,10 +187,14 @@ const Connector = styled.div`
 `;
 
 const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 1400px;
   height: auto;
-  padding: 40px;
+  padding: 10px 40px;
   font-family: var(--font-family-secondary);
   border: 2px solid var(--color-secondary);
   box-shadow: 0px 0px 15px var(--color-shadow);

@@ -11,9 +11,11 @@ const StyledContainer = styled.div`
   align-items: center;
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     border-right: none;
     padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-secondary);
   }
 `;
 const Name = styled.h1`

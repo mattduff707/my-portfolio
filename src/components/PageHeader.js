@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const PageHeader = ({ children }) => {
+const PageHeader = ({ className, children }) => {
   return (
-    <HeaderContainer>
+    <HeaderContainer className={className}>
       <Header>{children}</Header>
     </HeaderContainer>
   );

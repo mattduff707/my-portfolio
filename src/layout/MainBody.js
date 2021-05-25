@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Switch, Route, useLocation } from "react-router-dom";
-import Overview from "../components/body/Overview";
+import OverviewTwo from "../components/body/OverviewTwo";
 import About from "../components/body/About";
 import Projects from "../components/body/Projects";
 import ProjectDetails from "../components/body/projects/ProjectDetails";
@@ -21,7 +21,7 @@ const MainBody = () => {
     <StyledMain>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route exact path="/" component={Overview} />
+          <Route exact path="/" component={OverviewTwo} />
           <Route path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
           <Route path="/projects/duffy-web-brain">

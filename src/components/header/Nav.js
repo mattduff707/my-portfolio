@@ -9,6 +9,7 @@ const NavWrapper = styled.nav`
   @media (max-width: 1024px) {
     margin-left: 0;
   }
+  /* border: 2px solid blue; */
 `;
 const NavUl = styled.ul`
   display: flex;

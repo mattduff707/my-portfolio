@@ -28,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
 
 
   //nav
-  --font-size-nav: 1.2rem;
-  --link-container-width: 130px;
+  --font-size-nav: 1rem;
+  --link-container-width: 110px;
   --link-container-height: 50px;
 
     // content
@@ -49,13 +49,23 @@ const GlobalStyle = createGlobalStyle`
   --toggle-button-padding: 5px 5px;
 
   // Connector
-  --connector-length: 60px;
+  --connector-length: 20px;
+  --connector-width: 10px;
+
+    @media (min-width: 500px){
+    --connector-length: 30px;
+    --connector-width: 10px;
+    }
+    @media (min-width: 768px){
+      --connector-length: 40px;
+    --connector-width: 12px;
+    }
+    @media (min-width: 1440px) {
+      --connector-length: 60px;
+    --connector-width: 14px;
+    }
 
 
-  @media (max-width: 500px) {
-  --link-container-width: 110px;
-  --link-container-height: 50px;
-  }
   @media ${device.laptop} {
     --font-size-content: 1.1rem;
     --grid-size: 110px 1fr;
@@ -63,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
 
   @media ${device.laptopL} {
     --font-size-content: 1.1rem;
-    --connector-width: 10%;
+    
   }
 
   @media ${device.desktop} {
@@ -123,7 +133,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const GridWrapper = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-rows: var(--grid-size);
   grid-template-columns: 1fr;

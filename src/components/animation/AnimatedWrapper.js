@@ -74,16 +74,17 @@ const StyledWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
-  padding: 0px 10px;
+  /* padding: 0px 10px; */
+  /* padding-bottom: 10px; */
   position: relative;
   @media (max-width: 720px) {
     width: 95%;
   }
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     height: auto;
     padding-bottom: 15px;
     margin-bottom: 10px;
-  }
+  } */
 `;
 const StyledWrapperBottom = styled(StyledWrapper)`
   border: 3px solid var(--color-secondary);

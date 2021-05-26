@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const PageHeader = ({ className, children }) => {
+const PageHeader = ({ className, children, title }) => {
   return (
     <HeaderContainer className={className}>
-      <Header>{children}</Header>
+      <Header>{title || children}</Header>
     </HeaderContainer>
   );
 };
@@ -16,6 +16,9 @@ const HeaderContainer = styled.div`
   border-left: 3px solid var(--color-secondary);
   border-radius: 0px 0px 25px 25px;
   padding: 10px 30px;
+  @media (max-width: 500px) {
+    padding: 10px 20px;
+  } ;
 `;
 
 const Header = styled.h3`

@@ -38,10 +38,11 @@ const StylishConnector = styled.div`
   }
 `;
 
-const Connector = ({ vertical, left, noDisplayAt }) => {
+const Connector = ({ vertical, left, noDisplayAt, className }) => {
   return (
     <>
       <StylishConnector
+        className={className}
         noDisplayAt={noDisplayAt}
         vertical={vertical}
         left={left}

@@ -98,7 +98,7 @@ const FadeWrapper = styled(motion.div)`
   align-items: center;
   height: 100%;
   width: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
 `;
 
 export default AnimatedWrapper;

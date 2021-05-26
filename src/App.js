@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
   --font-size-content: 1rem;
 
       //headings
-  --font-size-heading: 1.5rem;
+  --font-size-heading: 1.2rem;
 
     //arrow buttons
   --arrow-font-size: 2rem;
@@ -59,10 +59,12 @@ const GlobalStyle = createGlobalStyle`
     @media (min-width: 768px){
       --connector-length: 40px;
     --connector-width: 12px;
+    --font-size-heading: 1.5rem;
     }
     @media (min-width: 1440px) {
       --connector-length: 60px;
     --connector-width: 14px;
+    --font-size-heading: 1.8rem;
     }
 
 
@@ -88,7 +90,7 @@ const GlobalStyle = createGlobalStyle`
 
   --font-size-content: 1.2rem;
 
-  --font-size-heading: 1.8rem;
+  
 
   --arrow-font-size: 3rem;
   --arrow-button-width: 60px;
@@ -109,7 +111,7 @@ const GlobalStyle = createGlobalStyle`
 
  
 
-  --font-size-heading: 2.2rem;
+  
 
   --arrow-font-size: 4rem;
   --arrow-button-width: 80px;

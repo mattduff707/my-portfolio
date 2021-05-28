@@ -6,6 +6,7 @@ import About from "../components/body/About";
 import Projects from "../components/body/Projects";
 import ProjectDetails from "../components/body/projects/ProjectDetails";
 import { AnimatePresence } from "framer-motion";
+import { projectsData } from "../constants";
 
 const StyledMain = styled.main`
   //background-color: var(--color-primary);
@@ -24,9 +25,12 @@ const MainBody = () => {
           <Route exact path="/" component={OverviewTwo} />
           <Route path="/about" component={About} />
           <Route exact path="/projects" component={Projects} />
-          <Route path="/projects/duffy-web-brain">
-            <ProjectDetails title={"Duffy Web Brain"} />
-          </Route>
+
+          {projectsData.map((project) => (
+            <Route path={project.path}>
+              <ProjectDetails title={project.title} slides={project.slides} />
+            </Route>
+          ))}
         </Switch>
       </AnimatePresence>
     </StyledMain>

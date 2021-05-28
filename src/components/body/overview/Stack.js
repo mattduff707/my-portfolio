@@ -31,7 +31,7 @@ const Stack = () => {
           </StackList>
         </StackWrapper>
         <Separator />
-        <Connector noDisplayAt="1024px" />
+        <Connector left noDisplayAt="1024px" />
         <MainImage noDisplayAt="1024px" />
         <Connector noDisplayAt="1024px" />
         <StackWrapper>

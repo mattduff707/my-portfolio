@@ -55,8 +55,8 @@ export const aboutData = {
 
 export const projectsData = [
   {
-    path: "/projects/duffy-web-brain",
-    title: "Duffy Web Brain",
+    path: "/projects/duffy-web-brain-one",
+    title: "Duffy Web Brain 1",
     subtitle: "Personal notes app",
     stack: ["React", "Gatsbyjs", "PrismJs"],
     description:
@@ -64,25 +64,24 @@ export const projectsData = [
     slides: [
       {
         title: "Overview",
-        content: "I made this project for this reason...",
-        picture: testPic,
+        text: "I made this project for this reason... asdasdasd asd asd sdwqd qwd qwd qwdqw dqwdqwd qdwd qwd qwd qwdasd asd asd asd asd  asd asd ads asd asd ",
+        image: testPic,
       },
       {
         title: "Core Functionality",
-        content: "This is some of the logic I programmed and how the app works",
-        picture: testPicTwo,
+        text: "This is some of the logic I programmed and how the app works",
+        image: testPicTwo,
       },
       {
         title: "Spotlight",
-        content:
-          "This is the feature I am most proud of... This is the biggest challenge I overcame",
-        picture: testPicThree,
+        text: "This is the feature I am most proud of... This is the biggest challenge I overcame",
+        image: testPicThree,
       },
     ],
   },
   {
-    path: "/projects/duffy-web-brain",
-    title: "Duffy Web Brain",
+    path: "/projects/duffy-web-brain-two",
+    title: "Duffy Web Brain 2",
     subtitle: "Personal notes app",
     stack: ["React", "Gatsbyjs", "PrismJs"],
     description:
@@ -90,25 +89,24 @@ export const projectsData = [
     slides: [
       {
         title: "Overview",
-        content: "I made this project for this reason...",
-        picture: testPic,
+        text: "I made this project for this reason...",
+        image: testPic,
       },
       {
         title: "Core Functionality",
-        content: "This is some of the logic I programmed and how the app works",
-        picture: testPicTwo,
+        text: "This is some of the logic I programmed and how the app works",
+        image: testPicTwo,
       },
       {
         title: "Spotlight",
-        content:
-          "This is the feature I am most proud of... This is the biggest challenge I overcame",
-        picture: testPicThree,
+        text: "This is the feature I am most proud of... This is the biggest challenge I overcame",
+        image: testPicThree,
       },
     ],
   },
   {
-    path: "/projects/duffy-web-brain",
-    title: "Duffy Web Brain",
+    path: "/projects/duffy-web-brain-three",
+    title: "Duffy Web Brain 3",
     subtitle: "Personal notes app",
     stack: ["React", "Gatsbyjs", "PrismJs"],
     description:
@@ -116,19 +114,18 @@ export const projectsData = [
     slides: [
       {
         title: "Overview",
-        content: "I made this project for this reason...",
-        picture: testPic,
+        text: "I made this project for this reason...",
+        image: testPic,
       },
       {
         title: "Core Functionality",
-        content: "This is some of the logic I programmed and how the app works",
-        picture: testPicTwo,
+        text: "This is some of the logic I programmed and how the app works",
+        image: testPicTwo,
       },
       {
         title: "Spotlight",
-        content:
-          "This is the feature I am most proud of... This is the biggest challenge I overcame",
-        picture: testPicThree,
+        text: "This is the feature I am most proud of... This is the biggest challenge I overcame",
+        image: testPicThree,
       },
     ],
   },

@@ -60,7 +60,7 @@ export const projectsData = [
     subtitle: "Personal notes app",
     stack: ["React", "Gatsbyjs", "PrismJs"],
     description:
-      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
+      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution! asjdh aksjdh aksjd akjshd kajshd kjakajksjk akhsjdkjahsh sjhdjs jshdjsh",
     slides: [
       {
         title: "Overview",
@@ -83,7 +83,7 @@ export const projectsData = [
     path: "/projects/duffy-web-brain-two",
     title: "Duffy Web Brain 2",
     subtitle: "Personal notes app",
-    stack: ["React", "Gatsbyjs", "PrismJs"],
+    stack: ["React", "Gatsbyjs", "PrismJs", "Tester", "Long Stack Item"],
     description:
       "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
     slides: [

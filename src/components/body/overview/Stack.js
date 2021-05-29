@@ -31,7 +31,7 @@ const Stack = () => {
           </StackList>
         </StackWrapper>
         <Separator />
-        <Connector left noDisplayAt="1024px" />
+        <Connector noDisplayAt="1024px" />
         <MainImage noDisplayAt="1024px" />
         <Connector noDisplayAt="1024px" />
         <StackWrapper>
@@ -110,39 +110,26 @@ const StackTitle = styled.h3`
   -webkit-text-fill-color: transparent;
 
   font-family: var(--font-family-primary);
-  font-size: 1.25rem;
+  font-size: var(--font-size-title);
   /* border: 2px solid blue; */
   display: inline-block;
 
   margin: 0px auto 5px auto;
-  @media (min-width: 500px) {
-    font-size: 1.35rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.8rem;
-  }
 `;
 const StackList = styled.ul`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* border: 2px solid blue; */
   margin-left: auto;
   margin-right: auto;
   list-style: none;
 `;
 const StackItem = styled.li`
-  font-size: 0.9rem;
+  font-size: var(--font-size-subtitle);
   font-family: var(--font-family-secondary);
   color: var(--color-alternative);
   /* border: 2px solid green; */
   /* text-align: center; */
   display: block;
-  @media (min-width: 500px) {
-    font-size: 1.1rem;
-  }
+
   @media (min-width: 1024px) {
-    font-size: 1.35rem;
     padding: 5px 0px;
   }
 `;

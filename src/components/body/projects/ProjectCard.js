@@ -33,9 +33,10 @@ const ProjectSubTitle = styled.h4`
   color: var(--color-alternative);
   font-size: 1rem;
   padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-secondary);
 `;
 const Content = styled.p`
-  color: var(--color-text-primary);
+  color: var(--color-alternative);
   font-size: 1.1rem;
   line-height: 1.5;
   padding-bottom: 15px;

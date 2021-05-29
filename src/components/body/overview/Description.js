@@ -34,16 +34,10 @@ const DescriptionTitle = styled.h3`
   -webkit-text-fill-color: transparent;
 
   font-family: var(--font-family-primary);
-  font-size: 1.25rem;
+  font-size: var(--font-size-title);
   /* border: 2px solid blue; */
   display: inline-block;
   margin-bottom: 5px;
-  @media (min-width: 500px) {
-    font-size: 1.35rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.8rem;
-  }
 `;
 
 const DescriptionText = styled.p`

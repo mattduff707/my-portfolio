@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ProjectCard from "./projects/ProjectCard";
+import ProjectCardTwo from "./projects/ProjectCardTwo";
 import PageHeader from "../PageHeader";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
 import { projectsData } from "../../constants";
@@ -11,24 +11,15 @@ const Projects = () => {
       <AnimatedWrapper>
         <PageHeader>My Projects</PageHeader>
         <ProjectList>
-          {/* <ProjectCard
-            title={"s"}
-            subTitle={"s"}
-            description={"s"}
-            linkToDetails={"s"}
-            linkToGitHub={"s"}
-          />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard /> */}
           {projectsData.map((project, index) => {
             return (
-              <ProjectCard
+              <ProjectCardTwo
                 key={project.title + index}
                 title={project.title}
                 subtitle={project.subtitle}
                 description={project.description}
                 path={project.path}
+                stack={project.stack}
               />
             );
           })}
@@ -47,11 +38,14 @@ const Wrapper = styled.div`
 
 const ProjectList = styled.ul`
   list-style: none;
-  padding: 10px 30px;
+  padding: 10px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1500px;
+  /* border: 2px solid red; */
 `;
 
 export default Projects;

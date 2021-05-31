@@ -105,6 +105,7 @@ const StackContainer = styled.div`
 const StackHeader = styled.h3`
   font-size: 2rem;
   font-family: var(--font-family-primary);
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -132,6 +133,7 @@ const Icon = styled.i`
   height: auto;
   margin-right: 8px;
   text-align: center;
+  background-color: #fa709a;
   background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;

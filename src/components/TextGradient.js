@@ -12,7 +12,7 @@ const TextGradient = ({ children, size, tag, padding }) => {
 const AddGradient = styled.p`
   font-size: ${(props) => props.size};
   padding: ${(props) => props.padding};
-
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 
   background-clip: text;

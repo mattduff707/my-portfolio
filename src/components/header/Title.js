@@ -19,6 +19,7 @@ const StyledContainer = styled.div`
   }
 `;
 const Name = styled.h1`
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;

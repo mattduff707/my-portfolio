@@ -71,6 +71,7 @@ const Title = styled.h3`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-title);
   display: inline-block;
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -96,6 +97,10 @@ const SubTitle = styled.h4`
 const Text = styled.p`
   font-family: var(--font-family-secondary);
   line-height: 18px;
+  @media (min-width: 768px) {
+    line-height: 22px;
+    font-size: 1.1rem;
+  } ;
 `;
 const Stack = styled.ul`
   font-family: var(--font-family-secondary);
@@ -107,6 +112,7 @@ const Stack = styled.ul`
 `;
 const StackItem = styled.li`
   padding: 0px 10px;
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;

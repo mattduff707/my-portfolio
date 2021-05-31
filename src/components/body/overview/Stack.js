@@ -104,6 +104,7 @@ const TitleWrapper = styled.div`
   margin-bottom: 10px;
 `;
 const StackTitle = styled.h3`
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -140,6 +141,7 @@ const Icon = styled.i`
 
   margin-right: 4px;
   text-align: center;
+  background-color: #fa709a;
   background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;

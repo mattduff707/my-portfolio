@@ -10,6 +10,7 @@ const ContentWrapper = styled.section`
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
+
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -73,8 +74,8 @@ const StyledPageHeader = styled(PageHeader)`
 const OverviewTwo = () => {
   return (
     <AnimatedWrapper>
+      <StyledPageHeader>Overview</StyledPageHeader>
       <ContentWrapper>
-        <StyledPageHeader>Overview</StyledPageHeader>
         <ContentFlexItem
           flex={"flex"}
           justify={"center"}

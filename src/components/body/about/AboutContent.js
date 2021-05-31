@@ -35,6 +35,7 @@ const StyledTitle = styled.h3`
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
   font-size: var(--font-size-heading);
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;

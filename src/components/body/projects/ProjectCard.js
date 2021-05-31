@@ -16,8 +16,7 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 const ProjectTitle = styled.h3`
-  background-color: var(--color-text-secondary);
-
+  background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 
   background-clip: text;

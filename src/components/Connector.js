@@ -33,17 +33,27 @@ const StylishConnector = styled.div`
       ? ` background-image: linear-gradient(to left, #fa709a 0%, #fee140 100%);`
       : ` background-color: var(--color-text-primary)`};
 
-  @media (max-width: ${(props) => props.noDisplayAt}) {
+  @media (max-width: ${(props) => props.noDisplayAtMax}) {
+    display: none;
+  }
+  @media (min-width: ${(props) => props.noDisplayAtMin}) {
     display: none;
   }
 `;
 
-const Connector = ({ vertical, left, noDisplayAt, className }) => {
+const Connector = ({
+  vertical,
+  left,
+  noDisplayAtMin,
+  noDisplayAtMax,
+  className,
+}) => {
   return (
     <>
       <StylishConnector
         className={className}
-        noDisplayAt={noDisplayAt}
+        noDisplayAtMin={noDisplayAtMin}
+        noDisplayAtMax={noDisplayAtMax}
         vertical={vertical}
         left={left}
       />

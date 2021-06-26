@@ -15,30 +15,33 @@ const AboutTwo = () => {
           <ImageContainer>
             <Image src={aboutData[0].picture} alt="1" />
           </ImageContainer>
-          <Connector vertical />
+          <Connector noDisplayAtMin="1024px" vertical />
+          <Connector noDisplayAtMax="1023px" />
           <TextContainer>
             <TitleWrapper>
               <Title>{aboutData[0].title}</Title>
             </TitleWrapper>
-            <Text>{aboutData[0].text}</Text>
+            <OverflowContainer>
+              <Text>{aboutData[0].text}</Text>
+            </OverflowContainer>
+            <ControlContainer>
+              <ArrowButton>
+                <Icon className="fas fa-angle-left" />
+              </ArrowButton>
+              <ArrowButton>
+                <Icon className="fas fa-angle-right" />
+              </ArrowButton>
+            </ControlContainer>
           </TextContainer>
         </AboutContainer>
-        <ControlContainer>
-          <ArrowButton>
-            <Icon className="fas fa-angle-left" />
-          </ArrowButton>
-          <ArrowButton>
-            <Icon className="fas fa-angle-right" />
-          </ArrowButton>
-        </ControlContainer>
       </ContentContainer>
     </AnimatedWrapper>
   );
 };
 const ContentContainer = styled.section`
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
-  height: 100%;
+
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
@@ -52,6 +55,13 @@ const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (min-width: 769px) {
+    max-width: 600px;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    max-width: 100%;
+  }
 `;
 const ImageContainer = styled.div`
   width: auto;
@@ -60,6 +70,10 @@ const ImageContainer = styled.div`
   border-radius: 20px;
   border: 2px solid var(--color-secondary);
   box-shadow: 0px 0px 8px var(--color-shadow);
+  @media (min-width: 1024px) {
+    height: 100%;
+    width: 50%;
+  }
 `;
 const Image = styled.img`
   width: 100%;
@@ -68,6 +82,10 @@ const Image = styled.img`
   border-radius: 20px;
   border: 2px solid var(--color-secondary);
   box-shadow: 0px 0px 8px var(--color-shadow);
+`;
+const OverflowContainer = styled.div`
+  overflow-y: auto;
+  padding: 0px 0px 10px 0px;
 `;
 const TextContainer = styled.article`
   width: 100%;
@@ -111,8 +129,9 @@ const Text = styled.p`
 `;
 const ControlContainer = styled.div`
   width: 100%;
+  border-top: 2px solid var(--color-secondary);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 15px 20px;
   margin-top: auto;
 `;

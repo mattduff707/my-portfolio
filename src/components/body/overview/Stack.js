@@ -31,9 +31,9 @@ const Stack = () => {
           </StackList>
         </StackWrapper>
         <Separator />
-        <Connector noDisplayAt="1024px" />
+        <Connector noDisplayAtMax="1024px" />
         <MainImage noDisplayAt="1024px" />
-        <Connector noDisplayAt="1024px" />
+        <Connector noDisplayAtMax="1024px" />
         <StackWrapper>
           <TitleWrapper>
             <StackTitle>Skills</StackTitle>

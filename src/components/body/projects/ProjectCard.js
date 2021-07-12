@@ -7,7 +7,7 @@ const ListItem = styled.li`
   padding: 20px;
   max-width: 500px;
 `;
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   border: var(--color-secondary) 2px solid;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px #fff;

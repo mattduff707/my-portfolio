@@ -15,6 +15,7 @@ const MainImage = ({ noDisplayAt }) => {
 const ImageContainer = styled.div`
   height: 150px;
   width: 150px;
+  margin: 0px 30px;
   /* margin: 0px auto 0px auto; */
   @media (min-width: 500px) {
     height: 250px;

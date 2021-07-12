@@ -31,9 +31,9 @@ const Stack = () => {
           </StackList>
         </StackWrapper>
         <Separator />
-        <Connector noDisplayAtMax="1024px" />
+        {/* <Connector noDisplayAtMax="1024px" /> */}
         <MainImage noDisplayAt="1024px" />
-        <Connector noDisplayAtMax="1024px" />
+        {/* <Connector noDisplayAtMax="1024px" /> */}
         <StackWrapper>
           <TitleWrapper>
             <StackTitle>Skills</StackTitle>
@@ -88,12 +88,17 @@ const StackWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: baseline;
-
-    border: 2px solid var(--color-secondary);
-    border-radius: 20px;
+    border: 6px solid var(--color-inset);
+    border-right: 6px solid var(--color-inset-light);
+    border-bottom: 6px solid var(--color-inset-light);
+    background-color: var(--color-inset-bg);
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 4px var(--color-shadow);
+    /* border: 2px solid var(--color-secondary);
+    border-radius: 20px; */
     padding: 20px;
     flex: 1;
-    box-shadow: 0px 0px 15px var(--color-shadow);
+    /* box-shadow: 0px 0px 15px var(--color-shadow); */
   }
 `;
 const TitleWrapper = styled.div`

@@ -14,6 +14,7 @@ const StyledMain = styled.main`
   width: 100%;
   grid-area: main;
   overflow: hidden;
+  background-color: var(--color-inset-bg);
 `;
 
 const MainBody = () => {

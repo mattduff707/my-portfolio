@@ -57,7 +57,7 @@ const Front = styled.span`
   padding: ${(props) => props.padding};
   font-size: ${(props) => props.fontSize};
   color: var(--color-alternative);
-  background-color: var(--color-primary);
+  background-color: hsl(226, 45%, 16%);
   will-change: transform;
   transform: translateY(-4px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1),

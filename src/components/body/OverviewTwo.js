@@ -13,7 +13,7 @@ const ContentWrapper = styled.section`
 
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   align-items: center;
 `;
 const ContentFlexItem = styled.div`

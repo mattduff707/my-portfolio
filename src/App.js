@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
   --color-text-secondary: hsl(2, 94%, 75%);
   --font-family-primary: 'Raleway', sans-serif;
   --font-family-secondary: 'Khula', sans-serif;
+  --color-inset: hsl(225, 46%, 20%);
+  --color-inset-light: hsl(225, 46%, 24%);
+  --color-inset-bg: hsl(226, 45%, 13%);
   
 
   //page grid

@@ -63,6 +63,7 @@ const AnimatedWrapper = ({ children, tag, bottom }) => {
 };
 
 const StyledWrapper = styled(motion.div)`
+  background-color: var(--color-primary);
   border: 3px solid var(--color-secondary);
   border-top: none;
   box-shadow: 0px 0px 15px var(--color-shadow);

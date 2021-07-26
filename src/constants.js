@@ -9,7 +9,7 @@ export const aboutData = [
     text: `I've been an avid strength training enthusiast for about 5 years now (With a year-long pause due to COVID-19).
        In fact I worked as a strength coach in Chicago for just over a year.
         It was during my time as a trainer that I caught wind of web development as a career from one of my clients, and the rest is history.
-         Though I no longer pursue strength training as a career, it will likely forever be a passionate hobby of mine.`,
+         Though I no longer pursue strength training as a career, it will likely forever be a passionate hobby of mine. sad kjaslkd jalskjd alksjd laksjd laksjd lkasjd lkasjd laksjd lkasjd lkasjd lakj sdlkasjd laksjd lkasjd lkasjd laksdj `,
     picture: testPic,
   },
   {

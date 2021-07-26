@@ -3,20 +3,19 @@ import styled from "styled-components";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
 import PageHeader from "../PageHeader";
 import CoolButton from "../CoolButton";
-import Connector from "../Connector";
+// import Connector from "../Connector";
 import { aboutData } from "../../constants";
 
 const AboutTwo = () => {
   return (
-    <AnimatedWrapper>
-      <PageHeader>About</PageHeader>
+    <Wrapper>
       <ContentContainer>
+        <PageHeader>About</PageHeader>
         <AboutContainer>
           <ImageContainer>
             <Image src={aboutData[0].picture} alt="1" />
           </ImageContainer>
-          <Connector noDisplayAtMin="1024px" vertical />
-          <Connector noDisplayAtMax="1023px" />
+
           <TextContainer>
             <TitleWrapper>
               <Title>{aboutData[0].title}</Title>
@@ -35,18 +34,36 @@ const AboutTwo = () => {
           </TextContainer>
         </AboutContainer>
       </ContentContainer>
-    </AnimatedWrapper>
+    </Wrapper>
   );
 };
+const Wrapper = styled(AnimatedWrapper)`
+  padding: 20px 20px;
+  /* justify-content: center; */
+  @media (min-width: 1025px) {
+    padding: 0px 20px;
+    justify-content: center;
+  }
+`;
 const ContentContainer = styled.section`
   /* border: 2px solid red; */
+  isolation: isolate;
+  /* z-index: -1; */
   width: 100%;
-
-  padding: 15px 10px 10px;
+  max-width: 2000px;
+  border: 8px solid var(--color-inset);
+  border-right: 8px solid var(--color-inset-light);
+  border-bottom: 8px solid var(--color-inset-light);
+  background-color: var(--color-inset-bg);
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 4px var(--color-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  /* @media (min-width: 1440px) {
+    width: 100%;
+  } */
 `;
 const AboutContainer = styled.div`
   width: 100%;
@@ -55,24 +72,28 @@ const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media (min-width: 769px) {
-    max-width: 600px;
+    max-width: 800px;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     flex-direction: row;
-    max-width: 90%;
+    justify-content: space-around;
+    max-width: 100%;
+    padding: 15px 20px 60px;
   }
 `;
+
 const ImageContainer = styled.div`
   width: auto;
-
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
   border-radius: 20px;
-  border: 2px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  @media (min-width: 1024px) {
+  /* border: 2px solid var(--color-secondary); */
+  /* box-shadow: 0px 0px 8px var(--color-shadow); */
+  @media (min-width: 1025px) {
     height: 100%;
     width: 50%;
+    padding-right: 10px;
   }
 `;
 const Image = styled.img`
@@ -80,37 +101,39 @@ const Image = styled.img`
   height: 100%;
   display: block;
   border-radius: 20px;
-  border: 2px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px var(--color-shadow);
+  border: 4px solid var(--color-secondary);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
   object-fit: cover;
 `;
 const OverflowContainer = styled.div`
   overflow-y: auto;
   padding: 0px 0px 10px 0px;
+  @media (max-width: 1025px) {
+    padding: 10px 10px;
+  }
 `;
 const TextContainer = styled.article`
   width: 100%;
   height: 100%;
-  border: 6px solid var(--color-inset);
-  border-right: 6px solid var(--color-inset-light);
-  border-bottom: 6px solid var(--color-inset-light);
-  background-color: var(--color-inset-bg);
-  border-radius: 15px;
-  box-shadow: inset 0px 0px 4px var(--color-shadow);
-  /* border-style: inset; */
-  /* box-shadow: 0px 0px 8px var(--color-shadow); */
-  padding: 10px;
+
+  padding-left: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     width: 50%;
+  }
+  @media (max-width: 1025px) {
+    padding: 10px 0px 0px 0px;
   }
 `;
 const TitleWrapper = styled.div`
-  border-bottom: 2px solid var(--color-secondary);
-  padding: 0px 20px 5px;
+  border: 2px solid var(--color-secondary);
+  padding: 10px 20px;
+  box-shadow: 0px 0px 8px var(--color-shadow);
+  border-radius: 20px;
   margin-bottom: 5px;
+  background-color: var(--color-primary);
 `;
 const Title = styled.h3`
   display: inline-block;

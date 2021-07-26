@@ -35,29 +35,21 @@ const childVariants = {
   bottomExit: { opacity: 0, transition: { delay: 0.2 } },
 };
 
-const AnimatedWrapper = ({ children, tag, bottom }) => {
+const AnimatedWrapper = ({ children, tag, bottom, className }) => {
   if (bottom) {
     return (
-      <StyledWrapperBottom
-        initial="bottomInitial"
-        animate="bottomEnter"
-        as={tag}
-        exit="bottomExit"
-        variants={variants}
-      >
-        <FadeWrapper variants={childVariants}>{children}</FadeWrapper>
+      <StyledWrapperBottom initial="bottomInitial" animate="bottomEnter" as={tag} exit="bottomExit" variants={variants}>
+        <FadeWrapper className={className} variants={childVariants}>
+          {children}
+        </FadeWrapper>
       </StyledWrapperBottom>
     );
   }
   return (
-    <StyledWrapper
-      initial="initial"
-      animate="enter"
-      as={tag}
-      exit="exit"
-      variants={variants}
-    >
-      <FadeWrapper variants={childVariants}>{children}</FadeWrapper>
+    <StyledWrapper initial="initial" animate="enter" as={tag} exit="exit" variants={variants}>
+      <FadeWrapper className={className} variants={childVariants}>
+        {children}
+      </FadeWrapper>
     </StyledWrapper>
   );
 };

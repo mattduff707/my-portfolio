@@ -9,15 +9,20 @@ const PageHeader = ({ className, children, title }) => {
   );
 };
 const HeaderContainer = styled.div`
+  min-width: 200px;
+  z-index: 10;
+  transform: translateY(-20px);
+  background-color: var(--color-primary);
   display: flex;
   justify-content: center;
-  border-bottom: 3px solid var(--color-secondary);
-  border-right: 3px solid var(--color-secondary);
-  border-left: 3px solid var(--color-secondary);
-  border-radius: 0px 0px 25px 25px;
+  border: 3px solid var(--color-secondary);
+
+  border-radius: 25px;
+  box-shadow: 0px 10px 8px -6px var(--color-shadow);
   padding: 10px 30px;
   @media (max-width: 500px) {
     padding: 10px 20px;
+    min-width: 100px;
   } ;
 `;
 

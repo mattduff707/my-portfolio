@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   --color-primary: hsl(226, 45%, 15%);
   --color-secondary: hsl(225, 46%, 25%);
   --color-alternative: hsl(225, 46%, 85%);
-  --color-shadow: hsl(226, 45%, 3%);
+  --color-shadow: hsl(226, 45%, 8%);
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
   --font-family-primary: 'Raleway', sans-serif;
@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
       //headings
   --font-size-title: 1.25rem;
   --font-size-subtitle: 1rem;
+  --font-size-heading: 1.3rem;
 
     //arrow buttons
   --arrow-font-size: 2rem;
@@ -65,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     @media (min-width: 768px){
       --connector-length: 40px;
       --connector-width: 12px;
-      --font-size-heading: 1.5rem;
+      
     
     }
     @media (min-width: 1024px){

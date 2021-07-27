@@ -11,7 +11,7 @@ const PageHeader = ({ className, children, title }) => {
 const HeaderContainer = styled.div`
   min-width: 200px;
   z-index: 10;
-  transform: translateY(-20px);
+  transform: translateY(-32px);
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;

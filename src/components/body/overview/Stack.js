@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MainImage from "./MainImage";
-import Connector from "../../Connector";
 
 const Stack = () => {
   return (
@@ -31,9 +30,9 @@ const Stack = () => {
           </StackList>
         </StackWrapper>
         <Separator />
-        {/* <Connector noDisplayAtMax="1024px" /> */}
+
         <MainImage noDisplayAt="1024px" />
-        {/* <Connector noDisplayAtMax="1024px" /> */}
+
         <StackWrapper>
           <TitleWrapper>
             <StackTitle>Skills</StackTitle>
@@ -64,16 +63,17 @@ const Stack = () => {
 
 const StackContainer = styled.div`
   padding: 5px 10px 5px 10px;
-  width: 95%;
-  border: 2px solid var(--color-secondary);
-  border-radius: 20px;
-  box-shadow: 0px 0px 15px var(--color-shadow);
+  width: 100%;
+  /* border: 2px solid red; */
+  /* border: 2px solid var(--color-secondary); */
+  /* border-radius: 20px; */
+  /* box-shadow: 0px 0px 15px var(--color-shadow); */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   max-width: 900px;
   @media (min-width: 1025px) {
-    border: none;
+    /* border: none; */
     box-shadow: none;
     padding: 0px;
     max-width: 1100px;
@@ -88,12 +88,12 @@ const StackWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    border: 6px solid var(--color-inset);
+    /* border: 6px solid var(--color-inset);
     border-right: 6px solid var(--color-inset-light);
     border-bottom: 6px solid var(--color-inset-light);
     background-color: var(--color-inset-bg);
     border-radius: 15px;
-    box-shadow: inset 0px 0px 4px var(--color-shadow);
+    box-shadow: inset 0px 0px 4px var(--color-shadow); */
     /* border: 2px solid var(--color-secondary);
     border-radius: 20px; */
     padding: 20px;
@@ -103,7 +103,11 @@ const StackWrapper = styled.div`
 `;
 const TitleWrapper = styled.div`
   width: 100%;
-  border-bottom: 2px solid var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  padding: 10px 20px;
+  box-shadow: 0px 0px 8px var(--color-shadow);
+  border-radius: 20px;
+  background-color: var(--color-primary);
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
@@ -120,7 +124,7 @@ const StackTitle = styled.h3`
   /* border: 2px solid blue; */
   display: inline-block;
 
-  margin: 0px auto 5px auto;
+  /* margin: 0px auto 5px auto; */
 `;
 const StackList = styled.ul`
   margin-left: auto;
@@ -158,7 +162,7 @@ const Icon = styled.i`
   /* border: 2px solid yellow; */
 `;
 const Separator = styled.div`
-  height: 100px;
+  height: 120px;
   width: 2px;
   background-color: var(--color-secondary);
   @media (min-width: 1025px) {

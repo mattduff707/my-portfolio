@@ -29,10 +29,10 @@ const ImageContainer = styled.div`
     height: 500px;
     width: 500px;
   }
-  @media (min-width: 1800px) {
+  /* @media (min-width: 1800px) {
     height: 600px;
     width: 600px;
-  }
+  } */
   ${(props) => {
     return `
         @media(max-width: ${props.noDisplayAt}){

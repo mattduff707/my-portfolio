@@ -38,7 +38,7 @@ const AboutTwo = () => {
   );
 };
 const Wrapper = styled(AnimatedWrapper)`
-  padding: 20px 20px;
+  padding: 30px 20px;
   /* justify-content: center; */
   @media (min-width: 1025px) {
     padding: 0px 20px;
@@ -47,6 +47,7 @@ const Wrapper = styled(AnimatedWrapper)`
 `;
 const ContentContainer = styled.section`
   /* border: 2px solid red; */
+
   isolation: isolate;
   /* z-index: -1; */
   width: 100%;
@@ -72,11 +73,12 @@ const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin-top: -20px;
   @media (min-width: 769px) {
     max-width: 800px;
   }
   @media (min-width: 1025px) {
+    margin-top: 0px;
     flex-direction: row;
     justify-content: space-around;
     max-width: 100%;

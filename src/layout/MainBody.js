@@ -28,7 +28,7 @@ const MainBody = () => {
           <Route exact path="/projects" component={Projects} />
 
           {projectsData.map((project) => (
-            <Route path={project.path}>
+            <Route key={project.title} path={project.path}>
               <ProjectDetails title={project.title} slides={project.slides} />
             </Route>
           ))}

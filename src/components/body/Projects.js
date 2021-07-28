@@ -8,7 +8,7 @@ import { projectsData } from "../../constants";
 const Projects = () => {
   return (
     <Wrapper>
-      <AnimatedWrapper>
+      <ContentContainer>
         <PageHeader>My Projects</PageHeader>
         <ProjectList>
           {projectsData.map((project, index) => {
@@ -24,27 +24,51 @@ const Projects = () => {
             );
           })}
         </ProjectList>
-      </AnimatedWrapper>
+      </ContentContainer>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+const Wrapper = styled(AnimatedWrapper)`
+  padding: 30px 20px;
+  /* justify-content: center; */
+  @media (min-width: 1100px) {
+    padding: 0px 20px;
+    justify-content: center;
+  }
 `;
+const ContentContainer = styled.section`
+  width: 100%;
+  max-width: 1800px;
+  /* padding: 20px 0px; */
+  border: 8px solid var(--color-inset);
+  border-right: 8px solid var(--color-inset-light);
+  border-bottom: 8px solid var(--color-inset-light);
+  background-color: var(--color-inset-bg);
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 4px var(--color-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+// const Wrapper = styled.div`
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+// `;
 
 const ProjectList = styled.ul`
   list-style: none;
-  padding: 10px 0px;
+  padding: 30px 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   width: 100%;
   max-width: 1500px;
+  margin-bottom: -50px;
   /* border: 2px solid red; */
 `;
 

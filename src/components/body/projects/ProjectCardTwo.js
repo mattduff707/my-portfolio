@@ -2,52 +2,38 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CoolButton from "../../CoolButton";
+import PageHeader from "../../PageHeader";
 
 const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
   return (
     <CardContainer>
-      <FlexWrap
-        style={{
-          marginBottom: "5px",
-          paddingBottom: "5px",
-          borderBottom: "2px solid var(--color-secondary)",
-        }}
-      >
-        <Title>{title}</Title>
+      <TitleWrap>
+        <PageHeader topShadow>{title}</PageHeader>
         <SubTitle>{subtitle}</SubTitle>
-      </FlexWrap>
-      <FlexWrap
-        style={{
-          paddingTop: "5px",
-          height: "100%",
-          borderBottom: "2px solid var(--color-secondary)",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
+      </TitleWrap>
+      <ContentWrap>
         <Text>{description}</Text>
         <Stack>
           {stack.map((e) => (
-            <StackItem>{e}</StackItem>
+            <StackItem key={e}>{e}</StackItem>
           ))}
         </Stack>
-      </FlexWrap>
+      </ContentWrap>
 
-      <FlexWrap style={{ marginTop: "auto" }}>
+      <LinkWrap>
         <ButtonWrapper>
           <Link to={path} style={{ marginRight: "10px" }}>
             <StyledCoolButton>
               Details <i className="fas fa-arrow-right"></i>
             </StyledCoolButton>
           </Link>
-          <Link>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">
             <StyledCoolButton>
               GitHub <i className="fab fa-github"></i>
             </StyledCoolButton>
-          </Link>
+          </a>
         </ButtonWrapper>
-      </FlexWrap>
+      </LinkWrap>
     </CardContainer>
   );
 };
@@ -55,14 +41,12 @@ const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
 const CardContainer = styled.li`
   width: 100%;
   max-width: 450px;
-  padding: 10px 20px;
-  margin: 10px;
-  border: 6px solid var(--color-inset);
-  border-right: 6px solid var(--color-inset-light);
-  border-bottom: 6px solid var(--color-inset-light);
-  background-color: var(--color-inset-bg);
-  border-radius: 15px;
-  box-shadow: inset 0px 0px 4px var(--color-shadow);
+  padding: 0px 20px 10px;
+  margin: 0px 10px 50px;
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
   /* border: 2px solid var(--color-secondary);
   border-radius: 20px;
   box-shadow: 0px 0px 10px var(--color-shadow); */
@@ -73,32 +57,32 @@ const FlexWrap = styled.div`
   /* border: 2px solid yellow; */
   color: var(--color-alternative);
 `;
-const Title = styled.h3`
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-title);
-  display: inline-block;
-  background-color: #fa709a;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* @media (min-width: 500px) {
-    font-size: 1.35rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.5rem;
-  } */
+const TitleWrap = styled(FlexWrap)`
+  margin-bottom: 5px;
+  border-bottom: 2px solid var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const SubTitle = styled.h4`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-subtitle);
+  padding-bottom: 15px;
   /* @media (min-width: 500px) {
     font-size: 1.1rem;
   }
   @media (min-width: 1024px) {
     font-size: 1.2rem;
   } */
+`;
+const ContentWrap = styled(FlexWrap)`
+  padding-top: 5px;
+  height: 100%;
+  border-bottom: 2px solid var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 const Text = styled.p`
   font-family: var(--font-family-secondary);
@@ -117,12 +101,16 @@ const Stack = styled.ul`
   padding: 5px 0px;
 `;
 const StackItem = styled.li`
-  padding: 0px 10px;
+  padding-right: 10px;
   background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`;
+const LinkWrap = styled(FlexWrap)`
+  margin-top: auto;
+  padding: 5px 0px;
 `;
 const ButtonWrapper = styled.div`
   padding: 12px 0px 5px;

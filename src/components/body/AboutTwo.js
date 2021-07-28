@@ -48,7 +48,7 @@ const ContentContainer = styled.section`
   isolation: isolate;
   /* z-index: -1; */
   width: 100%;
-  max-width: 2000px;
+  max-width: 1800px;
   border: 8px solid var(--color-inset);
   border-right: 8px solid var(--color-inset-light);
   border-bottom: 8px solid var(--color-inset-light);

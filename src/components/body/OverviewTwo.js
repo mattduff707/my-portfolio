@@ -18,7 +18,7 @@ const ContentWrapper = styled.section`
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
-  max-width: 2000px;
+  max-width: 1800px;
   width: 100%;
   border: 8px solid var(--color-inset);
   border-right: 8px solid var(--color-inset-light);

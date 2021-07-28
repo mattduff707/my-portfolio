@@ -77,7 +77,7 @@ const StackContainer = styled.div`
     margin-top: 0px;
   }
   @media (min-width: 1440px) {
-    max-width: 1300px;
+    max-width: 1500px;
   }
 `;
 const StackWrapper = styled.div`

@@ -13,11 +13,16 @@ const MainImage = ({ noDisplayAt }) => {
 };
 
 const ImageContainer = styled.div`
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: auto;
   margin: 0px 30px;
+  max-width: 400px;
+  @media (min-width: 1025px) {
+    height: 100%;
+    width: 33%;
+  }
   /* margin: 0px auto 0px auto; */
-  @media (min-width: 500px) {
+  /* @media (min-width: 500px) {
     height: 250px;
     width: 250px;
   }
@@ -28,7 +33,7 @@ const ImageContainer = styled.div`
   @media (min-width: 1440px) {
     height: 500px;
     width: 500px;
-  }
+  } */
   /* @media (min-width: 1800px) {
     height: 600px;
     width: 600px;
@@ -43,7 +48,8 @@ const ImageContainer = styled.div`
 `;
 const Image = styled.img`
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 50%;
   border: 4px solid var(--color-secondary);

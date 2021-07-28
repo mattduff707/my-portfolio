@@ -28,9 +28,9 @@ const ContentWrapper = styled.section`
   box-shadow: inset 0px 0px 4px var(--color-shadow);
   /* overflow-y: auto; */
   align-items: center;
+  padding: 0px 20px;
 `;
 const ContentFlexItem = styled.div`
-  margin-top: -20px;
   padding: ${(props) => props.padding};
   display: ${(props) => props.flex};
   flex-direction: ${(props) => props.flexDirection};

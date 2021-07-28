@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PageHeader from "../../PageHeader";
 
 const DescriptionContainer = styled.div`
-  width: 95%;
+  width: 100%;
   max-width: 900px;
   /* border: 2px solid red; */
   /* border: 6px solid var(--color-inset);
@@ -15,7 +15,7 @@ const DescriptionContainer = styled.div`
   /* border: 2px solid var(--color-secondary);
   border-radius: 20px;
   box-shadow: 0px 0px 15px var(--color-shadow); */
-  padding: 10px 10px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,7 +57,6 @@ const DescriptionContainer = styled.div`
 
 const DescriptionWrapper = styled.div`
   background-color: var(--color-primary);
-  border-radius: 15px;
   box-shadow: 0px 0px 6px var(--color-shadow);
   border: 2px solid var(--color-secondary);
   border-radius: 20px;

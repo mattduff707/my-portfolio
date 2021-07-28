@@ -67,7 +67,7 @@ const StackContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   max-width: 900px;
-  margin-top: 20px;
+  margin-top: 30px;
   @media (min-width: 1025px) {
     /* border: none; */
     box-shadow: none;

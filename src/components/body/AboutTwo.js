@@ -15,11 +15,8 @@ const AboutTwo = () => {
           <ImageContainer>
             <Image src={aboutData[0].picture} alt="1" />
           </ImageContainer>
-
           <TextContainer>
-            <TitleWrapper>
-              <Title>{aboutData[0].title}</Title>
-            </TitleWrapper>
+            <PageHeader topShadow>{aboutData[0].title}</PageHeader>
             <OverflowContainer>
               <Text>{aboutData[0].text}</Text>
             </OverflowContainer>
@@ -62,6 +59,7 @@ const ContentContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  /* padding-bottom: 20px; */
   /* @media (min-width: 1440px) {
     width: 100%;
   } */
@@ -73,6 +71,7 @@ const AboutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0px 20px 20px;
   /* margin-top: -20px; */
   @media (min-width: 769px) {
     max-width: 800px;
@@ -81,21 +80,23 @@ const AboutContainer = styled.div`
     margin-top: 0px;
     flex-direction: row;
     justify-content: space-around;
-    max-width: 100%;
+    max-width: 1500px;
     padding: 15px 20px 60px;
   }
 `;
 
 const ImageContainer = styled.div`
   width: auto;
-  padding: 0px 10px 10px 10px;
+  /* padding: 0px 10px 10px 10px; */
   border-radius: 20px;
+  padding-bottom: 30px;
   /* border: 2px solid var(--color-secondary); */
   /* box-shadow: 0px 0px 8px var(--color-shadow); */
   @media (min-width: 1025px) {
     height: 100%;
     width: 50%;
-    padding-right: 10px;
+    padding-bottom: 0px;
+    margin-right: 10px;
   }
 `;
 const Image = styled.img`
@@ -117,37 +118,40 @@ const OverflowContainer = styled.div`
 const TextContainer = styled.article`
   width: 100%;
   height: 100%;
-
-  padding-left: 10px;
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (min-width: 1025px) {
     width: 50%;
+    margin-left: 10px;
   }
   @media (max-width: 1025px) {
     padding: 10px 0px 0px 0px;
   }
 `;
-const TitleWrapper = styled.div`
-  border: 2px solid var(--color-secondary);
-  padding: 10px 20px;
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  border-radius: 20px;
-  margin-bottom: 5px;
-  background-color: var(--color-primary);
-`;
-const Title = styled.h3`
-  display: inline-block;
-  background-color: #fa709a;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+// const TitleWrapper = styled.div`
+//   border: 2px solid var(--color-secondary);
+//   padding: 10px 20px;
+//   box-shadow: 0px 0px 8px var(--color-shadow);
+//   border-radius: 20px;
+//   margin-bottom: 5px;
+//   background-color: var(--color-primary);
+// `;
+// const Title = styled.h3`
+//   display: inline-block;
+//   background-color: #fa709a;
+//   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
 
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-title);
-`;
+//   font-family: var(--font-family-primary);
+//   font-size: var(--font-size-title);
+// `;
 const Text = styled.p`
   text-indent: 30px;
   color: var(--color-alternative);

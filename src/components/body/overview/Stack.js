@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import MainImage from "./MainImage";
+import PageHeader from "../../PageHeader";
 
 const Stack = () => {
   return (
     <>
       <StackContainer>
         <StackWrapper>
-          <TitleWrapper>
-            <StackTitle>Stack</StackTitle>
-          </TitleWrapper>
+          <PageHeader topShadow>Stack</PageHeader>
           <StackList>
             <StackItem>
               <Icon className="fab fa-html5" />
@@ -30,13 +29,9 @@ const Stack = () => {
           </StackList>
         </StackWrapper>
         <Separator />
-
         <MainImage noDisplayAt="1024px" />
-
         <StackWrapper>
-          <TitleWrapper>
-            <StackTitle>Skills</StackTitle>
-          </TitleWrapper>
+          <PageHeader topShadow>Skills</PageHeader>
           <StackList>
             <StackItem>
               <Icon className="fab fa-html5" />
@@ -72,12 +67,14 @@ const StackContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   max-width: 900px;
+  margin-top: 20px;
   @media (min-width: 1025px) {
     /* border: none; */
     box-shadow: none;
     padding: 0px;
     max-width: 1100px;
     justify-content: center;
+    margin-top: 0px;
   }
   @media (min-width: 1440px) {
     max-width: 1300px;
@@ -87,45 +84,46 @@ const StackWrapper = styled.div`
   @media (min-width: 1025px) {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     /* border: 6px solid var(--color-inset);
     border-right: 6px solid var(--color-inset-light);
-    border-bottom: 6px solid var(--color-inset-light);
-    background-color: var(--color-inset-bg);
+    border-bottom: 6px solid var(--color-inset-light); */
+    background-color: var(--color-primary);
     border-radius: 15px;
-    box-shadow: inset 0px 0px 4px var(--color-shadow); */
-    /* border: 2px solid var(--color-secondary);
-    border-radius: 20px; */
-    padding: 20px;
+    box-shadow: 0px 0px 6px var(--color-shadow);
+    border: 2px solid var(--color-secondary);
+    border-radius: 20px;
+    padding: 0px 20px 20px 20px;
     flex: 1;
     /* box-shadow: 0px 0px 15px var(--color-shadow); */
   }
 `;
-const TitleWrapper = styled.div`
-  width: 100%;
-  border: 2px solid var(--color-secondary);
-  padding: 10px 20px;
-  box-shadow: 0px 0px 8px var(--color-shadow);
-  border-radius: 20px;
-  background-color: var(--color-primary);
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-`;
-const StackTitle = styled.h3`
-  background-color: #fa709a;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+// const TitleWrapper = styled.div`
+//   width: 100%;
+//   border: 2px solid var(--color-secondary);
+//   padding: 10px 20px;
+//   box-shadow: 0px 0px 8px var(--color-shadow);
+//   border-radius: 20px;
+//   background-color: var(--color-primary);
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 10px;
+//   transform: translateY(-);
+// `;
+// const StackTitle = styled.h3`
+//   background-color: #fa709a;
+//   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
 
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-title);
-  /* border: 2px solid blue; */
-  display: inline-block;
+//   font-family: var(--font-family-primary);
+//   font-size: var(--font-size-title);
+//   /* border: 2px solid blue; */
+//   display: inline-block;
 
-  /* margin: 0px auto 5px auto; */
-`;
+//   /* margin: 0px auto 5px auto; */
+// `;
 const StackList = styled.ul`
   margin-left: auto;
   margin-right: auto;

@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const PageHeader = ({ className, children, title }) => {
+const PageHeader = ({ className, children, title, tag, topShadow }) => {
   return (
-    <HeaderContainer className={className}>
-      <Header>{title || children}</Header>
+    <HeaderContainer topShadow={topShadow} className={className}>
+      <Header as={tag}>{title || children}</Header>
     </HeaderContainer>
   );
 };
@@ -18,8 +18,10 @@ const HeaderContainer = styled.div`
   border: 3px solid var(--color-secondary);
 
   border-radius: 25px;
-  box-shadow: 0px 10px 8px -6px var(--color-shadow);
+  box-shadow: ${(props) =>
+    props.topShadow ? "0px -10px 8px -8px var(--color-shadow)" : "0px 10px 8px -8px var(--color-shadow);"};
   padding: 10px 30px;
+  margin-bottom: -20px;
   @media (max-width: 500px) {
     padding: 10px 20px;
     min-width: 100px;

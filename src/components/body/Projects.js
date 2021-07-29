@@ -30,12 +30,8 @@ const Projects = () => {
 };
 
 const Wrapper = styled(AnimatedWrapper)`
-  padding: 30px 20px;
+  padding: 50px 20px;
   /* justify-content: center; */
-  @media (min-width: 1100px) {
-    padding: 0px 20px;
-    justify-content: center;
-  }
 `;
 const ContentContainer = styled.section`
   width: 100%;
@@ -60,6 +56,7 @@ const ContentContainer = styled.section`
 // `;
 
 const ProjectList = styled.ul`
+  margin-top: 20px;
   list-style: none;
   padding: 30px 0px;
   display: flex;

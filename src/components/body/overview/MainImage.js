@@ -15,12 +15,13 @@ const MainImage = ({ noDisplayAt }) => {
 const ImageContainer = styled.div`
   height: 100%;
   width: auto;
-  margin: 0px 30px;
+  margin-top: 20px;
   max-width: 400px;
   @media (min-width: 1025px) {
-    height: 100%;
+    height: auto;
     width: 33%;
     max-width: none;
+    margin: 20px;
   }
   /* margin: 0px auto 0px auto; */
   /* @media (min-width: 500px) {

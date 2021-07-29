@@ -9,10 +9,6 @@ import Description from "./overview/Description";
 const Wrapper = styled(AnimatedWrapper)`
   padding: 50px 20px;
   /* justify-content: center; */
-  @media (min-width: 1025px) {
-    padding: 0px 20px;
-    justify-content: center;
-  }
 `;
 const ContentWrapper = styled.section`
   /* border: 2px solid red; */

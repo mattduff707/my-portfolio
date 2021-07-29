@@ -9,7 +9,7 @@ const PageHeader = ({ className, children, title, tag, topShadow }) => {
   );
 };
 const HeaderContainer = styled.div`
-  min-width: 200px;
+  /* min-width: 200px; */
   z-index: 10;
   transform: translateY(-32px);
   background-color: var(--color-primary);

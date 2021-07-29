@@ -28,7 +28,7 @@ const Stack = () => {
             </StackItem>
           </StackList>
         </StackWrapper>
-        <Separator />
+
         <MainImage noDisplayAt="1024px" />
         <StackWrapper>
           <PageHeader topShadow>Skills</PageHeader>
@@ -81,22 +81,24 @@ const StackContainer = styled.div`
   }
 `;
 const StackWrapper = styled.div`
-  @media (min-width: 1025px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 6px solid var(--color-inset);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 6px solid var(--color-inset);
     border-right: 6px solid var(--color-inset-light);
     border-bottom: 6px solid var(--color-inset-light); */
-    background-color: var(--color-primary);
-    border-radius: 15px;
-    box-shadow: 0px 0px 6px var(--color-shadow);
-    border: 2px solid var(--color-secondary);
-    border-radius: 20px;
-    padding: 0px 20px 20px 20px;
-    flex: 1;
-    /* box-shadow: 0px 0px 15px var(--color-shadow); */
+  background-color: var(--color-primary);
+  border-radius: 15px;
+  box-shadow: 0px 0px 6px var(--color-shadow);
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
+  padding: 0px 20px 20px 20px;
+  flex: 1;
+  margin: 0px 5px;
+  @media (min-width: 1025px) {
+    margin: 0px;
   }
+  /* box-shadow: 0px 0px 15px var(--color-shadow); */
 `;
 // const TitleWrapper = styled.div`
 //   width: 100%;
@@ -128,6 +130,7 @@ const StackList = styled.ul`
   margin-left: auto;
   margin-right: auto;
   list-style: none;
+  /* border: 2px solid red; */
 `;
 const StackItem = styled.li`
   font-size: var(--font-size-subtitle);
@@ -158,14 +161,6 @@ const Icon = styled.i`
     margin-right: 6px;
   }
   /* border: 2px solid yellow; */
-`;
-const Separator = styled.div`
-  height: 120px;
-  width: 2px;
-  background-color: var(--color-secondary);
-  @media (min-width: 1025px) {
-    display: none;
-  }
 `;
 
 export default Stack;

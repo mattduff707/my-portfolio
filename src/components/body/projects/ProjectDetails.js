@@ -8,50 +8,42 @@ import DetailCard from "./projectDetails/DetailCard";
 
 const ProjectDetails = ({ title, slides }) => {
   return (
-    <FlexWrapper>
-      <Wrapper bottom>
-        <ContentContainer>
-          <PageHeader title={title}>Project Details</PageHeader>
-          <BtnLinkWrap to="/projects">
-            <StyledCoolButton padding="5px 10px" fontSize="1.2rem">
-              <Icon className="fas fa-arrow-left"></Icon>
-              <ButtonText>Back to Projects</ButtonText>
-            </StyledCoolButton>
-          </BtnLinkWrap>
-          <DetailsContainer>
-            {slides.map((slide, index, arr) => {
-              const lastSlideIndex = arr.length - 1;
-              if (index === lastSlideIndex) {
-                return (
-                  <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />
-                );
-              }
-              return (
-                <>
-                  <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />
-                </>
-              );
-            })}
-          </DetailsContainer>
-        </ContentContainer>
-      </Wrapper>
-    </FlexWrapper>
+    <Wrapper>
+      <ContentContainer>
+        <PageHeader title={title}>Project Details</PageHeader>
+        <BtnLinkWrap to="/projects">
+          <StyledCoolButton padding="5px 10px" fontSize="1.2rem">
+            <Icon className="fas fa-arrow-left"></Icon>
+            <ButtonText>Back to Projects</ButtonText>
+          </StyledCoolButton>
+        </BtnLinkWrap>
+        <DetailsContainer>
+          {slides.map((slide, index, arr) => {
+            const lastSlideIndex = arr.length - 1;
+            if (index === lastSlideIndex) {
+              return <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />;
+            }
+            return (
+              <>
+                <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />
+              </>
+            );
+          })}
+        </DetailsContainer>
+      </ContentContainer>
+    </Wrapper>
   );
 };
-const FlexWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  height: 100%;
-  width: 100%;
-`;
+// const FlexWrapper = styled.section`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   height: 100%;
+//   width: 100%;
+// `;
 const Wrapper = styled(AnimatedWrapper)`
-  padding: 30px 20px;
+  padding: 50px 20px;
   /* justify-content: center; */
-  @media (min-width: 1440px) {
-    padding: 0px 20px;
-    justify-content: center;
-  }
 `;
 const ContentContainer = styled.div`
   display: flex;
@@ -109,7 +101,7 @@ const DetailsContainer = styled.div`
   @media (min-width: 1440px) {
     flex-direction: row;
     align-items: stretch;
-    padding: 30px 10px;
+    padding: 20px 10px;
   }
 `;
 

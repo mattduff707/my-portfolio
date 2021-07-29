@@ -35,12 +35,8 @@ const AboutTwo = () => {
   );
 };
 const Wrapper = styled(AnimatedWrapper)`
-  padding: 30px 20px;
+  padding: 50px 20px;
   /* justify-content: center; */
-  @media (min-width: 1025px) {
-    padding: 0px 20px;
-    justify-content: center;
-  }
 `;
 const ContentContainer = styled.section`
   /* border: 2px solid red; */
@@ -65,6 +61,7 @@ const ContentContainer = styled.section`
   } */
 `;
 const AboutContainer = styled.div`
+  margin-top: 20px;
   width: 100%;
   max-width: 500px;
   display: flex;
@@ -81,7 +78,7 @@ const AboutContainer = styled.div`
     flex-direction: row;
     justify-content: space-around;
     max-width: 1500px;
-    padding: 15px 20px 60px;
+    padding: 15px 20px 40px;
   }
 `;
 

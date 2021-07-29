@@ -65,7 +65,7 @@ export const projectsData = [
     slides: [
       {
         title: "Overview",
-        text: "I made this project for this reason... asdasdasd asd asd sdwqd qwd qwd qwdqw dqwdqwd qdwd qwd qwd qwdasd asd asd asd asd  asd asd ads asd asd ",
+        text: "I made this project for this reason... asdasdasd asd asd sdwqd qwd qwd qwdqw dqwdqwd qdwd qwd qwd qwdasd asd asd asd asd  asd asd ads asd asd asd ;askldkas;lkfw peokfpw oek opwekf powekf powekfopwke fpokwepofkw poekfpow kefpowkefp owkefpo kwepfok wepofkpwoekfopwek f 1231 23 asd asd qwd qer dqsd qsdqw eq edd qwd qwe qwe qwewewe wq we",
         image: testPic,
       },
       {

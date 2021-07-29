@@ -5,57 +5,69 @@ import PageHeader from "../../PageHeader";
 import CoolButton from "../../CoolButton";
 import { Link } from "react-router-dom";
 import DetailCard from "./projectDetails/DetailCard";
-import Connector from "../../Connector";
 
 const ProjectDetails = ({ title, slides }) => {
   return (
     <FlexWrapper>
-      <AnimatedWrapper bottom>
-        <PageHeader title={title}>Project Details</PageHeader>
-        <BtnLinkWrap to="/projects">
-          <StyledCoolButton padding="5px 10px" fontSize="1.2rem">
-            <Icon className="fas fa-arrow-left"></Icon>
-            <ButtonText>Back to Projects</ButtonText>
-          </StyledCoolButton>
-        </BtnLinkWrap>
-        <DetailsContainer>
-          {slides.map((slide, index, arr) => {
-            const lastSlideIndex = arr.length - 1;
-            if (index === lastSlideIndex) {
+      <Wrapper bottom>
+        <ContentContainer>
+          <PageHeader title={title}>Project Details</PageHeader>
+          <BtnLinkWrap to="/projects">
+            <StyledCoolButton padding="5px 10px" fontSize="1.2rem">
+              <Icon className="fas fa-arrow-left"></Icon>
+              <ButtonText>Back to Projects</ButtonText>
+            </StyledCoolButton>
+          </BtnLinkWrap>
+          <DetailsContainer>
+            {slides.map((slide, index, arr) => {
+              const lastSlideIndex = arr.length - 1;
+              if (index === lastSlideIndex) {
+                return (
+                  <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />
+                );
+              }
               return (
-                <DetailCard
-                  image={slide.image}
-                  imageAlt={slide.imageAlt}
-                  title={slide.title}
-                  text={slide.text}
-                />
+                <>
+                  <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />
+                </>
               );
-            }
-            return (
-              <>
-                <DetailCard
-                  image={slide.image}
-                  imageAlt={slide.imageAlt}
-                  title={slide.title}
-                  text={slide.text}
-                />
-                <MobileConnector vertical />
-                <DesktopConnector />
-              </>
-            );
-          })}
-        </DetailsContainer>
-      </AnimatedWrapper>
+            })}
+          </DetailsContainer>
+        </ContentContainer>
+      </Wrapper>
     </FlexWrapper>
   );
 };
-
 const FlexWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
   width: 100%;
+`;
+const Wrapper = styled(AnimatedWrapper)`
+  padding: 30px 20px;
+  /* justify-content: center; */
+  @media (min-width: 1440px) {
+    padding: 0px 20px;
+    justify-content: center;
+  }
+`;
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1800px;
+  width: 100%;
+  border: 8px solid var(--color-inset);
+  border-right: 8px solid var(--color-inset-light);
+  border-bottom: 8px solid var(--color-inset-light);
+  background-color: var(--color-inset-bg);
+  border-radius: 15px;
+  box-shadow: inset 0px 0px 4px var(--color-shadow);
+  /* overflow-y: auto; */
+  align-items: center;
+  /* padding: 0px 20px; */
+  /* border: 2px solid red; */
 `;
 const BtnLinkWrap = styled(Link)`
   position: fixed;
@@ -90,28 +102,14 @@ const DetailsContainer = styled.div`
   /* border: red solid 2px; */
   width: 100%;
   max-width: 1800px;
-  padding: 40px 10px;
+  padding: 20px 5px;
   @media (min-width: 768px) {
-    padding: 40px 20px;
+    padding: 20px 0px;
   }
   @media (min-width: 1440px) {
     flex-direction: row;
     align-items: stretch;
-  }
-`;
-
-const DesktopConnector = styled(Connector)`
-  align-self: center;
-  @media (max-width: 1439px) {
-    display: none;
-  }
-  @media (max-width: 1700px) {
-    width: 30px;
-  }
-`;
-const MobileConnector = styled(Connector)`
-  @media (min-width: 1440px) {
-    display: none;
+    padding: 30px 10px;
   }
 `;
 

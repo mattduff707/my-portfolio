@@ -21,7 +21,7 @@ const HeaderContainer = styled.div`
   box-shadow: ${(props) =>
     props.topShadow ? "0px -10px 8px -8px var(--color-shadow)" : "0px 10px 8px -8px var(--color-shadow);"};
   padding: 10px 30px;
-  margin-bottom: -20px;
+  margin-bottom: -32px;
   @media (max-width: 500px) {
     padding: 10px 20px;
     min-width: 100px;

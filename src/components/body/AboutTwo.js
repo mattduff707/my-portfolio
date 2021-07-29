@@ -8,7 +8,7 @@ import { aboutData } from "../../constants";
 
 const AboutTwo = () => {
   return (
-    <Wrapper>
+    <AnimatedWrapper>
       <ContentContainer>
         <PageHeader>About</PageHeader>
         <AboutContainer>
@@ -31,13 +31,10 @@ const AboutTwo = () => {
           </TextContainer>
         </AboutContainer>
       </ContentContainer>
-    </Wrapper>
+    </AnimatedWrapper>
   );
 };
-const Wrapper = styled(AnimatedWrapper)`
-  padding: 50px 20px;
-  /* justify-content: center; */
-`;
+
 const ContentContainer = styled.section`
   /* border: 2px solid red; */
 

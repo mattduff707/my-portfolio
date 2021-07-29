@@ -7,7 +7,7 @@ import { projectsData } from "../../constants";
 
 const Projects = () => {
   return (
-    <Wrapper>
+    <AnimatedWrapper>
       <ContentContainer>
         <PageHeader>My Projects</PageHeader>
         <ProjectList>
@@ -25,14 +25,10 @@ const Projects = () => {
           })}
         </ProjectList>
       </ContentContainer>
-    </Wrapper>
+    </AnimatedWrapper>
   );
 };
 
-const Wrapper = styled(AnimatedWrapper)`
-  padding: 50px 20px;
-  /* justify-content: center; */
-`;
 const ContentContainer = styled.section`
   width: 100%;
   max-width: 1800px;

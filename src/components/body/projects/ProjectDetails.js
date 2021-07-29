@@ -8,7 +8,7 @@ import DetailCard from "./projectDetails/DetailCard";
 
 const ProjectDetails = ({ title, slides }) => {
   return (
-    <Wrapper>
+    <AnimatedWrapper>
       <ContentContainer>
         <PageHeader title={title}>Project Details</PageHeader>
         <BtnLinkWrap to="/projects">
@@ -31,7 +31,7 @@ const ProjectDetails = ({ title, slides }) => {
           })}
         </DetailsContainer>
       </ContentContainer>
-    </Wrapper>
+    </AnimatedWrapper>
   );
 };
 // const FlexWrapper = styled.section`
@@ -41,10 +41,7 @@ const ProjectDetails = ({ title, slides }) => {
 //   height: 100%;
 //   width: 100%;
 // `;
-const Wrapper = styled(AnimatedWrapper)`
-  padding: 50px 20px;
-  /* justify-content: center; */
-`;
+
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;

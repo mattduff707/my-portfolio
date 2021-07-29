@@ -6,10 +6,6 @@ import MainImage from "./overview/MainImage";
 import Stack from "./overview/Stack";
 import Description from "./overview/Description";
 
-const Wrapper = styled(AnimatedWrapper)`
-  padding: 50px 20px;
-  /* justify-content: center; */
-`;
 const ContentWrapper = styled.section`
   /* border: 2px solid red; */
   display: flex;
@@ -47,7 +43,7 @@ const ContentFlexItem = styled.div`
 
 const OverviewTwo = () => {
   return (
-    <Wrapper>
+    <AnimatedWrapper>
       <ContentWrapper>
         <PageHeader>Overview</PageHeader>
         <ContentFlexItem noDisplayAt={"1025px"} flex={"flex"} justify={"center"}>
@@ -56,7 +52,7 @@ const OverviewTwo = () => {
         <Stack />
         <Description />
       </ContentWrapper>
-    </Wrapper>
+    </AnimatedWrapper>
   );
 };
 

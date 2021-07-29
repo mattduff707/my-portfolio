@@ -5,6 +5,7 @@ import PageHeader from "../PageHeader";
 import CoolButton from "../CoolButton";
 // import Connector from "../Connector";
 import { aboutData } from "../../constants";
+import Heading from "../Heading";
 
 const AboutTwo = () => {
   return (
@@ -16,7 +17,7 @@ const AboutTwo = () => {
             <Image src={aboutData[0].picture} alt="1" />
           </ImageContainer>
           <TextContainer>
-            <PageHeader topShadow>{aboutData[0].title}</PageHeader>
+            <Heading topShadow>{aboutData[0].title}</Heading>
             <OverflowContainer>
               <Text>{aboutData[0].text}</Text>
             </OverflowContainer>

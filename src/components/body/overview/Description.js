@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Heading from "../../Heading";
 import PageHeader from "../../PageHeader";
 
 const DescriptionContainer = styled.div`
@@ -76,7 +77,7 @@ const DescriptionText = styled.p`
   }
   @media (min-width: 1024px) {
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 10px 20px 20px;
   }
 `;
 
@@ -87,7 +88,7 @@ const Description = () => {
         <DescriptionTitle>Matthew Duffy</DescriptionTitle>
       </TitleWrapper> */}
       <DescriptionWrapper>
-        <PageHeader topShadow>Matthew Duffy</PageHeader>
+        <Heading topShadow>Matthew Duffy</Heading>
         <DescriptionText>
           Passionate self taught developer who revels in c oasdo dosod asodoasod asd oasod aosdo aosod oasod oaosdo
           oasodo as Passionate self taught developer who revels in c oasdo dosod asodoasod asd oasod aosdo aosod oasod

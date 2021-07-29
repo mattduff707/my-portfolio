@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import CoolButton from "../../CoolButton";
-import PageHeader from "../../PageHeader";
+import Heading from "../../Heading";
 
 const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
   return (
     <CardContainer>
       <TitleWrap>
-        <PageHeader topShadow>{title}</PageHeader>
+        <Heading topShadow>{title}</Heading>
         <SubTitle>{subtitle}</SubTitle>
       </TitleWrap>
       <ContentWrap>

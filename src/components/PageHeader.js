@@ -11,17 +11,18 @@ const PageHeader = ({ className, children, title, tag, topShadow }) => {
 const HeaderContainer = styled.div`
   /* min-width: 200px; */
   z-index: 10;
-  transform: translateY(-32px);
+  transform: translateY(-8px);
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;
-  border: 3px solid var(--color-secondary);
-
-  border-radius: 25px;
+  border: 8px solid var(--color-inset);
+  border-left-color: var(--color-inset-light);
+  border-top: none;
+  border-radius: 0px 0px 15px 15px;
   box-shadow: ${(props) =>
-    props.topShadow ? "0px -10px 8px -8px var(--color-shadow)" : "0px 10px 8px -8px var(--color-shadow);"};
+    props.topShadow ? "0px -10px 8px -8px var(--color-shadow)" : "0px 10px 3px -8px var(--color-shadow);"};
   padding: 10px 30px;
-  margin-bottom: -32px;
+  margin-bottom: -8px;
   @media (max-width: 500px) {
     padding: 10px 20px;
     min-width: 100px;
@@ -30,11 +31,12 @@ const HeaderContainer = styled.div`
 
 const Header = styled.h3`
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-heading);
+  font-size: var(--font-size-page-heading);
   background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 4px;
 `;
 export default PageHeader;

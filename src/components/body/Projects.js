@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <AnimatedWrapper>
       <ContentContainer>
-        <PageHeader>My Projects</PageHeader>
+        <PageHeader>Projects</PageHeader>
         <ProjectList>
           {projectsData.map((project, index) => {
             return (

@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import MainImage from "./MainImage";
 import PageHeader from "../../PageHeader";
+import Heading from "../../Heading";
 
 const Stack = () => {
   return (
     <>
       <StackContainer>
         <StackWrapper>
-          <PageHeader topShadow>Stack</PageHeader>
+          <Heading topShadow>Stack</Heading>
           <StackList>
             <StackItem>
               <Icon className="fab fa-html5" />
@@ -28,10 +29,9 @@ const Stack = () => {
             </StackItem>
           </StackList>
         </StackWrapper>
-
         <MainImage noDisplayAt="1024px" />
         <StackWrapper>
-          <PageHeader topShadow>Skills</PageHeader>
+          <Heading topShadow>Skills</Heading>
           <StackList>
             <StackItem>
               <Icon className="fab fa-html5" />
@@ -57,7 +57,7 @@ const Stack = () => {
 };
 
 const StackContainer = styled.div`
-  padding: 5px 10px 5px 10px;
+  padding: 20px 10px 5px 10px;
   width: 100%;
   /* border: 2px solid red; */
   /* border: 2px solid var(--color-secondary); */
@@ -68,6 +68,7 @@ const StackContainer = styled.div`
   align-items: center;
   max-width: 900px;
   margin-top: 30px;
+
   @media (min-width: 1025px) {
     /* border: none; */
     box-shadow: none;
@@ -92,7 +93,7 @@ const StackWrapper = styled.div`
   box-shadow: 0px 0px 6px var(--color-shadow);
   border: 2px solid var(--color-secondary);
   border-radius: 20px;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 10px;
   flex: 1;
   margin: 0px 5px;
   @media (min-width: 1025px) {
@@ -127,6 +128,7 @@ const StackWrapper = styled.div`
 //   /* margin: 0px auto 5px auto; */
 // `;
 const StackList = styled.ul`
+  padding: 5px 0px;
   margin-left: auto;
   margin-right: auto;
   list-style: none;

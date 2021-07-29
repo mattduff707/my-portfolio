@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Heading from "../../../Heading";
 import PageHeader from "../../../PageHeader";
 
 const ArticleContainer = styled.article`
@@ -115,7 +116,7 @@ const DetailCard = ({ title, text, image, imageAlt }) => {
         <Image src={image} alt={imageAlt} />
       </ImageContainer>
       <ContentContainer>
-        <PageHeader topShadow>{title}</PageHeader>
+        <Heading topShadow>{title}</Heading>
         <Description>{text}</Description>
       </ContentContainer>
     </ArticleContainer>

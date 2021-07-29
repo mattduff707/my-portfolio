@@ -17,7 +17,7 @@ const NavUl = styled.ul`
   list-style: none;
 `;
 
-const Li = styled.li`
+const ListItem = styled.li`
   height: var(--link-container-height);
   width: var(--link-container-width);
   display: flex;
@@ -61,21 +61,21 @@ const Nav = () => {
   return (
     <NavWrapper>
       <NavUl>
-        <Li>
+        <ListItem>
           <ListLink activeStyle={active} exact to="/">
             Overview
           </ListLink>
-        </Li>
-        <Li>
+        </ListItem>
+        <ListItem>
           <ListLink activeStyle={active} to="/about">
             About
           </ListLink>
-        </Li>
-        <Li>
+        </ListItem>
+        <ListItem>
           <ListLink activeStyle={active} to="/projects">
             Projects
           </ListLink>
-        </Li>
+        </ListItem>
       </NavUl>
     </NavWrapper>
   );

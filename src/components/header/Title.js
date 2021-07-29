@@ -25,20 +25,36 @@ const Name = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0px 0px 5px 0px;
-  font-size: var(--font-size-name);
+  font-size: 1.3rem;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.7rem;
+  }
+  @media (min-width: 1440px) {
+    font-size: 2rem;
+  }
 `;
 
 const Subtitle = styled.h2`
   color: var(--color-alternative);
-  font-size: var(--font-size-subtitle);
+  font-size: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.3rem;
+  }
+  @media (min-width: 1440px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Title = () => {
   return (
     <StyledContainer>
-      <Name tag="h1" size="2.0rem" padding="0px 0px 15px 0px">
-        Matthew Duffy
-      </Name>
+      <Name>Matthew Duffy</Name>
       <Subtitle>Web Developer</Subtitle>
     </StyledContainer>
   );

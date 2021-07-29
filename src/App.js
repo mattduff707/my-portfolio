@@ -6,8 +6,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { device } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
-  html {
 
+  html {
+    height: 100%;
   //color
   --color-primary: hsl(226, 45%, 15%);
   --color-secondary: hsl(225, 46%, 25%);
@@ -15,14 +16,31 @@ const GlobalStyle = createGlobalStyle`
   --color-shadow: hsl(226, 45%, 8%);
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
-  --font-family-primary: 'Raleway', sans-serif;
-  --font-family-secondary: 'Khula', sans-serif;
   --color-inset: hsl(225, 46%, 20%);
   --color-inset-light: hsl(225, 46%, 24%);
   --color-inset-bg: hsl(226, 45%, 13%);
-  
 
-  //page grid
+  //Typography
+  --font-family-primary: 'Raleway', sans-serif;
+  --font-family-secondary: 'Khula', sans-serif;
+
+  --font-size-content: 1rem;
+  --font-size-heading: 1.2rem;
+  --font-size-page-heading: 1.5rem;
+  @media(min-width: 768px){
+    --font-size-heading: 1.3rem;
+  --font-size-page-heading: 1.6rem;
+  }
+  @media(min-width: 1024px){
+    --font-size-heading: 1.4rem;
+  --font-size-page-heading: 1.8rem;
+  }
+  @media(min-width: 1440px) {
+    --font-size-heading: 1.5rem;
+  --font-size-page-heading: 1.8rem;
+  }
+
+  /* //page grid
   --grid-size: 140px 1fr;
 
   // header title
@@ -126,7 +144,7 @@ const GlobalStyle = createGlobalStyle`
   
 
   --arrow-font-size: 4rem;
-  --arrow-button-width: 80px;
+  --arrow-button-width: 80px; */
 
 
   }
@@ -137,19 +155,25 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: var(--color-primary);
+    height: 100%;
   }
+  #root {
+    height: 100%;
+  }
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  }
+  
 `;
 
 const GridWrapper = styled.div`
-  height: 100vh;
+  height: 100%;
+  /* border: 2px solid red; */
   display: grid;
-  grid-template-rows: var(--grid-size);
+  grid-template-rows: 120px 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"

@@ -65,9 +65,7 @@ const About = () => {
 
   const [activeKey, setActiveKey] = useState(defaultKey);
   const [activeObj, setActiveObj] = useState(defaultActive(devObj, activeKey));
-  const [activeContent, setActiveContent] = useState(
-    returnActiveKeyVal(activeObj)
-  );
+  const [activeContent, setActiveContent] = useState(returnActiveKeyVal(activeObj));
   const [activeTag, setActiveTag] = useState(developer);
 
   //sets activeContent to the  activeKey whenever the key changes
@@ -114,11 +112,7 @@ const About = () => {
     <AnimatedWrapper>
       <PageHeader>About Me</PageHeader>
       <ToggleContainer>
-        <StyledCoolToggle
-          isActive={activeTag === developer}
-          htmlFor="about-developer"
-          margin={"0px 10px"}
-        >
+        <StyledCoolToggle isActive={activeTag === developer} htmlFor="about-developer" margin={"0px 10px"}>
           Developer
           <Radio
             checked={activeTag === developer}
@@ -129,11 +123,7 @@ const About = () => {
             onChange={handleChange}
           />
         </StyledCoolToggle>
-        <StyledCoolToggle
-          isActive={activeTag === person}
-          htmlFor="about-person"
-          margin={"0px 10px"}
-        >
+        <StyledCoolToggle isActive={activeTag === person} htmlFor="about-person" margin={"0px 10px"}>
           Person
           <Radio
             checked={activeTag === person}

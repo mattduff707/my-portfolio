@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import MainImage from "./MainImage";
-import PageHeader from "../../PageHeader";
 import Heading from "../../Heading";
 
 const Stack = () => {

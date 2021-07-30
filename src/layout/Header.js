@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Contact from "../components/header/Contact";
 import Nav from "../components/header/Nav";
 import Title from "../components/header/Title";
 
@@ -18,7 +19,7 @@ const StyledHeader = styled.header`
   position: relative;
   @media (max-width: 1023px) {
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 `;
 
@@ -27,6 +28,7 @@ const Header = () => {
     <StyledHeader>
       <Title />
       <Nav />
+      {/* <Contact /> */}
     </StyledHeader>
   );
 };

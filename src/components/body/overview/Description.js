@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Heading from "../../Heading";
-import PageHeader from "../../PageHeader";
 
 const DescriptionContainer = styled.div`
   width: 100%;

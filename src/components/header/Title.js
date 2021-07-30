@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
     border-right: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--color-secondary);
+    /* border-bottom: 2px solid var(--color-secondary); */
   }
 `;
 const Name = styled.h1`

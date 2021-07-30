@@ -19,14 +19,14 @@ const ProjectDetails = ({ title, slides }) => {
         </BtnLinkWrap>
         <DetailsContainer>
           {slides.map((slide, index, arr) => {
-            const lastSlideIndex = arr.length - 1;
-            if (index === lastSlideIndex) {
-              return <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />;
-            }
             return (
-              <>
-                <DetailCard image={slide.image} imageAlt={slide.imageAlt} title={slide.title} text={slide.text} />
-              </>
+              <DetailCard
+                key={slide.title}
+                image={slide.image}
+                imageAlt={slide.imageAlt}
+                title={slide.title}
+                text={slide.text}
+              />
             );
           })}
         </DetailsContainer>

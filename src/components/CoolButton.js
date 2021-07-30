@@ -1,14 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CoolButton = ({
-  children,
-  className,
-  handleClick,
-  margin,
-  padding,
-  fontSize,
-}) => {
+const CoolButton = ({ children, className, handleClick, margin, padding, fontSize }) => {
   return (
     <Btn margin={margin} padding={padding} onClick={handleClick}>
       <Shadow></Shadow>
@@ -60,8 +53,7 @@ const Front = styled.span`
   background-color: hsl(226, 45%, 16%);
   will-change: transform;
   transform: translateY(-4px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1),
-    color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1), color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
     border 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 `;
 const Btn = styled.button`
@@ -77,8 +69,7 @@ const Btn = styled.button`
     transform: translateY(-6px);
     color: var(--color-text-primary);
     border-color: var(--color-text-secondary);
-    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
-      border-color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5), border-color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
   }
   &:active ${Front} {
     transform: translateY(-2px);

@@ -67,6 +67,7 @@ const CoolLink = styled(CoolToggle)`
   padding: 5px 0px;
   font-weight: 600;
   letter-spacing: 1px;
+  width: 90px;
   @media (min-width: 1024px) {
     width: 100px;
     padding: 10px 0px;

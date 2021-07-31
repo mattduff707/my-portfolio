@@ -46,10 +46,10 @@ const DotContainer = styled.div`
 const Dot = styled.span`
   width: 25px;
   height: 25px;
-  border: 2px solid var(--color-secondary);
+  border: 3px solid var(--color-secondary);
   border-radius: 50%;
   margin: 0px 5px;
-  background: ${(props) => (props.isActive ? "linear-gradient(to right, #fa709a 0%, #fee140 100%)" : "none")};
+  background: ${(props) => (props.isActive ? " linear-gradient(140deg, #fa709a 0%, #fee140 100%)" : "none")};
 `;
 
 export default Controller;

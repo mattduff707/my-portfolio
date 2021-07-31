@@ -11,13 +11,13 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   //color
   --color-primary: hsl(226, 45%, 15%);
-  --color-secondary: hsl(225, 46%, 25%);
+  --color-secondary: hsl(225, 46%, 32%);
   --color-alternative: hsl(225, 46%, 85%);
   --color-shadow: hsl(226, 45%, 8%);
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
-  --color-inset: hsl(225, 46%, 22%);
-  --color-inset-light: hsl(225, 46%, 28%);
+  --color-inset: hsl(225, 46%, 24%);
+  --color-inset-light: hsl(225, 46%, 30%);
   --color-inset-bg: hsl(226, 45%, 13%);
 
   //Typography

@@ -55,13 +55,21 @@ const ContentContainer = styled.div`
   box-shadow: inset 0px 0px 4px var(--color-shadow);
   /* overflow-y: auto; */
   align-items: center;
+  position: relative;
   /* padding: 0px 20px; */
   /* border: 2px solid red; */
 `;
 const BtnLinkWrap = styled(Link)`
-  position: fixed;
-  left: 25px;
-  top: 25px;
+  position: absolute;
+
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  border-right: 8px solid var(--color-inset);
+  border-bottom: 8px solid var(--color-inset);
+  left: -8px;
+  top: -8px;
+  box-shadow: 5px 10px 3px -8px var(--color-shadow);
+  border-radius: 0px 0px 15px 0px;
   @media (max-width: 500px) {
     top: 20px;
     left: 8px;

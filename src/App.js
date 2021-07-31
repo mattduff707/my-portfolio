@@ -16,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
   --color-shadow: hsl(226, 45%, 8%);
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
-  --color-inset: hsl(225, 46%, 20%);
-  --color-inset-light: hsl(225, 46%, 24%);
+  --color-inset: hsl(225, 46%, 22%);
+  --color-inset-light: hsl(225, 46%, 28%);
   --color-inset-bg: hsl(226, 45%, 13%);
 
   //Typography
@@ -178,6 +178,9 @@ const GridWrapper = styled.div`
   grid-template-areas:
     "header"
     "main";
+  @media (max-width: 1024px) {
+    grid-template-rows: 130px 1fr;
+  }
 `;
 
 function App() {

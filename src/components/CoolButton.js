@@ -22,7 +22,7 @@ const Shadow = styled.span`
   border-radius: 12px;
   background: hsl(0deg 0% 0% / 0.25);
   will-change: transform;
-  transform: translateY(4px);
+  transform: translateY(2px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 `;
 
@@ -36,8 +36,8 @@ const Edge = styled.span`
   background: linear-gradient(
     to left,
     hsl(226 45% 11%) 0%,
-    hsl(226 45% 27%) 8%,
-    hsl(226 45% 27%) 92%,
+    hsl(226 45% 27%) 12%,
+    hsl(226 45% 27%) 88%,
     hsl(226 45% 11%) 100%
   );
 `;
@@ -68,7 +68,7 @@ const Btn = styled.button`
   &:hover ${Front} {
     transform: translateY(-6px);
     color: var(--color-text-primary);
-    border-color: var(--color-text-secondary);
+    /* border-color: var(--color-text-secondary); */
     transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5), border-color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
   }
   &:active ${Front} {
@@ -78,6 +78,10 @@ const Btn = styled.button`
 
   &:active ${Shadow} {
     transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  &:hover ${Shadow} {
+    transform: translateY(4px);
     transition: transform 34ms;
   }
   &:focus:not(:focus-visible) {

@@ -72,7 +72,6 @@ const CoolLink = styled(CoolToggle)`
   }
 `;
 
-console.log(window.location.pathname);
 const OverviewPath = "/";
 const AboutPath = "/about";
 const ProjectsPath = "/projects";
@@ -82,7 +81,6 @@ const Nav = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const handleNav = (e) => {
     const path = e.currentTarget.attributes.path.value;
-    console.log(path);
 
     setCurrentPath(() => path);
   };

@@ -28,7 +28,7 @@ const Header = () => {
     <StyledHeader>
       <Title />
       <Nav />
-      {/* <Contact /> */}
+      <Contact />
     </StyledHeader>
   );
 };

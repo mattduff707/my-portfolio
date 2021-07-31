@@ -22,7 +22,7 @@ const Shadow = styled.span`
   border-radius: 12px;
   background: hsl(0deg 0% 0% / 0.25);
   will-change: transform;
-  transform: ${(props) => (props.isActive ? "translateY(1px)" : "translateY(4px)")};
+  transform: ${(props) => (props.isActive ? "translateY(0px)" : "translateY(2px)")};
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 `;
 
@@ -47,12 +47,12 @@ const Front = styled.label`
   cursor: pointer;
   position: relative;
   border: 2px solid;
-  border-color: ${(props) => (props.isActive ? "var(--color-text-secondary)" : "var(--color-secondary)")};
+  border-color: ${(props) => (props.isActive ? "var(--color-text-primary)" : "var(--color-secondary)")};
   /* border-color: var(--color-secondary); */
   border-radius: 12px;
   padding: ${(props) => props.padding};
   font-size: ${(props) => props.fontSize};
-  color: ${(props) => (props.isActive ? "var(--color-text-primary)" : "var(--color-alternative)")};
+  color: ${(props) => (props.isActive ? "var(--color-text-secondary)" : "var(--color-alternative)")};
   background-color: var(--color-primary);
   will-change: transform;
   transform: ${(props) => (props.isActive ? "translateY(-0px);" : "translateY(-4px)")};
@@ -73,7 +73,7 @@ const Btn = styled.button`
       return `
   &:hover ${Front} {
     transform: translateY(-6px);
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
 
     transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
       border-color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
@@ -85,6 +85,10 @@ const Btn = styled.button`
 
   &:active ${Shadow} {
     transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  &:hover ${Shadow} {
+    transform: translateY(4px);
     transition: transform 34ms;
   }
   &:focus:not(:focus-visible) {

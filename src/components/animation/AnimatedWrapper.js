@@ -85,7 +85,7 @@ const StyledWrapperBottom = styled(StyledWrapper)`
   border-radius: 25px 25px 0px 0px;
 `;
 const FadeWrapper = styled(motion.div)`
-  padding: 50px 20px;
+  padding: 30px 20px;
   position: relative;
   display: flex;
   flex-direction: column;

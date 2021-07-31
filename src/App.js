@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   --font-size-content: 1rem;
   --font-size-heading: 1.2rem;
-  --font-size-page-heading: 1.5rem;
+  --font-size-page-heading: 1.3rem;
   @media(min-width: 768px){
     --font-size-heading: 1.3rem;
   --font-size-page-heading: 1.6rem;

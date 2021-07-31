@@ -1,35 +1,53 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import AnimatedWrapper from "../animation/AnimatedWrapper";
 import PageHeader from "../PageHeader";
-import CoolButton from "../CoolButton";
-// import Connector from "../Connector";
 import { aboutData } from "../../constants";
-import Heading from "../Heading";
+import AboutImage from "./about/AboutImage";
+import AboutContent from "./about/AboutContent";
 
 const AboutTwo = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeAbout, setActiveAbout] = useState(aboutData[activeIndex]);
+
+  useEffect(() => {
+    setActiveAbout(aboutData[activeIndex]);
+  }, [activeIndex]);
+
+  const handleIncrement = () => {
+    if (activeIndex === aboutData.length - 1) {
+      setActiveIndex(() => 0);
+    } else {
+      setActiveIndex(() => activeIndex + 1);
+    }
+  };
+  const handleDecrement = () => {
+    if (activeIndex === 0) {
+      setActiveIndex(() => aboutData.length - 1);
+    } else {
+      setActiveIndex(() => activeIndex - 1);
+    }
+  };
+  const handleDotClick = (e) => {
+    console.log(e.target.value);
+    setActiveIndex(() => e.target.value);
+  };
+
   return (
     <AnimatedWrapper>
       <ContentContainer>
         <PageHeader>About</PageHeader>
         <AboutContainer>
-          <ImageContainer>
-            <Image src={aboutData[0].picture} alt="1" />
-          </ImageContainer>
-          <TextContainer>
-            <Heading topShadow>{aboutData[0].title}</Heading>
-            <OverflowContainer>
-              <Text>{aboutData[0].text}</Text>
-            </OverflowContainer>
-            <ControlContainer>
-              <ArrowButton>
-                <Icon className="fas fa-angle-left" />
-              </ArrowButton>
-              <ArrowButton>
-                <Icon className="fas fa-angle-right" />
-              </ArrowButton>
-            </ControlContainer>
-          </TextContainer>
+          <AboutImage imageSrc={activeAbout.picture} />
+          <AboutContent
+            aboutData={aboutData}
+            title={activeAbout.title}
+            content={activeAbout.text}
+            handleIncrement={handleIncrement}
+            handleDecrement={handleDecrement}
+            handleDotClick={handleDotClick}
+            activeIndex={activeIndex}
+          />
         </AboutContainer>
       </ContentContainer>
     </AnimatedWrapper>
@@ -78,101 +96,6 @@ const AboutContainer = styled.div`
     max-width: 1500px;
     padding: 15px 20px 40px;
   }
-`;
-
-const ImageContainer = styled.div`
-  width: auto;
-  /* padding: 0px 10px 10px 10px; */
-  border-radius: 20px;
-  padding-bottom: 30px;
-  /* border: 2px solid var(--color-secondary); */
-  /* box-shadow: 0px 0px 8px var(--color-shadow); */
-  @media (min-width: 1025px) {
-    height: 100%;
-    width: 50%;
-    padding-bottom: 0px;
-    margin-right: 10px;
-  }
-`;
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 20px;
-  border: 4px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
-  object-fit: cover;
-`;
-const OverflowContainer = styled.div`
-  overflow-y: auto;
-  padding: 0px 0px 10px 0px;
-  @media (max-width: 1025px) {
-    padding: 10px 10px;
-  }
-`;
-const TextContainer = styled.article`
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-primary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
-  border: 2px solid var(--color-secondary);
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (min-width: 1025px) {
-    width: 50%;
-    margin-left: 10px;
-  }
-  @media (max-width: 1025px) {
-    padding: 10px 0px 0px 0px;
-  }
-`;
-// const TitleWrapper = styled.div`
-//   border: 2px solid var(--color-secondary);
-//   padding: 10px 20px;
-//   box-shadow: 0px 0px 8px var(--color-shadow);
-//   border-radius: 20px;
-//   margin-bottom: 5px;
-//   background-color: var(--color-primary);
-// `;
-// const Title = styled.h3`
-//   display: inline-block;
-//   background-color: #fa709a;
-//   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-
-//   font-family: var(--font-family-primary);
-//   font-size: var(--font-size-title);
-// `;
-const Text = styled.p`
-  text-indent: 30px;
-  color: var(--color-alternative);
-  font-family: var(--font-family-secondary);
-  font-size: 0.9rem;
-  @media (min-width: 500px) {
-    font-size: 1rem;
-  }
-  @media (min-width: 1024px) {
-    font-size: 1.2rem;
-    padding: 10px;
-  }
-`;
-const ControlContainer = styled.div`
-  width: 100%;
-  border-top: 2px solid var(--color-secondary);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 20px;
-  margin-top: auto;
-`;
-const ArrowButton = styled(CoolButton)`
-  padding: 5px 10px;
-`;
-const Icon = styled.i`
-  font-size: 48px;
 `;
 
 export default AboutTwo;

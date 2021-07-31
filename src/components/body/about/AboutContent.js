@@ -1,65 +1,63 @@
+import React from "react";
+import Heading from "../../Heading";
 import styled from "styled-components";
+import Controller from "./Controller";
 
-// todo:
-// * Toggle: developer / person
-// ? Developer: Self Taught, Why I got into Web Development, Ambitions?
-// ! Person: Lifting, Travel, Music, Tennis
-
-const AboutContent = ({ activeContent }) => {
+const AboutContent = ({ aboutData, title, content, handleIncrement, handleDecrement, handleDotClick, activeIndex }) => {
   return (
-    <>
-      {activeContent.map(([key, value]) => {
-        return (
-          <Wrapper key={value.title}>
-            <StyledTitle>{value.title}</StyledTitle>
-            <StyledText>{value.text}</StyledText>
-          </Wrapper>
-        );
-      })}
-    </>
+    <TextContainer>
+      <Heading topShadow>{title}</Heading>
+      <OverflowContainer>
+        <Text>{content}</Text>
+      </OverflowContainer>
+      <Controller
+        aboutData={aboutData}
+        handleIncrement={handleIncrement}
+        handleDecrement={handleDecrement}
+        handleDotClick={handleDotClick}
+        activeIndex={activeIndex}
+      />
+    </TextContainer>
   );
 };
-const Wrapper = styled.article`
-  padding: 0px 30px;
+
+const OverflowContainer = styled.div`
+  overflow-y: auto;
+  padding: 0px 0px 10px 0px;
+  @media (max-width: 1025px) {
+    padding: 10px 10px;
+  }
+`;
+const TextContainer = styled.article`
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
-
-  @media (max-width: 500px) {
-    padding: 0px 5px;
+  @media (min-width: 1025px) {
+    width: 50%;
+    margin-left: 10px;
+  }
+  @media (max-width: 1025px) {
+    padding: 10px 0px 0px 0px;
   }
 `;
 
-const StyledTitle = styled.h3`
-  font-family: var(--font-family-primary);
-  letter-spacing: 3px;
-  font-size: var(--font-size-heading);
-  background-color: #fa709a;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--color-secondary);
-  text-align: center;
-  @media (max-width: 1440px) {
-    padding-bottom: 5px;
-  }
-`;
-const StyledText = styled.p`
+const Text = styled.p`
+  text-indent: 30px;
   color: var(--color-alternative);
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-content);
-  text-indent: 40px;
-  line-height: 2.3;
-
-  @media (max-width: 1440px) {
-    line-height: 1.8;
+  font-size: 0.9rem;
+  @media (min-width: 500px) {
+    font-size: 1rem;
   }
-  @media (max-width: 1024px) {
-    padding-bottom: 20px;
+  @media (min-width: 1024px) {
+    font-size: 1.2rem;
+    padding: 10px;
   }
 `;
 

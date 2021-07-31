@@ -62,6 +62,7 @@ const active = {
 
 const CoolLink = styled(CoolToggle)`
   font-family: var(--font-family-primary);
+  font-size: 0.8rem;
   width: 80px;
   padding: 5px 0px;
   font-weight: 600;
@@ -69,6 +70,7 @@ const CoolLink = styled(CoolToggle)`
   @media (min-width: 1024px) {
     width: 100px;
     padding: 10px 0px;
+    font-size: 0.9rem;
   }
 `;
 

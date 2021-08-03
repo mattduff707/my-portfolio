@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Heading from "../../Heading";
+import React from 'react';
+import styled from 'styled-components';
+import Heading from '../../Heading';
 
 const DescriptionContainer = styled.div`
   width: 100%;
@@ -59,7 +59,7 @@ const DescriptionContainer = styled.div`
 const DescriptionWrapper = styled.div`
   background-color: var(--color-primary);
   box-shadow: 0px 0px 6px var(--color-shadow);
-  border: 2px solid var(--color-secondary);
+  border: 4px solid var(--color-secondary);
   border-radius: 20px;
   display: flex;
   flex-direction: column;

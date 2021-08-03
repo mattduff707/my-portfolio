@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import Header from "./layout/Header";
-import MainBody from "./layout/MainBody";
-import { createGlobalStyle } from "styled-components";
-import { BrowserRouter as Router } from "react-router-dom";
-import { device } from "./constants";
+import styled from 'styled-components';
+import Header from './layout/Header';
+import MainBody from './layout/MainBody';
+import { createGlobalStyle } from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { device } from './constants';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -29,15 +29,15 @@ const GlobalStyle = createGlobalStyle`
   --font-size-page-heading: 1.3rem;
   @media(min-width: 768px){
     --font-size-heading: 1.3rem;
-  --font-size-page-heading: 1.6rem;
+    --font-size-page-heading: 1.6rem;
   }
   @media(min-width: 1024px){
     --font-size-heading: 1.4rem;
-  --font-size-page-heading: 1.8rem;
+    --font-size-page-heading: 1.8rem;
   }
   @media(min-width: 1440px) {
     --font-size-heading: 1.5rem;
-  --font-size-page-heading: 1.8rem;
+    --font-size-page-heading: 1.8rem;
   }
 
   /* //page grid
@@ -176,8 +176,8 @@ const GridWrapper = styled.div`
   grid-template-rows: 120px 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "header"
-    "main";
+    'header'
+    'main';
   @media (max-width: 1024px) {
     grid-template-rows: 130px 1fr;
   }

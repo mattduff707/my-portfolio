@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import CoolButton from "../../CoolButton";
-import Heading from "../../Heading";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import CoolButton from '../../CoolButton';
+import Heading from '../../Heading';
 
 const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
   return (
@@ -22,7 +22,7 @@ const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
 
       <LinkWrap>
         <ButtonWrapper>
-          <Link to={path} style={{ marginRight: "10px" }}>
+          <Link to={path} style={{ marginRight: '10px' }}>
             <StyledCoolButton>
               Details <i className="fas fa-arrow-right"></i>
             </StyledCoolButton>
@@ -45,7 +45,7 @@ const CardContainer = styled.li`
   margin: 0px 10px 50px;
   background-color: var(--color-primary);
   box-shadow: 0px 0px 8px 2px var(--color-shadow);
-  border: 2px solid var(--color-secondary);
+  border: 4px solid var(--color-secondary);
   border-radius: 20px;
   /* border: 2px solid var(--color-secondary);
   border-radius: 20px;

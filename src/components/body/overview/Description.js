@@ -58,7 +58,7 @@ const DescriptionContainer = styled.div`
 
 const DescriptionWrapper = styled.div`
   background-color: var(--color-primary);
-  box-shadow: 0px 0px 6px var(--color-shadow);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
   border: 4px solid var(--color-secondary);
   border-radius: 20px;
   display: flex;
@@ -83,9 +83,6 @@ const DescriptionText = styled.p`
 const Description = () => {
   return (
     <DescriptionContainer>
-      {/* <TitleWrapper>
-        <DescriptionTitle>Matthew Duffy</DescriptionTitle>
-      </TitleWrapper> */}
       <DescriptionWrapper>
         <Heading topShadow>Matthew Duffy</Heading>
         <DescriptionText>

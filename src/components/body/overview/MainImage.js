@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import picture from "../../../images/me.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import picture from '../../../images/me.jpg';
 
 const MainImage = ({ noDisplayAt }) => {
   return (
@@ -55,7 +55,7 @@ const Image = styled.img`
   display: block;
   border-radius: 50%;
   border: 4px solid var(--color-secondary);
-  box-shadow: 0px 0px 15px var(--color-shadow);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
 `;
 
 export default MainImage;

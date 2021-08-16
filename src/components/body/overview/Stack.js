@@ -125,7 +125,7 @@ const StackWrapper = styled.div`
   align-items: center;
   background-color: var(--color-primary);
   border-radius: 15px;
-  box-shadow: 0px 0px 6px var(--color-shadow);
+  box-shadow: 0px 0px 8px 2px var(--color-shadow);
   border: 4px solid var(--color-secondary);
   border-radius: 20px;
   padding: 0px 10px;
@@ -141,35 +141,15 @@ const StackList = styled.ul`
   margin-left: auto;
   margin-right: auto;
   list-style: none;
-  /* border: 2px solid red; */
 `;
 const StackItem = styled.li`
   font-size: var(--font-size-subtitle);
   font-family: var(--font-family-secondary);
   color: var(--color-alternative);
-  /* border: 2px solid green; */
-  /* text-align: center; */
+
   display: flex;
   align-items: center;
 
   padding: 5px 0px;
 `;
-// const Icon = styled.i`
-//   color: var(--color-text-primary);
-//   font-size: 1.15rem;
-//   max-width: 40px;
-//   transform: translateY(-3px);
-//   margin-right: 4px;
-//   text-align: center;
-//   background-color: #fa709a;
-//   background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   @media (min-width: 1024px) {
-//     font-size: 1.5rem;
-//     margin-right: 8px;
-//   }
-//   /* border: 2px solid yellow; */
-// `;
 export default Stack;

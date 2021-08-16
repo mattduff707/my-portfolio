@@ -95,17 +95,7 @@ const StyledCoolButton = styled(CoolButton)`
   display: flex;
   align-items: stretch;
 `;
-const Icon = styled.i`
-  /* border: 2px solid red; */
-  display: block;
-  padding-right: 5px;
-  font-size: 1.15rem;
-  background-color: #fa709a;
-  background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
+
 const Text = styled.p`
   display: block;
   padding-top: 2px;

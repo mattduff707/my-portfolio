@@ -2,8 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import MainImage from './MainImage';
 import Heading from '../../Heading';
+import { ReactComponent as GatsbyIcon } from '../../../icons/gatsby.svg';
+import { ReactComponent as ReactIcon } from '../../../icons/react.svg';
+import { ReactComponent as JavascriptIcon } from '../../../icons/javascript.svg';
+import { ReactComponent as CssIcon } from '../../../icons/css.svg';
+import { ReactComponent as HtmlIcon } from '../../../icons/html.svg';
+import { ReactComponent as StyledIcon } from '../../../icons/styled.svg';
+import { ReactComponent as SassIcon } from '../../../icons/sass.svg';
+import { ReactComponent as OopIcon } from '../../../icons/oop.svg';
+import { ReactComponent as AccessibilityIcon } from '../../../icons/accessibility.svg';
+import { ReactComponent as GitIcon } from '../../../icons/git.svg';
+import { ReactComponent as TasksIcon } from '../../../icons/tasks.svg';
+import { ReactComponent as ScrumIcon } from '../../../icons/scrum.svg';
+import { ReactComponent as ResponsiveIcon } from '../../../icons/responsive.svg';
+import { ReactComponent as SolvingIcon } from '../../../icons/solving.svg';
 
 const Stack = () => {
+  const IconStyle = {
+    marginRight: '8px',
+  };
   return (
     <>
       <StackContainer>
@@ -11,20 +28,32 @@ const Stack = () => {
           <Heading topShadow>Stack</Heading>
           <StackList>
             <StackItem>
-              <Icon className="fab fa-html5" />
+              <HtmlIcon style={IconStyle} />
               HTML
             </StackItem>
             <StackItem>
-              <Icon className="fab fa-css3-alt" />
+              <CssIcon style={IconStyle} />
               CSS
             </StackItem>
             <StackItem>
-              <Icon className="fab fa-js-square" />
+              <StyledIcon style={IconStyle} />
+              styled-components
+            </StackItem>
+            <StackItem>
+              <SassIcon style={IconStyle} />
+              SASS
+            </StackItem>
+            <StackItem>
+              <JavascriptIcon style={IconStyle} />
               Javascript
             </StackItem>
             <StackItem>
-              <Icon className="fab fa-react" />
+              <ReactIcon style={IconStyle} />
               React
+            </StackItem>
+            <StackItem>
+              <GatsbyIcon style={IconStyle} />
+              Gatsby
             </StackItem>
           </StackList>
         </StackWrapper>
@@ -33,20 +62,33 @@ const Stack = () => {
           <Heading topShadow>Skills</Heading>
           <StackList>
             <StackItem>
-              <Icon className="fab fa-html5" />
-              HTML
+              <OopIcon style={IconStyle} />
+              Object-Oriented Programming
             </StackItem>
             <StackItem>
-              <Icon className="fab fa-css3-alt" />
-              CSS
+              <GitIcon style={IconStyle} />
+              Git / Github
             </StackItem>
             <StackItem>
-              <Icon className="fab fa-js-square" />
-              Javascript
+              <ResponsiveIcon style={IconStyle} />
+              Responsive Design
             </StackItem>
             <StackItem>
-              <Icon className="fab fa-react" />
-              React
+              <AccessibilityIcon style={IconStyle} />
+              Accessibility
+            </StackItem>
+
+            <StackItem>
+              <ScrumIcon style={IconStyle} />
+              Agile / Scrum
+            </StackItem>
+            <StackItem>
+              <TasksIcon style={IconStyle} />
+              Task Management
+            </StackItem>
+            <StackItem>
+              <SolvingIcon style={IconStyle} />
+              Problem Solving
             </StackItem>
           </StackList>
         </StackWrapper>
@@ -58,13 +100,9 @@ const Stack = () => {
 const StackContainer = styled.div`
   padding: 20px 10px 5px 10px;
   width: 100%;
-  /* border: 2px solid red; */
-  /* border: 2px solid var(--color-secondary); */
-  /* border-radius: 20px; */
-  /* box-shadow: 0px 0px 15px var(--color-shadow); */
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: stretch;
   max-width: 900px;
   margin-top: 30px;
 
@@ -74,6 +112,7 @@ const StackContainer = styled.div`
     padding: 0px;
     max-width: 1100px;
     justify-content: center;
+    align-items: center;
     margin-top: 0px;
   }
   @media (min-width: 1440px) {
@@ -84,9 +123,6 @@ const StackWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 6px solid var(--color-inset);
-    border-right: 6px solid var(--color-inset-light);
-    border-bottom: 6px solid var(--color-inset-light); */
   background-color: var(--color-primary);
   border-radius: 15px;
   box-shadow: 0px 0px 6px var(--color-shadow);
@@ -98,34 +134,8 @@ const StackWrapper = styled.div`
   @media (min-width: 1025px) {
     margin: 0px;
   }
-  /* box-shadow: 0px 0px 15px var(--color-shadow); */
 `;
-// const TitleWrapper = styled.div`
-//   width: 100%;
-//   border: 2px solid var(--color-secondary);
-//   padding: 10px 20px;
-//   box-shadow: 0px 0px 8px var(--color-shadow);
-//   border-radius: 20px;
-//   background-color: var(--color-primary);
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: 10px;
-//   transform: translateY(-);
-// `;
-// const StackTitle = styled.h3`
-//   background-color: #fa709a;
-//   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
 
-//   font-family: var(--font-family-primary);
-//   font-size: var(--font-size-title);
-//   /* border: 2px solid blue; */
-//   display: inline-block;
-
-//   /* margin: 0px auto 5px auto; */
-// `;
 const StackList = styled.ul`
   padding: 5px 0px;
   margin-left: auto;
@@ -139,29 +149,27 @@ const StackItem = styled.li`
   color: var(--color-alternative);
   /* border: 2px solid green; */
   /* text-align: center; */
-  display: block;
+  display: flex;
+  align-items: center;
 
-  @media (min-width: 1024px) {
-    padding: 5px 0px;
-  }
+  padding: 5px 0px;
 `;
-const Icon = styled.i`
-  color: var(--color-text-primary);
-  font-size: 1.15rem;
-  max-width: 40px;
-
-  margin-right: 4px;
-  text-align: center;
-  background-color: #fa709a;
-  background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  @media (min-width: 1024px) {
-    font-size: 1.35rem;
-    margin-right: 6px;
-  }
-  /* border: 2px solid yellow; */
-`;
-
+// const Icon = styled.i`
+//   color: var(--color-text-primary);
+//   font-size: 1.15rem;
+//   max-width: 40px;
+//   transform: translateY(-3px);
+//   margin-right: 4px;
+//   text-align: center;
+//   background-color: #fa709a;
+//   background-image: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   @media (min-width: 1024px) {
+//     font-size: 1.5rem;
+//     margin-right: 8px;
+//   }
+//   /* border: 2px solid yellow; */
+// `;
 export default Stack;

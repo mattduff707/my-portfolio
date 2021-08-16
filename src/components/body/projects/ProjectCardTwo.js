@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import CoolButton from '../../CoolButton';
 import Heading from '../../Heading';
+import { ReactComponent as DetailsIcon } from '../../../icons/details.svg';
+import { ReactComponent as GithubIcon } from '../../../icons/github.svg';
 
 const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
   return (
@@ -24,12 +26,14 @@ const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
         <ButtonWrapper>
           <Link to={path} style={{ marginRight: '10px' }}>
             <StyledCoolButton>
-              Details <i className="fas fa-arrow-right"></i>
+              <DetailsIcon style={{ marginRight: '5px' }} />
+              Details
             </StyledCoolButton>
           </Link>
           <a href="https://github.com/" target="_blank" rel="noreferrer">
             <StyledCoolButton>
-              GitHub <i className="fab fa-github"></i>
+              <GithubIcon style={{ width: '20px', height: '20px', marginRight: '5px' }} />
+              GitHub
             </StyledCoolButton>
           </a>
         </ButtonWrapper>
@@ -118,5 +122,7 @@ const ButtonWrapper = styled.div`
 const StyledCoolButton = styled(CoolButton)`
   padding: 5px 10px;
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
 `;
 export default ProjectCardTwo;

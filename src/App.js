@@ -6,8 +6,11 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { device } from './constants';
 
 const GlobalStyle = createGlobalStyle`
-
+  svg {
+  
+  }
   html {
+
     height: 100%;
   //color
   --color-primary: hsl(226, 45%, 15%);

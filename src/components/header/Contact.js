@@ -1,6 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import CoolButton from "../CoolButton";
+import React from 'react';
+import styled from 'styled-components';
+import CoolButton from '../CoolButton';
+import { ReactComponent as LinkedInIcon } from '../../icons/linkedIn.svg';
+import { ReactComponent as ResumeIcon } from '../../icons/resume.svg';
+import { ReactComponent as GithubIcon } from '../../icons/github.svg';
+import { ReactComponent as EmailIcon } from '../../icons/email.svg';
 
 const Contact = () => {
   return (
@@ -8,28 +12,28 @@ const Contact = () => {
       <GithubWrapper>
         <a href="https://github.com/mattduff707" target="_blank" rel="noreferrer">
           <StyledCoolButton>
-            <Icon className="fab fa-github"></Icon>
+            <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
             <Text>GitHub</Text>
           </StyledCoolButton>
         </a>
       </GithubWrapper>
       <ResumeWrapper>
         <StyledCoolButton>
-          <Icon className="fas fa-file-alt"></Icon>
+          <ResumeIcon style={{ marginRight: '2px' }} />
           <Text>Resume</Text>
         </StyledCoolButton>
       </ResumeWrapper>
       <LinkedInWrapper>
         <a href="https://www.linkedin.com/in/matthew-duffy-940112210/" target="_blank" rel="noreferrer">
           <StyledCoolButton>
-            <Icon className="fab fa-linkedin"></Icon>
+            <LinkedInIcon style={{ display: 'block', marginRight: '5px', marginTop: '1px' }} />
             <Text>LinkedIn</Text>
           </StyledCoolButton>
         </a>
       </LinkedInWrapper>
 
       <EmailWrapper>
-        <Icon className="fas fa-envelope"></Icon>
+        <EmailIcon style={{ marginRight: '3px' }} />
         <EmailText>mattduff707@hotmail.com</EmailText>
       </EmailWrapper>
     </Wrapper>
@@ -56,8 +60,8 @@ const Wrapper = styled.section`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    "github resume linkedIn"
-    "email email email";
+    'github resume linkedIn'
+    'email email email';
   @media (max-width: 1200px) {
     width: 320px;
     margin-right: 20px;

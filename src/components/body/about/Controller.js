@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import CoolButton from "../../CoolButton";
-
+import React from 'react';
+import styled from 'styled-components';
+import CoolButton from '../../CoolButton';
+import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
+import { ReactComponent as NextArrowIcon } from '../../../icons/nextArrow.svg';
 const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClick, activeIndex }) => {
   return (
     <ControlContainer>
       <ArrowButton handleClick={handleDecrement}>
-        <Icon className="fas fa-angle-left" />
+        <BackArrowIcon />
       </ArrowButton>
       <DotContainer>
         {aboutData.map((item, index) => {
@@ -14,7 +15,7 @@ const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClic
         })}
       </DotContainer>
       <ArrowButton handleClick={handleIncrement}>
-        <Icon className="fas fa-angle-right" />
+        <NextArrowIcon />
       </ArrowButton>
     </ControlContainer>
   );
@@ -28,11 +29,15 @@ const ControlContainer = styled.div`
   margin-top: auto;
 `;
 const ArrowButton = styled(CoolButton)`
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
+  &:hover > svg {
+    transition: fill 0.3s ease;
+    fill: var(--color-text-primary);
+  }
 `;
-const Icon = styled.i`
-  font-size: 48px;
-`;
+// const Icon = styled.i`
+//   font-size: 48px;
+// `;
 const DotContainer = styled.div`
   /* border: 2px solid red; */
   /* width: 100px; */
@@ -49,7 +54,7 @@ const Dot = styled.span`
   border: 3px solid var(--color-secondary);
   border-radius: 50%;
   margin: 0px 5px;
-  background: ${(props) => (props.isActive ? " linear-gradient(140deg, #fa709a 0%, #fee140 100%)" : "none")};
+  background: ${(props) => (props.isActive ? ' linear-gradient(140deg, #fa709a 0%, #fee140 100%)' : 'none')};
 `;
 
 export default Controller;

@@ -1,10 +1,11 @@
-import React from "react";
-import AnimatedWrapper from "../animation/AnimatedWrapper";
-import PageHeader from "../PageHeader";
-import styled from "styled-components";
-import MainImage from "./overview/MainImage";
-import Stack from "./overview/Stack";
-import Description from "./overview/Description";
+import React from 'react';
+import AnimatedWrapper from '../animation/AnimatedWrapper';
+import PageHeader from '../PageHeader';
+import styled from 'styled-components';
+import MainImage from './overview/MainImage';
+import Stack from './overview/Stack';
+import Description from './overview/Description';
+import Contact from '../header/Contact';
 
 const ContentWrapper = styled.section`
   /* border: 2px solid red; */
@@ -40,15 +41,22 @@ const ContentFlexItem = styled.div`
     }
   }}
 `;
+const StyledContact = styled(Contact)`
+  margin: 40px 0px 0px 0px;
+  @media (min-width: 1025px) {
+    display: none;
+  }
+`;
 
 const OverviewTwo = () => {
   return (
     <AnimatedWrapper>
       <ContentWrapper>
         <PageHeader>Overview</PageHeader>
-        <ContentFlexItem noDisplayAt={"1025px"} flex={"flex"} justify={"center"}>
+        <ContentFlexItem noDisplayAt={'1025px'} flex={'flex'} justify={'center'}>
           <MainImage />
         </ContentFlexItem>
+        <StyledContact />
         <Stack />
         <Description />
       </ContentWrapper>

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Contact from "../components/header/Contact";
-import Nav from "../components/header/Nav";
-import Title from "../components/header/Title";
+import React from 'react';
+import styled from 'styled-components';
+import Contact from '../components/header/Contact';
+import Nav from '../components/header/Nav';
+import Title from '../components/header/Title';
 
 const StyledHeader = styled.header`
   //background-color: var(--color-primary);
@@ -22,13 +22,20 @@ const StyledHeader = styled.header`
     justify-content: space-evenly;
   }
 `;
+const StyledContact = styled(Contact)`
+  margin-left: auto;
+  margin-right: 40px;
+  @media (max-width: 1025px) {
+    display: none;
+  }
+`;
 
 const Header = () => {
   return (
     <StyledHeader>
       <Title />
       <Nav />
-      <Contact />
+      <StyledContact />
     </StyledHeader>
   );
 };

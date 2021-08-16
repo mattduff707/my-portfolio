@@ -6,9 +6,9 @@ import { ReactComponent as ResumeIcon } from '../../icons/resume.svg';
 import { ReactComponent as GithubIcon } from '../../icons/github.svg';
 import { ReactComponent as EmailIcon } from '../../icons/email.svg';
 
-const Contact = () => {
+const Contact = ({ className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <GithubWrapper>
         <a href="https://github.com/mattduff707" target="_blank" rel="noreferrer">
           <StyledCoolButton>
@@ -26,7 +26,7 @@ const Contact = () => {
       <LinkedInWrapper>
         <a href="https://www.linkedin.com/in/matthew-duffy-940112210/" target="_blank" rel="noreferrer">
           <StyledCoolButton>
-            <LinkedInIcon style={{ display: 'block', marginRight: '5px', marginTop: '1px' }} />
+            <LinkedInIcon style={{ marginRight: '5px', marginTop: '1px' }} />
             <Text>LinkedIn</Text>
           </StyledCoolButton>
         </a>
@@ -43,8 +43,7 @@ const Contact = () => {
 const Wrapper = styled.section`
   width: 350px;
   height: 80%;
-  margin-left: auto;
-  margin-right: 40px;
+
   padding: 5px 0px;
   /* border: 8px solid var(--color-inset);
   border-right: 8px solid var(--color-inset-light);
@@ -65,9 +64,6 @@ const Wrapper = styled.section`
   @media (max-width: 1200px) {
     width: 320px;
     margin-right: 20px;
-  }
-  @media (max-width: 1025px) {
-    display: none;
   }
 `;
 const Container = styled.div`

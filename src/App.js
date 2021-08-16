@@ -6,9 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { device } from './constants';
 
 const GlobalStyle = createGlobalStyle`
-  svg {
-  
-  }
+
   html {
 
     height: 100%;
@@ -41,6 +39,11 @@ const GlobalStyle = createGlobalStyle`
   @media(min-width: 1440px) {
     --font-size-heading: 1.5rem;
     --font-size-page-heading: 1.8rem;
+  }
+  svg {
+    @media(max-width: 1025px) {
+      display: none;
+    }
   }
 
   /* //page grid

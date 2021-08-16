@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Heading = ({ className, children, title, tag, topShadow }) => {
   return (
@@ -11,7 +11,7 @@ const Heading = ({ className, children, title, tag, topShadow }) => {
 const HeadingContainer = styled.div`
   /* min-width: 200px; */
   z-index: 10;
-  transform: translateY(-32px);
+  transform: translateY(-30px);
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ const HeadingContainer = styled.div`
 
   border-radius: 25px;
   box-shadow: ${(props) =>
-    props.topShadow ? "0px -10px 8px -8px var(--color-shadow)" : "0px 10px 8px -8px var(--color-shadow);"};
+    props.topShadow ? '0px -10px 8px -8px var(--color-shadow)' : '0px 10px 8px -8px var(--color-shadow);'};
   padding: 10px 30px;
   margin-bottom: -32px;
   @media (max-width: 500px) {

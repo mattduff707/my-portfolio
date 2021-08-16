@@ -45,6 +45,8 @@ const GlobalStyle = createGlobalStyle`
       display: none;
     }
   }
+  
+
 
   /* //page grid
   --grid-size: 140px 1fr;

@@ -1,28 +1,28 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const variants = {
   initial: {
-    transform: "translateY(-100%)",
+    transform: 'translateY(-100%)',
   },
   bottomInitial: {
-    transform: "translateY(100%)",
+    transform: 'translateY(100%)',
   },
   enter: {
-    transform: "translateY(0%)",
+    transform: 'translateY(0%)',
     transition: { duration: 1, delay: 0.1, delayChildren: 1 },
   },
   bottomEnter: {
-    transform: "translateY(0%)",
+    transform: 'translateY(0%)',
     transition: { duration: 1, delay: 0.1, delayChildren: 1 },
   },
   exit: {
-    transform: "translateY(-100%)",
+    transform: 'translateY(-100%)',
     transition: { duration: 1, delay: 0.1 },
   },
   bottomExit: {
-    transform: "translateY(100%)",
+    transform: 'translateY(100%)',
     transition: { duration: 1, delay: 0.1 },
   },
 };
@@ -93,6 +93,20 @@ const FadeWrapper = styled(motion.div)`
   height: 100%;
   width: 100%;
   overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-inset);
+    border-radius: 5px;
+    border: 4px solid var(--color-primary);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-inset-light);
+  }
 `;
 
 export default AnimatedWrapper;

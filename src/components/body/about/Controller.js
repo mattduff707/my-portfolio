@@ -7,7 +7,7 @@ const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClic
   return (
     <ControlContainer>
       <ArrowButton handleClick={handleDecrement}>
-        <BackArrowIcon />
+        <BackArrowIcon style={{ display: 'block' }} />
       </ArrowButton>
       <DotContainer>
         {aboutData.map((item, index) => {
@@ -15,7 +15,7 @@ const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClic
         })}
       </DotContainer>
       <ArrowButton handleClick={handleIncrement}>
-        <NextArrowIcon />
+        <NextArrowIcon style={{ display: 'block' }} />
       </ArrowButton>
     </ControlContainer>
   );

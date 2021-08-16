@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import styled from "styled-components";
-import AnimatedWrapper from "../animation/AnimatedWrapper";
-import PageHeader from "../PageHeader";
-import { aboutData } from "../../constants";
-import AboutImage from "./about/AboutImage";
-import AboutContent from "./about/AboutContent";
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import AnimatedWrapper from '../animation/AnimatedWrapper';
+import PageHeader from '../PageHeader';
+import { aboutData } from '../../constants';
+import AboutImage from './about/AboutImage';
+import AboutContent from './about/AboutContent';
 
-const AboutTwo = () => {
+const About = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeAbout, setActiveAbout] = useState(aboutData[activeIndex]);
 
@@ -98,4 +98,4 @@ const AboutContainer = styled.div`
   }
 `;
 
-export default AboutTwo;
+export default About;

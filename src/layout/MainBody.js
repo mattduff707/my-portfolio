@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Switch, Route, useLocation } from "react-router-dom";
-import OverviewTwo from "../components/body/OverviewTwo";
-import AboutTwo from "../components/body/AboutTwo";
-import Projects from "../components/body/Projects";
-import ProjectDetails from "../components/body/projects/ProjectDetails";
-import { AnimatePresence } from "framer-motion";
-import { projectsData } from "../constants";
+import React from 'react';
+import styled from 'styled-components';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import OverviewTwo from '../components/body/Overview';
+import AboutTwo from '../components/body/About';
+import Projects from '../components/body/Projects';
+import ProjectDetails from '../components/body/projects/ProjectDetails';
+import { AnimatePresence } from 'framer-motion';
+import { projectsData } from '../constants';
 
 const StyledMain = styled.main`
   //background-color: var(--color-primary);

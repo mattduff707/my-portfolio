@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import ProjectCardTwo from "./projects/ProjectCardTwo";
-import PageHeader from "../PageHeader";
-import AnimatedWrapper from "../animation/AnimatedWrapper";
-import { projectsData } from "../../constants";
+import React from 'react';
+import styled from 'styled-components';
+import ProjectCardTwo from './projects/ProjectCard';
+import PageHeader from '../PageHeader';
+import AnimatedWrapper from '../animation/AnimatedWrapper';
+import { projectsData } from '../../constants';
 
 const Projects = () => {
   return (

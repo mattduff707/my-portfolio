@@ -6,7 +6,7 @@ import Heading from '../../Heading';
 import { ReactComponent as DetailsIcon } from '../../../icons/details.svg';
 import { ReactComponent as GithubIcon } from '../../../icons/github.svg';
 
-const ProjectCardTwo = ({ title, subtitle, description, stack, path }) => {
+const ProjectCard = ({ title, subtitle, description, stack, path }) => {
   return (
     <CardContainer>
       <TitleWrap>
@@ -125,4 +125,4 @@ const StyledCoolButton = styled(CoolButton)`
   display: flex;
   align-items: center;
 `;
-export default ProjectCardTwo;
+export default ProjectCard;

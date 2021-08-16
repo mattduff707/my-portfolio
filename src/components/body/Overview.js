@@ -48,7 +48,7 @@ const StyledContact = styled(Contact)`
   }
 `;
 
-const OverviewTwo = () => {
+const Overview = () => {
   return (
     <AnimatedWrapper>
       <ContentWrapper>
@@ -64,4 +64,4 @@ const OverviewTwo = () => {
   );
 };
 
-export default OverviewTwo;
+export default Overview;

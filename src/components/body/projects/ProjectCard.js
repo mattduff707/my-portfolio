@@ -48,7 +48,7 @@ const CardContainer = styled.li`
   padding: 0px 20px 10px;
   margin: 0px 10px 50px;
   background-color: var(--color-primary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  box-shadow: var(--shadow-card);
   border: 4px solid var(--color-secondary);
   border-radius: 20px;
   /* border: 2px solid var(--color-secondary);

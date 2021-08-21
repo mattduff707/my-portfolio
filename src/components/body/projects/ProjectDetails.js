@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import AnimatedWrapper from "../../animation/AnimatedWrapper";
-import PageHeader from "../../PageHeader";
-import CoolButton from "../../CoolButton";
-import { Link } from "react-router-dom";
-import DetailCard from "./projectDetails/DetailCard";
+import React from 'react';
+import styled from 'styled-components';
+import AnimatedWrapper from '../../animation/AnimatedWrapper';
+import PageHeader from '../../PageHeader';
+import CoolButton from '../../CoolButton';
+import { Link } from 'react-router-dom';
+import DetailCard from './projectDetails/DetailCard';
 
 const ProjectDetails = ({ title, slides }) => {
   return (
@@ -52,7 +52,7 @@ const ContentContainer = styled.div`
   border-bottom: 8px solid var(--color-inset-light);
   background-color: var(--color-inset-bg);
   border-radius: 15px;
-  box-shadow: inset 0px 0px 4px var(--color-shadow);
+  box-shadow: inset 0px 0px 4px var(--shadow-color);
   /* overflow-y: auto; */
   align-items: center;
   position: relative;
@@ -68,7 +68,7 @@ const BtnLinkWrap = styled(Link)`
   border-bottom: 8px solid var(--color-inset);
   left: -8px;
   top: -8px;
-  box-shadow: 5px 10px 3px -8px var(--color-shadow);
+  box-shadow: 5px 10px 3px -8px var(--shadow-color);
   border-radius: 0px 0px 15px 0px;
   @media (max-width: 500px) {
     top: 20px;

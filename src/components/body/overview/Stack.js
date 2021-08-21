@@ -125,7 +125,7 @@ const StackWrapper = styled.div`
   align-items: center;
   background-color: var(--color-primary);
   border-radius: 15px;
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  box-shadow: var(--shadow-card);
   border: 4px solid var(--color-secondary);
   border-radius: 20px;
   padding: 0px 10px;

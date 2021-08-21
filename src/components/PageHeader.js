@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const PageHeader = ({ className, children, title, tag, topShadow }) => {
   return (
@@ -20,7 +20,6 @@ const HeaderContainer = styled.div`
   border-left-color: var(--color-inset-light);
   border-top: none;
   border-radius: 0px 0px 15px 15px;
-  box-shadow: 0px 10px 3px -8px var(--color-shadow);
   padding: 10px 30px;
   margin-bottom: -8px;
   max-width: 90%;

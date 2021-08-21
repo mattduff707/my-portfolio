@@ -29,7 +29,7 @@ const Image = styled.img`
   display: block;
   border-radius: 20px;
   border: 4px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  box-shadow: var(--shadow-card);
   object-fit: cover;
 `;
 
@@ -40,7 +40,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   border: 4px solid var(--color-secondary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  box-shadow: var(--shadow-card);
   border-radius: 20px;
   margin-top: 30px;
   background-color: var(--color-primary);

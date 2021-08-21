@@ -38,7 +38,7 @@ const ContentContainer = styled.section`
   border-bottom: 8px solid var(--color-inset-light);
   background-color: var(--color-inset-bg);
   border-radius: 15px;
-  box-shadow: inset 0px 0px 4px var(--color-shadow);
+  box-shadow: inset 0px 0px 4px var(--shadow-color);
   display: flex;
   flex-direction: column;
   align-items: center;

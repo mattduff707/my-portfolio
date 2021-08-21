@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   height: 100%;
   width: 100%;
   border-bottom: 3px solid var(--color-secondary);
-  box-shadow: 0px 1px 15px var(--color-shadow);
+  box-shadow: 0px 1px 15px var(--shadow-color);
   background-color: var(--color-primary);
   grid-area: header;
   display: flex;

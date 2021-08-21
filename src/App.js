@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   --color-primary: hsl(226, 45%, 15%);
   --color-secondary: hsl(225, 46%, 32%);
   --color-alternative: hsl(225, 46%, 85%);
-  --color-shadow: hsl(226, 45%, 8%);
+ 
   --color-text-primary: hsl(51, 99%, 72%);
   --color-text-secondary: hsl(2, 94%, 75%);
   --color-inset: hsl(225, 46%, 24%);
@@ -40,6 +40,11 @@ const GlobalStyle = createGlobalStyle`
     --font-size-heading: 1.5rem;
     --font-size-page-heading: 1.8rem;
   }
+
+  // Shadow
+  --shadow-color: hsl(226, 45%, 8%);
+  --shadow-card: 2px 2px 8px 0px var(--shadow-color);
+
   svg {
     @media(max-width: 1025px) {
       display: none;

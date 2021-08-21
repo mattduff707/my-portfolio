@@ -32,7 +32,7 @@ const TextContainer = styled.article`
   width: 100%;
   height: 100%;
   background-color: var(--color-primary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
+  box-shadow: var(--shadow-card);
   border: 4px solid var(--color-secondary);
   border-radius: 20px;
   display: flex;

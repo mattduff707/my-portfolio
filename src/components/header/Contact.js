@@ -52,8 +52,8 @@ const Wrapper = styled.section`
   border-radius: 15px;
   box-shadow: inset 0px 0px 4px var(--color-shadow); */
   background-color: var(--color-primary);
-  box-shadow: 0px 0px 8px 2px var(--color-shadow);
-  border: 2px solid var(--color-secondary);
+  box-shadow: var(--shadow-card);
+  border: 4px solid var(--color-secondary);
   border-radius: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -75,6 +75,7 @@ const Container = styled.div`
 `;
 const EmailWrapper = styled(Container)`
   grid-area: email;
+  padding-top: 0px;
 `;
 const LinkedInWrapper = styled(Container)`
   grid-area: linkedIn;

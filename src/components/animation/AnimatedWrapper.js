@@ -35,16 +35,7 @@ const childVariants = {
   bottomExit: { opacity: 0, transition: { delay: 0.2 } },
 };
 
-const AnimatedWrapper = ({ children, tag, bottom, className }) => {
-  if (bottom) {
-    return (
-      <StyledWrapperBottom initial="bottomInitial" animate="bottomEnter" as={tag} exit="bottomExit" variants={variants}>
-        <FadeWrapper className={className} variants={childVariants}>
-          {children}
-        </FadeWrapper>
-      </StyledWrapperBottom>
-    );
-  }
+const AnimatedWrapper = ({ children, tag, className }) => {
   return (
     <StyledWrapper initial="initial" animate="enter" as={tag} exit="exit" variants={variants}>
       <FadeWrapper className={className} variants={childVariants}>
@@ -78,11 +69,6 @@ const StyledWrapper = styled(motion.div)`
     padding-bottom: 15px;
     margin-bottom: 10px;
   } */
-`;
-const StyledWrapperBottom = styled(StyledWrapper)`
-  border: 3px solid var(--color-secondary);
-  border-bottom: none;
-  border-radius: 25px 25px 0px 0px;
 `;
 const FadeWrapper = styled(motion.div)`
   padding: 30px 20px;

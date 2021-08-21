@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from '../../Heading';
+import { ReactComponent as SmileIcon } from '../../../icons/smile.svg';
 
 const DescriptionContainer = styled.div`
   width: 100%;
@@ -29,32 +30,6 @@ const DescriptionContainer = styled.div`
     max-width: 1300px;
   }
 `;
-// const TitleWrapper = styled.div`
-//   /* width: 30%; */
-//   /* min-width: 200px; */
-//   border: 2px solid var(--color-secondary);
-//   padding: 10px 20px;
-//   box-shadow: 0px 0px 8px var(--color-shadow);
-//   border-radius: 20px;
-//   background-color: var(--color-primary);
-//   display: flex;
-//   justify-content: center;
-//   margin-bottom: 10px;
-// `;
-
-// const DescriptionTitle = styled.h3`
-//   background-color: #fa709a;
-//   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-//   background-clip: text;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-
-//   font-family: var(--font-family-primary);
-//   font-size: var(--font-size-title);
-//   /* border: 2px solid blue; */
-//   display: inline-block;
-//   /* margin-bottom: 5px; */
-// `;
 
 const DescriptionWrapper = styled.div`
   background-color: var(--color-primary);
@@ -79,16 +54,24 @@ const DescriptionText = styled.p`
     padding: 10px 20px 20px;
   }
 `;
+const StyledSmile = styled(SmileIcon)`
+  /* margin-top: -20px; */
+  /* margin-left: 5px; */
+  /* transform: translateY(8px); */
+  display: block;
+`;
 
 const Description = () => {
   return (
     <DescriptionContainer>
       <DescriptionWrapper>
-        <Heading topShadow>Matthew Duffy</Heading>
+        <Heading>Matthew Duffy</Heading>
         <DescriptionText>
-          Passionate self taught developer who revels in c oasdo dosod asodoasod asd oasod aosdo aosod oasod oaosdo
-          oasodo as Passionate self taught developer who revels in c oasdo dosod asodoasod asd oasod aosdo aosod oasod
-          oaosdo oasodo as Passionate self taught asd asd asd asd asd asd asd s ad
+          A fresh new face to the world of Web Development! I am a self taught developer who loves to build apps that
+          fulfill a meaningful purpose. Currently I operate in the front-end with a desire to transition into full-stack
+          development down the line. A patient learner, motivated collaborator, dedicated employee, and gradient
+          aficionado. Feel free to spend time checking out this portfolio that I spent far too long working on.
+          <StyledSmile />
         </DescriptionText>
       </DescriptionWrapper>
     </DescriptionContainer>

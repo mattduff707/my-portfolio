@@ -21,7 +21,6 @@ const ProjectCard = ({ title, subtitle, description, stack, path }) => {
           ))}
         </Stack>
       </ContentWrap>
-
       <LinkWrap>
         <ButtonWrapper>
           <Link to={path} style={{ marginRight: '10px' }}>
@@ -69,7 +68,8 @@ const TitleWrap = styled(FlexWrap)`
 const SubTitle = styled.h4`
   font-family: var(--font-family-primary);
   font-size: var(--font-size-subtitle);
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   /* @media (min-width: 500px) {
     font-size: 1.1rem;
   }
@@ -97,17 +97,24 @@ const Stack = styled.ul`
   font-family: var(--font-family-secondary);
   display: flex;
   flex-wrap: wrap;
-
-  list-style: none;
+  list-style: inside;
   padding: 5px 0px;
 `;
 const StackItem = styled.li`
-  padding-right: 10px;
+  padding: 0px 10px;
   background-color: #fa709a;
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* border-right: 2px solid black; */
+
+  /* &:first-of-type {
+    padding-left: 0px;
+  }
+  &:last-of-type {
+    border-right: 0px;
+  } */
 `;
 const LinkWrap = styled(FlexWrap)`
   margin-top: auto;

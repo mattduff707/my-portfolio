@@ -34,16 +34,19 @@ const TextContainer = styled.article`
   background-color: var(--color-primary);
   box-shadow: var(--shadow-card);
   border: 4px solid var(--color-secondary);
-  border-radius: 20px;
+
+  border-radius: 0px 0px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   @media (min-width: 1025px) {
     width: 50%;
-    margin-left: 10px;
+    margin-left: 0px;
+    border-radius: 0px 20px 20px 0px;
+    border-left: 0px;
   }
   @media (max-width: 1025px) {
-    padding: 10px 0px 0px 0px;
+    padding: 3px 0px 0px 0px;
   }
 `;
 

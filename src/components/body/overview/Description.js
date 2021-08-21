@@ -69,7 +69,7 @@ const DescriptionWrapper = styled.div`
 const DescriptionText = styled.p`
   color: var(--color-alternative);
   font-family: var(--font-family-secondary);
-  padding: 5px;
+  padding: 10px;
   font-size: 0.9rem;
   @media (min-width: 500px) {
     font-size: 1rem;

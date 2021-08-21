@@ -16,6 +16,7 @@ const ImageContainer = styled.div`
   height: 100%;
   width: auto;
   margin-top: 20px;
+  /* margin-bottom: 40px; */
   max-width: 400px;
   @media (min-width: 1025px) {
     height: auto;

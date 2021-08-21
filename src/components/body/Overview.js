@@ -22,6 +22,9 @@ const ContentWrapper = styled.section`
   /* overflow-y: auto; */
   align-items: center;
   padding: 0px 20px;
+  @media (max-width: 700px) {
+    padding: 0px 5px;
+  }
 `;
 const ContentFlexItem = styled.div`
   padding: ${(props) => props.padding};
@@ -40,6 +43,9 @@ const ContentFlexItem = styled.div`
       `;
     }
   }}
+  @media (max-width: 1025px) {
+    margin-bottom: 20px;
+  }
 `;
 const StyledContact = styled(Contact)`
   margin: 40px 0px 0px 0px;

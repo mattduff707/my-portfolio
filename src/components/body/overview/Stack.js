@@ -105,7 +105,10 @@ const StackContainer = styled.div`
   align-items: stretch;
   max-width: 900px;
   margin-top: 30px;
-
+  @media (max-width: 700px) {
+    flex-direction: column;
+    padding: 0px;
+  }
   @media (min-width: 1025px) {
     /* border: none; */
     box-shadow: none;
@@ -133,6 +136,13 @@ const StackWrapper = styled.div`
   margin: 0px 5px;
   @media (min-width: 1025px) {
     margin: 0px;
+  }
+  @media (max-width: 700px) {
+    padding: 0px;
+    margin: 0px;
+    &:first-child {
+      margin-bottom: 40px;
+    }
   }
 `;
 

@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import styled from "styled-components";
-import CoolToggle from "../CoolToggle";
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import styled from 'styled-components';
+import CoolToggle from '../CoolToggle';
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -57,7 +57,7 @@ const ListLink = styled(NavLink)`
 `;
 
 const active = {
-  color: "var(--color-text-primary)",
+  color: 'var(--color-text-primary)',
 };
 
 const CoolLink = styled(CoolToggle)`
@@ -68,16 +68,16 @@ const CoolLink = styled(CoolToggle)`
   font-weight: 600;
   letter-spacing: 1px;
   width: 90px;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     width: 100px;
     padding: 10px 0px;
     font-size: 0.9rem;
   }
 `;
 
-const OverviewPath = "/";
-const AboutPath = "/about";
-const ProjectsPath = "/projects";
+const OverviewPath = '/';
+const AboutPath = '/about';
+const ProjectsPath = '/projects';
 const ProjectsPathRegex = /\/projects/;
 
 const Nav = () => {

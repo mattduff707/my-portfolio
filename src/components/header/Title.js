@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   /* border: 2px red solid; */
@@ -11,7 +11,7 @@ const StyledContainer = styled.div`
   align-items: center;
   font-family: var(--font-family-primary);
   letter-spacing: 3px;
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     border-right: none;
     padding-top: 10px;
     padding-bottom: 10px;

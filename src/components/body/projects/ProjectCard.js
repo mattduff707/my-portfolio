@@ -17,7 +17,9 @@ const ProjectCard = ({ title, subtitle, description, stack, path }) => {
         <Text>{description}</Text>
         <Stack>
           {stack.map((e) => (
-            <StackItem key={e}>{e}</StackItem>
+            <StackItem key={e}>
+              <StackText>{e}</StackText>
+            </StackItem>
           ))}
         </Stack>
       </ContentWrap>
@@ -101,12 +103,8 @@ const Stack = styled.ul`
   padding: 5px 0px;
 `;
 const StackItem = styled.li`
-  padding: 0px 10px;
-  background-color: #fa709a;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* padding: 0px 10px; */
+  margin: 0px 10px;
   /* border-right: 2px solid black; */
 
   /* &:first-of-type {
@@ -115,6 +113,13 @@ const StackItem = styled.li`
   &:last-of-type {
     border-right: 0px;
   } */
+`;
+const StackText = styled.span`
+  background-color: #fa709a;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 const LinkWrap = styled(FlexWrap)`
   margin-top: auto;

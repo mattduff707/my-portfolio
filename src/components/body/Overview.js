@@ -48,7 +48,7 @@ const ContentFlexItem = styled.div`
   }
 `;
 const StyledContact = styled(Contact)`
-  margin: 40px 0px 0px 0px;
+  margin: 40px 0px 10px 0px;
   @media (min-width: 1025px) {
     display: none;
   }

@@ -5,50 +5,44 @@ import Heading from '../Heading';
 import { ReactComponent as LinkedInIcon } from '../../icons/linkedIn.svg';
 import { ReactComponent as ResumeIcon } from '../../icons/resume.svg';
 import { ReactComponent as GithubIcon } from '../../icons/github.svg';
-import { ReactComponent as EmailIcon } from '../../icons/email.svg';
 
 const Contact = ({ className }) => {
   return (
     <Wrapper className={className}>
       <StyledHeading>Contact</StyledHeading>
       <FlexWrap>
-        <GithubWrapper>
+        <Container>
           <a href="https://github.com/mattduff707" target="_blank" rel="noreferrer">
             <StyledCoolButton>
               <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
               <Text>GitHub</Text>
             </StyledCoolButton>
           </a>
-        </GithubWrapper>
-        <ResumeWrapper>
+        </Container>
+        <Container>
           <StyledCoolButton>
             <ResumeIcon style={{ marginRight: '2px' }} />
             <Text>Resume</Text>
           </StyledCoolButton>
-        </ResumeWrapper>
-        <LinkedInWrapper>
+        </Container>
+        <Container>
           <a href="https://www.linkedin.com/in/matthew-duffy-940112210/" target="_blank" rel="noreferrer">
             <StyledCoolButton>
               <LinkedInIcon style={{ marginRight: '5px', marginTop: '1px' }} />
               <Text>LinkedIn</Text>
             </StyledCoolButton>
           </a>
-        </LinkedInWrapper>
+        </Container>
       </FlexWrap>
-      <div>
-        <EmailWrapper>
-          <EmailIcon style={{ marginRight: '3px' }} />
-          <EmailText>mattduff707@hotmail.com</EmailText>
-        </EmailWrapper>
-      </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
   width: 350px;
-  height: 80%;
+  height: 72%;
   padding: 5px 0px;
+  margin-top: 15px;
   /* border: 8px solid var(--color-inset);
   border-right: 8px solid var(--color-inset-light);
   border-bottom: 8px solid var(--color-inset-light);
@@ -66,23 +60,23 @@ const Wrapper = styled.section`
     margin-right: 20px;
   }
   @media (max-width: 600px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 const StyledHeading = styled(Heading)`
   align-self: center;
+  padding: 5px 20px;
   /* margin-bottom: 10px; */
-  @media (min-width: 1025px) {
+  /* @media (min-width: 1025px) {
     display: none;
-  }
+  } */
 `;
 const FlexWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 1025px) {
-    margin-top: 10px;
-  }
+
+  margin-top: 8px;
 `;
 const Container = styled.div`
   padding: 5px;
@@ -91,19 +85,7 @@ const Container = styled.div`
   justify-content: center;
   /* border: 2px solid red; */
 `;
-const EmailWrapper = styled(Container)`
-  grid-area: email;
-  padding-top: 0px;
-`;
-const LinkedInWrapper = styled(Container)`
-  grid-area: linkedIn;
-`;
-const ResumeWrapper = styled(Container)`
-  grid-area: resume;
-`;
-const GithubWrapper = styled(Container)`
-  grid-area: github;
-`;
+
 const StyledCoolButton = styled(CoolButton)`
   padding: 8px 5px;
   font-size: 0.9rem;
@@ -116,15 +98,6 @@ const StyledCoolButton = styled(CoolButton)`
 
 const Text = styled.p`
   display: block;
-  padding-top: 2px;
-`;
-const EmailText = styled.p`
-  color: var(--color-alternative);
-  font-family: var(--font-family-secondary);
-  display: block;
-  display: flex;
-  align-items: center;
-  /* border: 2px solid red; */
   padding-top: 2px;
 `;
 

@@ -55,10 +55,10 @@ const DescriptionText = styled.p`
   }
 `;
 const StyledSmile = styled(SmileIcon)`
-  /* margin-top: -20px; */
-  /* margin-left: 5px; */
-  /* transform: translateY(8px); */
-  display: block;
+  margin-top: -20px;
+  margin-left: 5px;
+  transform: translateY(8px);
+  /* display: block; */
 `;
 
 const Description = () => {

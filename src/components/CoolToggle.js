@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const CoolToggle = ({ children, className, handleClick, margin, padding, width, fontSize, isActive, labelFor }) => {
   return (
@@ -17,12 +17,12 @@ const Shadow = styled.span`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 102%;
   height: 100%;
   border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
+  background: hsl(0deg 0% 0% / 0.15);
   will-change: transform;
-  transform: ${(props) => (props.isActive ? "translateY(0px)" : "translateY(2px)")};
+  transform: ${(props) => (props.isActive ? 'translateY(0px)' : 'translateY(2px)')};
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 `;
 
@@ -47,15 +47,15 @@ const Front = styled.label`
   cursor: pointer;
   position: relative;
   border: 2px solid;
-  border-color: ${(props) => (props.isActive ? "var(--color-text-primary)" : "var(--color-secondary)")};
+  border-color: ${(props) => (props.isActive ? 'var(--color-text-primary)' : 'var(--color-secondary)')};
   /* border-color: var(--color-secondary); */
   border-radius: 12px;
   padding: ${(props) => props.padding};
   font-size: ${(props) => props.fontSize};
-  color: ${(props) => (props.isActive ? "var(--color-text-secondary)" : "var(--color-alternative)")};
+  color: ${(props) => (props.isActive ? 'var(--color-text-secondary)' : 'var(--color-alternative)')};
   background-color: var(--color-primary);
   will-change: transform;
-  transform: ${(props) => (props.isActive ? "translateY(-0px);" : "translateY(-4px)")};
+  transform: ${(props) => (props.isActive ? 'translateY(-0px);' : 'translateY(-4px)')};
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1), color 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5),
     border 500ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 `;

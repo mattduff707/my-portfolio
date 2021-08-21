@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const CoolButton = ({ children, className, handleClick, margin, padding, fontSize }) => {
   return (
@@ -17,10 +17,10 @@ const Shadow = styled.span`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 102%;
   height: 100%;
   border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
+  background: hsl(0deg 0% 0% / 0.15);
   will-change: transform;
   transform: translateY(2px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);

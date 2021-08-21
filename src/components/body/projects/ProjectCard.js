@@ -27,13 +27,13 @@ const ProjectCard = ({ title, subtitle, description, stack, path }) => {
           <Link to={path} style={{ marginRight: '10px' }}>
             <StyledCoolButton>
               <DetailsIcon style={{ marginRight: '5px' }} />
-              Details
+              <LinkText>Details</LinkText>
             </StyledCoolButton>
           </Link>
           <a href="https://github.com/" target="_blank" rel="noreferrer">
             <StyledCoolButton>
               <GithubIcon style={{ width: '20px', height: '20px', marginRight: '5px' }} />
-              GitHub
+              <LinkText>GitHub</LinkText>
             </StyledCoolButton>
           </a>
         </ButtonWrapper>
@@ -51,9 +51,6 @@ const CardContainer = styled.li`
   box-shadow: var(--shadow-card);
   border: 4px solid var(--color-secondary);
   border-radius: 20px;
-  /* border: 2px solid var(--color-secondary);
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px var(--color-shadow); */
   display: flex;
   flex-direction: column;
 `;
@@ -120,9 +117,13 @@ const ButtonWrapper = styled.div`
   padding: 12px 0px 5px;
 `;
 const StyledCoolButton = styled(CoolButton)`
-  padding: 5px 10px;
+  padding: 8px 10px;
   font-size: 0.9rem;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+`;
+const LinkText = styled.p`
+  display: block;
+  padding-top: 2px;
 `;
 export default ProjectCard;

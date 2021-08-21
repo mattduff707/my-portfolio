@@ -5,6 +5,7 @@ import PageHeader from '../../PageHeader';
 import CoolButton from '../../CoolButton';
 import { Link } from 'react-router-dom';
 import DetailCard from './projectDetails/DetailCard';
+import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
 
 const ProjectDetails = ({ title, slides }) => {
   return (
@@ -12,8 +13,8 @@ const ProjectDetails = ({ title, slides }) => {
       <ContentContainer>
         <PageHeader title={title}>Project Details</PageHeader>
         <BtnLinkWrap to="/projects">
-          <StyledCoolButton padding="5px 10px" fontSize="1.2rem">
-            <Icon className="fas fa-arrow-left"></Icon>
+          <StyledCoolButton fontSize="1.2rem">
+            <BackArrowIcon style={{ display: 'block', width: '40px', height: '40px' }}></BackArrowIcon>
             <ButtonText>Back to Projects</ButtonText>
           </StyledCoolButton>
         </BtnLinkWrap>
@@ -62,7 +63,7 @@ const ContentContainer = styled.div`
 const BtnLinkWrap = styled(Link)`
   position: absolute;
 
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: var(--color-primary);
   border-right: 8px solid var(--color-inset);
   border-bottom: 8px solid var(--color-inset);
@@ -77,17 +78,19 @@ const BtnLinkWrap = styled(Link)`
 `;
 const StyledCoolButton = styled(CoolButton)`
   display: flex;
-`;
-const ButtonText = styled.p`
-  @media (max-width: 768px) {
-    display: none;
+  align-items: center;
+  padding-right: 10px;
+  &:hover > svg {
+    transition: fill 0.3s ease;
+    fill: var(--color-text-primary);
+  }
+  @media (max-width: 1025px) {
+    padding-right: 0px;
   } ;
 `;
-const Icon = styled.i`
-  padding-right: 5px;
-  @media (max-width: 768px) {
-    padding: 5px;
-    font-size: 1.8rem;
+const ButtonText = styled.p`
+  @media (max-width: 1025px) {
+    display: none;
   } ;
 `;
 
@@ -99,8 +102,8 @@ const DetailsContainer = styled.div`
   /* border: red solid 2px; */
   width: 100%;
   max-width: 1800px;
-  padding: 20px 5px;
-  @media (min-width: 768px) {
+  padding: 20px 10px;
+  @media (min-width: 1025px) {
     padding: 20px 0px;
   }
   @media (min-width: 1440px) {

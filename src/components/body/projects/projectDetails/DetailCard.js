@@ -10,8 +10,9 @@ const ArticleContainer = styled.article`
   flex-direction: column;
 
   align-items: center;
-
-  padding: 0px 10px 30px;
+  box-shadow: var(--shadow-card);
+  margin: 0px 10px 30px;
+  border-radius: 20px;
   /* border: 2px solid var(--color-secondary); */
   /* border-radius: 20px; */
   /* box-shadow: 0px 0px 15px var(--color-shadow); */
@@ -21,15 +22,16 @@ const ArticleContainer = styled.article`
   }
 `;
 const ImageContainer = styled.div`
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
   display: block;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   border: 4px solid var(--color-secondary);
-  box-shadow: var(--shadow-card);
+  border-bottom: 0px;
+  /* box-shadow: var(--shadow-card); */
   object-fit: cover;
 `;
 
@@ -40,9 +42,9 @@ const ContentContainer = styled.div`
   flex-direction: column;
   align-items: center;
   border: 4px solid var(--color-secondary);
-  box-shadow: var(--shadow-card);
-  border-radius: 20px;
-  margin-top: 30px;
+  /* box-shadow: var(--shadow-card); */
+  border-radius: 0px 0px 20px 20px;
+  /* margin-top: 30px; */
   background-color: var(--color-primary);
 `;
 
@@ -70,7 +72,7 @@ const DetailCard = ({ title, text, image, imageAlt }) => {
         <Image src={image} alt={imageAlt} />
       </ImageContainer>
       <ContentContainer>
-        <Heading topShadow>{title}</Heading>
+        <Heading>{title}</Heading>
         <Description>{text}</Description>
       </ContentContainer>
     </ArticleContainer>

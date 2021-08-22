@@ -52,7 +52,7 @@ const ContentContainer = styled.section`
 // `;
 
 const ProjectList = styled.ul`
-  margin-top: 20px;
+  margin-top: 15px;
   list-style: none;
   padding: 30px 0px;
   display: flex;

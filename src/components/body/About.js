@@ -94,7 +94,7 @@ const AboutContainer = styled.div`
     flex-direction: row;
     justify-content: space-around;
     max-width: 1500px;
-    padding: 15px 20px 40px;
+    padding: 20px 20px 40px;
   }
 `;
 

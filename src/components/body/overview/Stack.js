@@ -77,13 +77,12 @@ const Stack = () => {
               <AccessibilityIcon style={IconStyle} />
               Accessibility
             </StackItem>
-
             <StackItem>
-              <ScrumIcon style={IconStyle} />
+              <ScrumIcon style={{ marginRight: '6px' }} />
               Agile / Scrum
             </StackItem>
             <StackItem>
-              <TasksIcon style={IconStyle} />
+              <TasksIcon style={{ marginRight: '6px' }} />
               Task Management
             </StackItem>
             <StackItem>

@@ -1,9 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CoolToggle = ({ children, className, handleClick, margin, padding, width, fontSize, isActive, labelFor }) => {
+const CoolToggle = ({
+  children,
+  className,
+  handleClick,
+  margin,
+  padding,
+  width,
+  fontSize,
+  isActive,
+  labelFor,
+  tabIndex,
+}) => {
   return (
-    <Btn width={width} margin={margin} padding={padding} onClick={handleClick} isActive={isActive}>
+    <Btn tabIndex={tabIndex} width={width} margin={margin} padding={padding} onClick={handleClick} isActive={isActive}>
       <Shadow isActive={isActive}></Shadow>
       <Edge></Edge>
       <Front isActive={isActive} padding={padding} fontSize={fontSize} className={className} htmlFor={labelFor}>

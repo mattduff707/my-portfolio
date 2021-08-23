@@ -93,17 +93,23 @@ const Nav = () => {
       <NavUl>
         <ListItem>
           <ListLink onClick={handleNav} path={OverviewPath} activeStyle={active} exact to={OverviewPath}>
-            <CoolLink isActive={currentPath === OverviewPath}>Overview</CoolLink>
+            <CoolLink tabIndex="-1" isActive={currentPath === OverviewPath}>
+              Overview
+            </CoolLink>
           </ListLink>
         </ListItem>
         <ListItem>
           <ListLink onClick={handleNav} path={AboutPath} activeStyle={active} to={AboutPath}>
-            <CoolLink isActive={currentPath === AboutPath}>About</CoolLink>
+            <CoolLink tabIndex="-1" isActive={currentPath === AboutPath}>
+              About
+            </CoolLink>
           </ListLink>
         </ListItem>
         <ListItem>
           <ListLink onClick={handleNav} path={ProjectsPath} activeStyle={active} to={ProjectsPath}>
-            <CoolLink isActive={ProjectsPathRegex.test(currentPath)}>Projects</CoolLink>
+            <CoolLink tabIndex="-1" isActive={ProjectsPathRegex.test(currentPath)}>
+              Projects
+            </CoolLink>
           </ListLink>
         </ListItem>
       </NavUl>

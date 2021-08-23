@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import picture from '../../../images/me.jpg';
+import picture from '../../../images/dogpic.jpg';
 
 const MainImage = ({ noDisplayAt }) => {
   return (

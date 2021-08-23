@@ -55,12 +55,13 @@ const Text = styled.p`
   color: var(--color-alternative);
   font-family: var(--font-family-secondary);
   font-size: 0.9rem;
+  line-height: 30px;
   @media (min-width: 500px) {
     font-size: 1rem;
   }
   @media (min-width: 1024px) {
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 10px 15px;
   }
 `;
 

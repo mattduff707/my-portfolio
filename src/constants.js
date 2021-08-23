@@ -1,4 +1,4 @@
-import testPic from './images/backgroundUs.jpg';
+import testPic from './images/strength.png';
 import testPicTwo from './images/image0.jpeg';
 import testPicThree from './images/image1.jpeg';
 
@@ -6,9 +6,11 @@ export const aboutData = [
   {
     title: 'Strength Training',
     text: `I've been an avid strength training enthusiast for about 5 years now (With a year-long pause due to COVID-19).
-       In fact I worked as a strength coach in Chicago for just over a year.
-        It was during my time as a trainer that I caught wind of web development as a career from one of my clients, and the rest is history.
-         Though I no longer pursue strength training as a career, it will likely forever be a passionate hobby of mine. sad kjaslkd jalskjd alksjd laksjd laksjd lkasjd lkasjd laksjd lkasjd lkasjd lakj sdlkasjd laksjd lkasjd lkasjd laksdj `,
+       In fact I worked as a strength coach in Chicago for just over a year. This was my first dip into self education as I
+       learned the necessary material for my training certification.
+        It was during my time as a trainer that I caught wind of web development as a career from one of my clients. 
+        From then on, I was much more interested in the mental sweat of code! 
+         Though I no longer pursue strength training as a career, it will forever be a passionate hobby of mine.`,
     picture: testPic,
   },
   {
@@ -26,9 +28,9 @@ export const aboutData = [
 ];
 export const projectsData = [
   {
-    path: '/projects/duffy-web-brain-one',
-    title: 'Duffy Web Brain 1',
-    subtitle: 'Personal notes app',
+    path: '/projects/the-hub',
+    title: 'The Hub',
+    subtitle: 'Sci-fi Landing page',
     stack: ['React', 'Gatsbyjs', 'PrismJs'],
     description:
       "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution! asjdh aksjdh aksjd akjshd kajshd kjakajksjk akhsjdkjahsh sjhdjs jshdjsh",

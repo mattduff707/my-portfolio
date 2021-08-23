@@ -26,13 +26,13 @@ const ProjectCard = ({ title, subtitle, description, stack, path }) => {
       <LinkWrap>
         <ButtonWrapper>
           <Link to={path} style={{ marginRight: '10px' }}>
-            <StyledCoolButton>
+            <StyledCoolButton tabIndex="-1">
               <DetailsIcon style={{ marginRight: '5px' }} />
               <LinkText>Details</LinkText>
             </StyledCoolButton>
           </Link>
           <a href="https://github.com/" target="_blank" rel="noreferrer">
-            <StyledCoolButton>
+            <StyledCoolButton tabIndex="-1">
               <GithubIcon style={{ width: '20px', height: '20px', marginRight: '5px' }} />
               <LinkText>GitHub</LinkText>
             </StyledCoolButton>

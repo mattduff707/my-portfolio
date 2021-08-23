@@ -13,21 +13,21 @@ const Contact = ({ className }) => {
       <FlexWrap>
         <Container>
           <a href="https://github.com/mattduff707" target="_blank" rel="noreferrer">
-            <StyledCoolButton>
+            <StyledCoolButton tabIndex="-1">
               <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
               <Text>GitHub</Text>
             </StyledCoolButton>
           </a>
         </Container>
         <Container>
-          <StyledCoolButton>
+          <StyledCoolButton tabIndex="-1">
             <ResumeIcon style={{ marginRight: '2px' }} />
             <Text>Resume</Text>
           </StyledCoolButton>
         </Container>
         <Container>
           <a href="https://www.linkedin.com/in/matthew-duffy-940112210/" target="_blank" rel="noreferrer">
-            <StyledCoolButton>
+            <StyledCoolButton tabIndex="-1">
               <LinkedInIcon style={{ marginRight: '5px', marginTop: '1px' }} />
               <Text>LinkedIn</Text>
             </StyledCoolButton>
@@ -87,10 +87,13 @@ const Container = styled.div`
 `;
 
 const StyledCoolButton = styled(CoolButton)`
-  padding: 8px 5px;
+  padding: 8px 10px;
   font-size: 0.9rem;
   display: flex;
   align-items: stretch;
+  @media (max-width: 1200px) {
+    padding: 8px 5px;
+  }
   @media (max-width: 700px) {
     font-size: 0.75rem;
   }

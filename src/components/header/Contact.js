@@ -38,7 +38,7 @@ const Contact = ({ className }) => {
   );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.nav`
   width: 350px;
   height: 72%;
   padding: 5px 0px;
@@ -60,7 +60,7 @@ const Wrapper = styled.section`
     margin-right: 20px;
   }
   @media (max-width: 600px) {
-    width: 90%;
+    width: 100%;
   }
 `;
 const StyledHeading = styled(Heading)`
@@ -71,14 +71,14 @@ const StyledHeading = styled(Heading)`
     display: none;
   } */
 `;
-const FlexWrap = styled.div`
+const FlexWrap = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   margin-top: 8px;
 `;
-const Container = styled.div`
+const Container = styled.li`
   padding: 5px;
   display: flex;
   align-items: center;

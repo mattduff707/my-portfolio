@@ -1,19 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const variants = {
   initial: {
     transform: 'translateY(-100%)',
   },
-  bottomInitial: {
-    transform: 'translateY(100%)',
-  },
+
   enter: {
-    transform: 'translateY(0%)',
-    transition: { duration: 1, delay: 0.1, delayChildren: 1 },
-  },
-  bottomEnter: {
     transform: 'translateY(0%)',
     transition: { duration: 1, delay: 0.1, delayChildren: 1 },
   },
@@ -21,11 +15,8 @@ const variants = {
     transform: 'translateY(-100%)',
     transition: { duration: 1, delay: 0.1 },
   },
-  bottomExit: {
-    transform: 'translateY(100%)',
-    transition: { duration: 1, delay: 0.1 },
-  },
 };
+
 const childVariants = {
   initial: { opacity: 0 },
   bottomInitial: { opacity: 0 },
@@ -36,8 +27,16 @@ const childVariants = {
 };
 
 const AnimatedWrapper = ({ children, tag, className }) => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <StyledWrapper initial="initial" animate="enter" as={tag} exit="exit" variants={variants}>
+    <StyledWrapper
+      initial="initial"
+      animate="enter"
+      as={tag}
+      exit="exit"
+      variants={shouldReduceMotion ? false : variants}
+    >
       <FadeWrapper className={className} variants={childVariants}>
         {children}
       </FadeWrapper>

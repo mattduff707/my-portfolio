@@ -5,8 +5,8 @@ import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
 import { ReactComponent as NextArrowIcon } from '../../../icons/nextArrow.svg';
 const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClick, activeIndex }) => {
   return (
-    <ControlContainer>
-      <ArrowButton handleClick={handleDecrement}>
+    <ControlContainer aria-controls="carousel" aria-label="carousel buttons">
+      <ArrowButton ariaLabel="previous slide" handleClick={handleDecrement}>
         <BackArrowIcon style={{ display: 'block' }} />
       </ArrowButton>
       <DotContainer>
@@ -14,14 +14,15 @@ const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClic
           return <Dot key={index} handleDotClick={handleDotClick} isActive={index === activeIndex} />;
         })}
       </DotContainer>
-      <ArrowButton handleClick={handleIncrement}>
+      <ArrowButton ariaLabel="next slide" handleClick={handleIncrement}>
         <NextArrowIcon style={{ display: 'block' }} />
       </ArrowButton>
     </ControlContainer>
   );
 };
-const ControlContainer = styled.div`
+const ControlContainer = styled.fieldset`
   width: 100%;
+  border: none;
   border-top: 2px solid var(--color-secondary);
   display: flex;
   justify-content: space-between;

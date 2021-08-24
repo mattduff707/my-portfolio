@@ -37,7 +37,7 @@ const About = () => {
     <AnimatedWrapper>
       <ContentContainer>
         <PageHeader>About</PageHeader>
-        <AboutContainer>
+        <AboutContainer aria-live="polite">
           <AboutImage imageSrc={activeAbout.picture} />
           <AboutContent
             aboutData={aboutData}

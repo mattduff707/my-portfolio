@@ -10,14 +10,14 @@ const CoolToggle = ({
   width,
   fontSize,
   isActive,
-  labelFor,
+
   tabIndex,
 }) => {
   return (
     <Btn tabIndex={tabIndex} width={width} margin={margin} padding={padding} onClick={handleClick} isActive={isActive}>
       <Shadow isActive={isActive}></Shadow>
       <Edge></Edge>
-      <Front isActive={isActive} padding={padding} fontSize={fontSize} className={className} htmlFor={labelFor}>
+      <Front isActive={isActive} padding={padding} fontSize={fontSize} className={className}>
         {children}
       </Front>
     </Btn>
@@ -53,7 +53,7 @@ const Edge = styled.span`
   );
 `;
 
-const Front = styled.label`
+const Front = styled.span`
   display: block;
   cursor: pointer;
   position: relative;

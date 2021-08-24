@@ -5,12 +5,15 @@ import Controller from './Controller';
 
 const AboutContent = ({ aboutData, title, content, handleIncrement, handleDecrement, handleDotClick, activeIndex }) => {
   return (
-    <TextContainer>
-      <Heading topShadow>{title}</Heading>
+    <TextContainer aria-labelledby="carouselheading">
+      <Heading id="carouselheading" topShadow>
+        {title}
+      </Heading>
       <OverflowContainer>
         <Text>{content}</Text>
       </OverflowContainer>
       <Controller
+        aria-controls="carousel"
         aboutData={aboutData}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}

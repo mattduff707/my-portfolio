@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CoolButton = ({ children, className, handleClick, margin, padding, fontSize, tabIndex }) => {
+const CoolButton = ({ children, className, handleClick, margin, padding, fontSize, tabIndex, ariaLabel }) => {
   return (
-    <Btn tabIndex={tabIndex} margin={margin} padding={padding} onClick={handleClick}>
+    <Btn aria-label={ariaLabel} tabIndex={tabIndex} margin={margin} padding={padding} onClick={handleClick}>
       <Shadow></Shadow>
       <Edge></Edge>
       <Front padding={padding} fontSize={fontSize} className={className}>

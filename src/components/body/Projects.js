@@ -14,6 +14,7 @@ const Projects = () => {
           {projectsData.map((project, index) => {
             return (
               <ProjectCardTwo
+                isShowcase={project.showcase}
                 key={project.title + index}
                 title={project.title}
                 subtitle={project.subtitle}

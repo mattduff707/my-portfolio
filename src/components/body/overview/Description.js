@@ -69,8 +69,8 @@ const Description = () => {
         <DescriptionText>
           A fresh new face to the world of Web Development! I am a self taught developer who loves to build apps that
           fulfill a meaningful purpose. Currently I operate in the front-end with a desire to transition into full-stack
-          development down the line. A patient learner, motivated collaborator, dedicated employee, and gradient
-          aficionado. Enjoy spending some time checking out this portfolio that I spent far too long working on.
+          development down the line. I primarily use React due to its popularity and massive catalog of A patient
+          learner, motivated collaborator, dedicated employee, and gradient aficionado. Please enjoy your stay.
           <StyledSmile />
         </DescriptionText>
       </DescriptionWrapper>

@@ -26,6 +26,7 @@ const ControlContainer = styled.fieldset`
   border-top: 2px solid var(--color-secondary);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 20px;
   margin-top: auto;
 `;

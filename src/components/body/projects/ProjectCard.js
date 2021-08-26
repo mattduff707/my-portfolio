@@ -5,10 +5,12 @@ import CoolButton from '../../CoolButton';
 import Heading from '../../Heading';
 import { ReactComponent as DetailsIcon } from '../../../icons/details.svg';
 import { ReactComponent as GithubIcon } from '../../../icons/github.svg';
+import { ReactComponent as StarIcon } from '../../../icons/star.svg';
 
-const ProjectCard = ({ title, subtitle, description, stack, path }) => {
+const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase }) => {
   return (
     <CardContainer>
+      {isShowcase && <StarIcon style={{ position: 'absolute', top: '15px', left: '20px' }} />}
       <TitleWrap>
         <Heading topShadow>{title}</Heading>
         <SubTitle>{subtitle}</SubTitle>
@@ -44,6 +46,7 @@ const ProjectCard = ({ title, subtitle, description, stack, path }) => {
 };
 
 const CardContainer = styled.li`
+  position: relative;
   width: 100%;
   max-width: 450px;
   padding: 0px 20px 10px;

@@ -4,40 +4,52 @@ import testPicThree from './images/image1.jpeg';
 
 export const aboutData = [
   {
-    title: 'Strength Training',
-    text: `I've been an avid strength training enthusiast for about 5 years now (With a year-long pause due to COVID-19).
-       In fact I worked as a strength coach in Chicago for just over a year. This was my first dip into self education as I
-       learned the necessary material for my training certification.
-        It was during my time as a trainer that I caught wind of web development as a career from one of my clients. 
-        From then on, I was much more interested in the mental sweat of code! 
-         Though I no longer pursue strength training as a career, it will forever be a passionate hobby of mine.`,
+    title: 'Strength Coach',
+    text: `I've been an avid strength training enthusiast for about 5 years now (with a year-long pause due to COVID-19).
+       I worked as a strength coach in Chicago for just over a year. This was my first dip into self-education as I
+       learned the necessary material for my training certification. Learning how to learn played a key role in my web development journey, and it started here.
+        Acting as an educator for those taking their first steps into the intimidating world of fitness and health was humbling and inspiring. 
+         Although I no longer pursue strength training as a career, it will forever be a passionate hobby of mine. Yeah, buddy! `,
     picture: testPic,
   },
   {
-    title: 'Person I got into Web Development',
-    subtitle: 'A computer nerd finds his passion',
-    text: "I didn't even know it was an option...",
+    title: 'Computer Enthusiast',
+    text: `There are few things that I am more passionate about than computing. It is my comfort zone. I was privileged to have a father who was keeping up during the digital revolution; 
+     he bought his first home computer in the early 80s. In a way, it seemed preordained that I would also become an enthusiast through his influence.
+      YouTube has been a major source of entertainment and education throughout my life, especially during this professional transition. I have been an avid PC gamer since the age of 5,
+     living vicariously through Pajama Sam is where the interest sparked. My favorites along the way include Diablo 2, Rocket League, and World of Warcraft.`,
     picture: testPicTwo,
   },
   {
-    title: 'Person ambitions',
-    subtitle: 'What I want to achieve',
-    text: 'I plan to achieve this...',
+    title: 'Advocate',
+    text: `I am constantly searching for ways to play my part in improving the world we share.
+     Knowing the lives of others may be positively impacted by my decisions today fuels me to take the necessary actions to ignite change.
+     That extends to my interest in web development. I have a keen interest in specializing in accessibility going forward.
+     My mother has dedicated her life to assisting those in the disabled community.
+     She was an ASL interpreter for 18 years and now works as a home care provider for people with mental/physical disabilities.
+     As an inspiration to me, I aspire to achieve even a fraction of the impact she has made in people's lives.
+     `,
     picture: testPicThree,
   },
 ];
 export const projectsData = [
   {
     path: '/projects/the-hub',
+    showcase: true,
     title: 'The Hub',
     subtitle: 'Sci-fi Landing page',
-    stack: ['React', 'Gatsbyjs', 'PrismJs'],
-    description:
-      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution! asjdh aksjdh aksjd akjshd kajshd kjakajksjk akhsjdkjahsh sjhdjs jshdjsh",
+    stack: ['React', 'styled components', 'PrismJs', 'NASA APOD API'],
+    description: `This is my browser landing page with all sorts of fun features built in already with more planned for the future.
+     Task management, Search the MDN Docs, and NASA's picture of the day are just a few features of this app.
+
+     `,
     slides: [
       {
-        title: 'Overview',
-        text: 'I made this project for this reason... asdasdasd asd asd sdwqd qwd qwd qwdqw dqwdqwd qdwd qwd qwd qwdasd asd asd asd asd  asd asd ads asd asd asd ;askldkas;lkfw peokfpw oek opwekf powekf powekfopwke fpokwepofkw poekfpow kefpowkefp owkefpo kwepfok wepofkpwoekfopwek f 1231 23 asd asd qwd qer dqsd qsdqw eq edd qwd qwe qwe qwewewe wq we',
+        title: 'The Process',
+        text: `A love for sci-fi and the educational YouTube channel Kurzgesagt – In a Nutshell is what inspired this project.
+         The concept of a feature rich browser homepage stems from my desire to take existing ideas and tailor them to my needs to increase my own productivity.
+         I created a rough design on Figma once I had fully conceptualized the idea. From there I broke it down into tasks to create a consistant productive workflow.
+         `,
         image: testPic,
       },
       {
@@ -53,10 +65,11 @@ export const projectsData = [
     ],
   },
   {
-    path: '/projects/duffy-web-brain-two',
-    title: 'Duffy Web Brain 2',
+    path: '/projects/portfolio',
+    showcase: true,
+    title: 'This Portfolio',
     subtitle: 'Personal notes app',
-    stack: ['React', 'Gatsbyjs', 'PrismJs', 'Tester', 'Long Stack Item', 'Another long Stack Item'],
+    stack: ['React', 'Framer Motion', 'styled components'],
     description:
       "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
     slides: [
@@ -78,12 +91,12 @@ export const projectsData = [
     ],
   },
   {
-    path: '/projects/duffy-web-brain-three',
-    title: 'Duffy Web Brain 3',
-    subtitle: 'Personal notes app',
-    stack: ['React', 'Gatsbyjs', 'PrismJs'],
-    description:
-      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
+    path: '/projects/5-3-1',
+    title: '5-3-1 Calculator',
+    subtitle: 'Lifting protocol calculator',
+    stack: ['React', 'styled components'],
+    description: `A calculator for the famous 5-3-1 lifting program, my personal favorite.
+     It was an enjoyable jump into controlled inputs and another app that I use frequently.`,
     slides: [
       {
         title: 'Overview',
@@ -102,6 +115,7 @@ export const projectsData = [
       },
     ],
   },
+
   {
     path: '/projects/duffy-web-brain-three',
     title: 'Duffy Web Brain 3',
@@ -153,24 +167,3 @@ export const projectsData = [
     ],
   },
 ];
-
-const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '768px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '1920px',
-  desktopL: '2560px',
-};
-export const device = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
-  desktopL: `(min-width: ${size.desktopL})`,
-};

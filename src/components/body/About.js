@@ -79,6 +79,7 @@ const ContentContainer = styled.section`
 const AboutContainer = styled.div`
   margin-top: 20px;
   width: 100%;
+  /* max-height: 575px; */
   max-width: 500px;
   display: flex;
   flex-direction: column;

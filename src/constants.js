@@ -2,6 +2,7 @@ import testPic from './images/strength.png';
 import testPicTwo from './images/image1.jpeg';
 import hubDesignImage from './images/hubDesign.jpg';
 import hubDrawingImage from './images/hubDrawing.jpg';
+import hubLiveImage from './images/hubLive.png';
 import fiveBookImage from './images/fiveBook.jpg';
 import fiveAppImage from './images/fiveApp.png';
 import fiveCodeImage from './images/fiveCode.png';
@@ -40,6 +41,7 @@ export const aboutData = [
 export const projectsData = [
   {
     path: '/projects/the-hub',
+    github: 'https://github.com/mattduff707/the-hub',
     showcase: true,
     title: 'The Hub',
     subtitle: 'Sci-fi landing page',
@@ -53,24 +55,32 @@ export const projectsData = [
         title: 'The Process',
         text: `A love for sci-fi and the educational YouTube channel Kurzgesagt – In a Nutshell is what inspired this project.
          The concept of a feature rich browser homepage stems from my desire to take existing ideas and tailor them to my needs to increase my own productivity.
-         I created a ROUGH design on Figma once I had fully conceptualized the idea. From there I broke it down into tasks to create a consistant productive workflow.
+         I sketched a ROUGH design on paper then jumped on Figma to create a simple design.
+          From there I broke it down into tasks to create a consistant productive workflow.
          `,
         image: hubDrawingImage,
       },
       {
-        title: 'Core Functionality',
-        text: 'This is some of the logic I programmed and how the app works',
+        title: 'Key Feature',
+        text: `This app is built for productivity, that's why I have built-in a task management system.
+         It is fairly simple for now but this project will continue to expand.
+          As of now tasks can be created and edited with the state saved to window.localStorage so tasks persist between sessions.
+          I plan to add an ordering system, a time tracker and a history system.
+           I have also set up a nifty search feature for the bookmark section that allows you to quickly search anything on the MDN Docs!`,
         image: hubDesignImage,
       },
       {
         title: `What's Next`,
-        text: 'This is the feature I am most proud of... This is the biggest challenge I overcame',
-        image: testPicThree,
+        text: `I have a lot in store for this app.
+         A snippets library, mental math game to keep the mind sharp, and a bug report library so no problems trip me up twice.
+          I plan to continue to work on this app until I have built it into what I had imagined from the start!`,
+        image: hubLiveImage,
       },
     ],
   },
   {
     path: '/projects/5-3-1',
+    github: 'https://github.com/mattduff707/5-3-1',
     title: '5/3/1 Calculator',
     showcase: true,
     subtitle: 'Lifting protocol calculator',
@@ -94,18 +104,20 @@ export const projectsData = [
       {
         title: `What's Next`,
         text: `I will certainly jump back into this project in the near future to expand upon it.
-         I would like to implement the option for the user to add/remove lifts and change the calculation percentages. I would like to make it responsive as well so it can be used on mobile at the gym.`,
+         I would like to implement the option for the user to add/remove lifts and change the calculation percentages.
+          I would like to make it responsive as well so it can be used on mobile at the gym.`,
         image: fiveAppImage,
       },
     ],
   },
   {
     path: '/projects/portfolio',
+    github: 'https://github.com/mattduff707/my-portfolio',
     showcase: true,
     title: 'Portfolio',
     subtitle: 'This darling portfolio',
-    stack: ['React', 'Framer Motion', 'styled components'],
-    description: 'Did I spend too much time working on this portfolio? Yes. Do I regret it? No.',
+    stack: ['React', 'Framer Motion', 'styled components', 'Responsive'],
+    description: 'Did I spend too much time working on this portfolio? Yes. Do I regret it? No!',
     slides: [
       {
         title: 'Overview',

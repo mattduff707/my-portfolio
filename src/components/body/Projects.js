@@ -20,6 +20,7 @@ const Projects = () => {
                 subtitle={project.subtitle}
                 description={project.description}
                 path={project.path}
+                github={project.github}
                 stack={project.stack}
               />
             );

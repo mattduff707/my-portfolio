@@ -7,7 +7,7 @@ import { ReactComponent as DetailsIcon } from '../../../icons/details.svg';
 import { ReactComponent as GithubIcon } from '../../../icons/github.svg';
 import { ReactComponent as StarIcon } from '../../../icons/star.svg';
 
-const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase }) => {
+const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase, github }) => {
   return (
     <CardContainer>
       {isShowcase && <StarIcon style={{ position: 'absolute', top: '15px', left: '20px' }} />}
@@ -33,7 +33,7 @@ const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase }) 
               <LinkText>Details</LinkText>
             </StyledCoolButton>
           </Link>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href={github} target="_blank" rel="noreferrer">
             <StyledCoolButton tabIndex="-1">
               <GithubIcon style={{ width: '20px', height: '20px', marginRight: '5px' }} />
               <LinkText>GitHub</LinkText>

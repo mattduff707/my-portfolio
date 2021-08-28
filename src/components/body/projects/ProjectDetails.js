@@ -71,10 +71,10 @@ const BtnLinkWrap = styled(Link)`
   top: -8px;
   box-shadow: 5px 10px 3px -8px var(--shadow-color);
   border-radius: 0px 0px 15px 0px;
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     top: 20px;
     left: 8px;
-  }
+  } */
 `;
 const StyledCoolButton = styled(CoolButton)`
   display: flex;

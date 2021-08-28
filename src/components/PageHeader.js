@@ -24,8 +24,9 @@ const HeaderContainer = styled.div`
   margin-bottom: -8px;
   max-width: 90%;
   @media (max-width: 500px) {
-    padding: 10px 20px;
+    padding: 10px 10px;
     min-width: 100px;
+    max-width: 140px;
   } ;
 `;
 
@@ -41,6 +42,9 @@ const Header = styled.h3`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 4px;
+  @media (max-width: 600px) {
+    letter-spacing: 3px;
+  }
   /* margin: 0px auto; */
 `;
 export default PageHeader;

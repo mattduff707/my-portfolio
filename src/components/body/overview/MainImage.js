@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import picture from '../../../images/dogpic.jpg';
+import picture from '../../../images/gip.jpg';
 
 const MainImage = ({ noDisplayAt }) => {
   return (
@@ -24,23 +24,7 @@ const ImageContainer = styled.div`
     max-width: 400px;
     margin: 20px;
   }
-  /* margin: 0px auto 0px auto; */
-  /* @media (min-width: 500px) {
-    height: 250px;
-    width: 250px;
-  }
-  @media (min-width: 769px) {
-    height: 400px;
-    width: 400px;
-  }
-  @media (min-width: 1440px) {
-    height: 500px;
-    width: 500px;
-  } */
-  /* @media (min-width: 1800px) {
-    height: 600px;
-    width: 600px;
-  } */
+
   ${(props) => {
     return `
         @media(max-width: ${props.noDisplayAt}){

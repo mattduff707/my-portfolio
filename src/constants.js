@@ -1,5 +1,10 @@
 import testPic from './images/strength.png';
-import testPicTwo from './images/image0.jpeg';
+import testPicTwo from './images/image1.jpeg';
+import hubDesignImage from './images/hubDesign.jpg';
+import hubDrawingImage from './images/hubDrawing.jpg';
+import fiveBookImage from './images/fiveBook.jpg';
+import fiveAppImage from './images/fiveApp.png';
+import fiveCodeImage from './images/fiveCode.png';
 import testPicThree from './images/image1.jpeg';
 
 export const aboutData = [
@@ -37,7 +42,7 @@ export const projectsData = [
     path: '/projects/the-hub',
     showcase: true,
     title: 'The Hub',
-    subtitle: 'Sci-fi Landing page',
+    subtitle: 'Sci-fi landing page',
     stack: ['React', 'styled components', 'PrismJs', 'NASA APOD API'],
     description: `This is my browser landing page with all sorts of fun features built in already with more planned for the future.
      Task management, Search the MDN Docs, and NASA's picture of the day are just a few features of this app.
@@ -48,43 +53,17 @@ export const projectsData = [
         title: 'The Process',
         text: `A love for sci-fi and the educational YouTube channel Kurzgesagt – In a Nutshell is what inspired this project.
          The concept of a feature rich browser homepage stems from my desire to take existing ideas and tailor them to my needs to increase my own productivity.
-         I created a rough design on Figma once I had fully conceptualized the idea. From there I broke it down into tasks to create a consistant productive workflow.
+         I created a ROUGH design on Figma once I had fully conceptualized the idea. From there I broke it down into tasks to create a consistant productive workflow.
          `,
-        image: testPic,
+        image: hubDrawingImage,
       },
       {
         title: 'Core Functionality',
         text: 'This is some of the logic I programmed and how the app works',
-        image: testPicTwo,
+        image: hubDesignImage,
       },
       {
-        title: 'Spotlight',
-        text: 'This is the feature I am most proud of... This is the biggest challenge I overcame',
-        image: testPicThree,
-      },
-    ],
-  },
-  {
-    path: '/projects/portfolio',
-    showcase: true,
-    title: 'This Portfolio',
-    subtitle: 'Personal notes app',
-    stack: ['React', 'Framer Motion', 'styled components'],
-    description:
-      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
-    slides: [
-      {
-        title: 'Overview',
-        text: 'I made this project for this reason...',
-        image: testPic,
-      },
-      {
-        title: 'Core Functionality',
-        text: 'This is some of the logic I programmed and how the app works',
-        image: testPicTwo,
-      },
-      {
-        title: 'Spotlight',
+        title: `What's Next`,
         text: 'This is the feature I am most proud of... This is the biggest challenge I overcame',
         image: testPicThree,
       },
@@ -92,11 +71,41 @@ export const projectsData = [
   },
   {
     path: '/projects/5-3-1',
-    title: '5-3-1 Calculator',
+    title: '5/3/1 Calculator',
+    showcase: true,
     subtitle: 'Lifting protocol calculator',
     stack: ['React', 'styled components'],
-    description: `A calculator for the famous 5-3-1 lifting program, my personal favorite.
+    description: `A calculator for the famous 5/3/1 lifting program, my personal favorite.
      It was an enjoyable jump into controlled inputs and another app that I use frequently.`,
+    slides: [
+      {
+        title: 'The Process',
+        text: `I created this app so I could finally have a quick and convenient way to get my lifting numbers each week (Refer to the README for a quick rundown on how the 5/3/1 works if you are interested).
+          I focused on trying to make this as dynamic and scalable as I could through the use of functional programming principles.
+         `,
+        image: fiveBookImage,
+      },
+      {
+        title: 'Key Feature',
+        text: `This app has controlled inputs utilizing Reacts useState hook. On each input is a function that ensures only numbers can be entered into the inputs.
+         This was achieved by creating multiple smaller conditional functions that combine to prevent an invalid input value.`,
+        image: fiveCodeImage,
+      },
+      {
+        title: `What's Next`,
+        text: `I will certainly jump back into this project in the near future to expand upon it.
+         I would like to implement the option for the user to add/remove lifts and change the calculation percentages. I would like to make it responsive as well so it can be used on mobile at the gym.`,
+        image: fiveAppImage,
+      },
+    ],
+  },
+  {
+    path: '/projects/portfolio',
+    showcase: true,
+    title: 'Portfolio',
+    subtitle: 'This darling portfolio',
+    stack: ['React', 'Framer Motion', 'styled components'],
+    description: 'Did I spend too much time working on this portfolio? Yes. Do I regret it? No.',
     slides: [
       {
         title: 'Overview',
@@ -116,31 +125,6 @@ export const projectsData = [
     ],
   },
 
-  {
-    path: '/projects/duffy-web-brain-three',
-    title: 'Duffy Web Brain 3',
-    subtitle: 'Personal notes app',
-    stack: ['React', 'Gatsbyjs', 'PrismJs'],
-    description:
-      "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
-    slides: [
-      {
-        title: 'Overview',
-        text: 'I made this project for this reason...',
-        image: testPic,
-      },
-      {
-        title: 'Core Functionality',
-        text: 'This is some of the logic I programmed and how the app works',
-        image: testPicTwo,
-      },
-      {
-        title: 'Spotlight',
-        text: 'This is the feature I am most proud of... This is the biggest challenge I overcame',
-        image: testPicThree,
-      },
-    ],
-  },
   {
     path: '/projects/duffy-web-brain-three',
     title: 'Duffy Web Brain 3',

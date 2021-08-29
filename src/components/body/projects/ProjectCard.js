@@ -6,8 +6,9 @@ import Heading from '../../Heading';
 import { ReactComponent as DetailsIcon } from '../../../icons/details.svg';
 import { ReactComponent as GithubIcon } from '../../../icons/github.svg';
 import { ReactComponent as StarIcon } from '../../../icons/star.svg';
+import { ReactComponent as DemoIcon } from '../../../icons/demo.svg';
 
-const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase, github }) => {
+const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase, github, slides, live }) => {
   return (
     <CardContainer>
       {isShowcase && <StarIcon style={{ position: 'absolute', top: '15px', left: '20px' }} />}
@@ -27,18 +28,28 @@ const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase, gi
       </ContentWrap>
       <LinkWrap>
         <ButtonWrapper>
-          <Link to={path} style={{ marginRight: '10px' }}>
-            <StyledCoolButton tabIndex="-1">
-              <DetailsIcon style={{ marginRight: '5px' }} />
-              <LinkText>Details</LinkText>
-            </StyledCoolButton>
-          </Link>
+          {slides && (
+            <Link to={path} style={{ marginRight: '10px' }}>
+              <StyledCoolButton tabIndex="-1">
+                <DetailsIcon style={{ marginRight: '5px' }} />
+                <LinkText>Details</LinkText>
+              </StyledCoolButton>
+            </Link>
+          )}
           <a href={github} target="_blank" rel="noreferrer">
             <StyledCoolButton tabIndex="-1">
               <GithubIcon style={{ width: '20px', height: '20px', marginRight: '5px' }} />
               <LinkText>GitHub</LinkText>
             </StyledCoolButton>
           </a>
+          {live && (
+            <a href={live} target="_blank" rel="noreferrer" style={{ marginLeft: '10px' }}>
+              <StyledCoolButton tabIndex="-1">
+                <DemoIcon style={{ marginRight: '5px' }} />
+                <LinkText>Demo</LinkText>
+              </StyledCoolButton>
+            </a>
+          )}
         </ButtonWrapper>
       </LinkWrap>
     </CardContainer>

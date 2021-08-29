@@ -5,6 +5,7 @@ import Heading from '../Heading';
 import { ReactComponent as LinkedInIcon } from '../../icons/linkedIn.svg';
 import { ReactComponent as ResumeIcon } from '../../icons/resume.svg';
 import { ReactComponent as GithubIcon } from '../../icons/github.svg';
+import pdf from '../../resume/resume2021.pdf';
 
 const Contact = ({ className }) => {
   return (
@@ -12,18 +13,18 @@ const Contact = ({ className }) => {
       <StyledHeading>Contact</StyledHeading>
       <FlexWrap>
         <Container>
-          <a href="https://github.com/mattduff707" target="_blank" rel="noreferrer">
-            <StyledCoolButton tabIndex="-1">
-              <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
-              <Text>GitHub</Text>
-            </StyledCoolButton>
-          </a>
+          <StyledCoolButton tabIndex="-1">
+            <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
+            <Text>GitHub</Text>
+          </StyledCoolButton>
         </Container>
         <Container>
-          <StyledCoolButton tabIndex="-1">
-            <ResumeIcon style={{ marginRight: '2px' }} />
-            <Text>Resume</Text>
-          </StyledCoolButton>
+          <a href={pdf} target="_blank" rel="noreferrer">
+            <StyledCoolButton tabIndex="-1">
+              <ResumeIcon style={{ marginRight: '2px' }} />
+              <Text>Resume</Text>
+            </StyledCoolButton>
+          </a>
         </Container>
         <Container>
           <a href="https://www.linkedin.com/in/matthew-duffy-940112210/" target="_blank" rel="noreferrer">

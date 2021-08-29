@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProjectCardTwo from './projects/ProjectCard';
+import ProjectCard from './projects/ProjectCard';
 import PageHeader from '../PageHeader';
 import AnimatedWrapper from '../animation/AnimatedWrapper';
 import { projectsData } from '../../constants';
@@ -13,7 +13,7 @@ const Projects = () => {
         <ProjectList>
           {projectsData.map((project, index) => {
             return (
-              <ProjectCardTwo
+              <ProjectCard
                 isShowcase={project.showcase}
                 key={project.title + index}
                 title={project.title}
@@ -22,6 +22,8 @@ const Projects = () => {
                 path={project.path}
                 github={project.github}
                 stack={project.stack}
+                slides={project.slides}
+                live={project.live}
               />
             );
           })}

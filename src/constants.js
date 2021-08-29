@@ -42,6 +42,7 @@ export const projectsData = [
   {
     path: '/projects/the-hub',
     github: 'https://github.com/mattduff707/the-hub',
+    live: 'https://peaceful-rosalind-3ff916.netlify.app',
     showcase: true,
     title: 'The Hub',
     subtitle: 'Sci-fi landing page',
@@ -81,6 +82,7 @@ export const projectsData = [
   {
     path: '/projects/5-3-1',
     github: 'https://github.com/mattduff707/5-3-1',
+
     title: '5/3/1 Calculator',
     showcase: true,
     subtitle: 'Lifting protocol calculator',
@@ -118,48 +120,17 @@ export const projectsData = [
     subtitle: 'This darling portfolio',
     stack: ['React', 'Framer Motion', 'styled components', 'Responsive'],
     description: 'Did I spend too much time working on this portfolio? Yes. Do I regret it? No!',
-    slides: [
-      {
-        title: 'Overview',
-        text: 'I made this project for this reason...',
-        image: testPic,
-      },
-      {
-        title: 'Core Functionality',
-        text: 'This is some of the logic I programmed and how the app works',
-        image: testPicTwo,
-      },
-      {
-        title: 'Spotlight',
-        text: 'This is the feature I am most proud of... This is the biggest challenge I overcame',
-        image: testPicThree,
-      },
-    ],
+    slides: false,
   },
 
   {
     path: '/projects/duffy-web-brain-three',
-    title: 'Duffy Web Brain 3',
+    github: 'https://github.com/mattduff707/matt-blog',
+    title: 'Duffy Web Brain',
     subtitle: 'Personal notes app',
     stack: ['React', 'Gatsbyjs', 'PrismJs'],
     description:
       "Throughout most of my self education I had not been utilizing any solid not taking methodology. Learning in the IDE wasn't cutting it, so I made my own solution!",
-    slides: [
-      {
-        title: 'Overview',
-        text: 'I made this project for this reason...',
-        image: testPic,
-      },
-      {
-        title: 'Core Functionality',
-        text: 'This is some of the logic I programmed and how the app works',
-        image: testPicTwo,
-      },
-      {
-        title: 'Spotlight',
-        text: 'This is the feature I am most proud of... This is the biggest challenge I overcame',
-        image: testPicThree,
-      },
-    ],
+    slides: false,
   },
 ];

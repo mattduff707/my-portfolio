@@ -1,12 +1,12 @@
-import testPic from './images/strength.png';
-import testPicTwo from './images/image1.jpeg';
+import StrengthImage from './images/strength.png';
 import hubDesignImage from './images/hubDesign.jpg';
 import hubDrawingImage from './images/hubDrawing.jpg';
 import hubLiveImage from './images/hubLive.png';
 import fiveBookImage from './images/fiveBook.jpg';
 import fiveAppImage from './images/fiveApp.png';
-import fiveCodeImage from './images/fiveCode.png';
-import testPicThree from './images/image1.jpeg';
+import fiveSketch from './images/fiveSketch.jpg';
+import alissaDog from './images/alissaDog.jpg';
+import computerDog from './images/computerDog.jpg';
 
 export const aboutData = [
   {
@@ -16,7 +16,7 @@ export const aboutData = [
        learned the necessary material for my training certification. Learning how to learn played a key role in my web development journey, and it started here.
         Acting as an educator for those taking their first steps into the intimidating world of fitness and health was humbling and inspiring. 
          Although I no longer pursue strength training as a career, it will forever be a passionate hobby of mine. Yeah, buddy! `,
-    picture: testPic,
+    picture: StrengthImage,
   },
   {
     title: 'Computer Enthusiast',
@@ -24,18 +24,19 @@ export const aboutData = [
      he bought his first home computer in the early 80s. In a way, it seemed preordained that I would also become an enthusiast through his influence.
       YouTube has been a major source of entertainment and education throughout my life, especially during this professional transition. I have been an avid PC gamer since the age of 5,
      living vicariously through Pajama Sam is where the interest sparked. My favorites along the way include Diablo 2, Rocket League, and World of Warcraft.`,
-    picture: testPicTwo,
+    picture: computerDog,
   },
   {
     title: 'Advocate',
     text: `I am constantly searching for ways to play my part in improving the world we share.
      Knowing the lives of others may be positively impacted by my decisions today fuels me to take the necessary actions to ignite change.
-     That extends to my interest in web development. I have a keen interest in specializing in accessibility going forward.
+      This has manifested in a strong drive to combat global climate change.
+     It also extends to my interest in web development. I have a keen interest in specializing in accessibility going forward.
      My mother has dedicated her life to assisting those in the disabled community.
      She was an ASL interpreter for 18 years and now works as a home care provider for people with mental/physical disabilities.
      As an inspiration to me, I aspire to achieve even a fraction of the impact she has made in people's lives.
      `,
-    picture: testPicThree,
+    picture: alissaDog,
   },
 ];
 export const projectsData = [
@@ -101,7 +102,7 @@ export const projectsData = [
         title: 'Key Feature',
         text: `This app has controlled inputs utilizing Reacts useState hook. On each input is a function that ensures only numbers can be entered into the inputs.
          This was achieved by creating multiple smaller conditional functions that combine to prevent an invalid input value.`,
-        image: fiveCodeImage,
+        image: fiveSketch,
       },
       {
         title: `What's Next`,
@@ -119,7 +120,7 @@ export const projectsData = [
     title: 'Portfolio',
     subtitle: 'This darling portfolio',
     stack: ['React', 'Framer Motion', 'styled components', 'Responsive'],
-    description: 'Did I spend too much time working on this portfolio? Yes. Do I regret it? No!',
+    description: `Design isn't what I strive to do, but I do enjoy injecting my own creativity into my personal projects. My portfolio is no exception. I hope you like gradients and icons.`,
     slides: false,
   },
 

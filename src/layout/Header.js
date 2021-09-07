@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Contact from '../components/header/Contact';
 import Nav from '../components/header/Nav';
 import Title from '../components/header/Title';
+import AnimToggle from '../components/header/AnimToggle';
 
 const StyledHeader = styled.header`
   //background-color: var(--color-primary);
@@ -23,18 +24,24 @@ const StyledHeader = styled.header`
   }
 `;
 const StyledContact = styled(Contact)`
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: 40px;
   @media (max-width: 1025px) {
     display: none;
   }
 `;
+const StyledAnimToggle = styled(AnimToggle)`
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
 
-const Header = () => {
+const Header = ({ isAnimated, handleToggle }) => {
   return (
     <StyledHeader>
       <Title />
       <Nav />
+      <StyledAnimToggle isAnimated={isAnimated} handleToggle={handleToggle} />
       <StyledContact />
     </StyledHeader>
   );

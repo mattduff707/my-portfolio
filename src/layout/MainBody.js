@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route, useLocation } from 'react-router-dom';
-import OverviewTwo from '../components/body/Overview';
-import AboutTwo from '../components/body/About';
+import Overview from '../components/body/Overview';
+import About from '../components/body/About';
 import Projects from '../components/body/Projects';
 import ProjectDetails from '../components/body/projects/ProjectDetails';
 import { AnimatePresence } from 'framer-motion';
@@ -17,19 +17,24 @@ const StyledMain = styled.main`
   background-color: var(--color-inset-bg);
 `;
 
-const MainBody = () => {
+const MainBody = ({ isAnimated }) => {
   const location = useLocation();
   return (
     <StyledMain>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route exact path="/" component={OverviewTwo} />
-          <Route path="/about" component={AboutTwo} />
-          <Route exact path="/projects" component={Projects} />
-
+          <Route exact path="/">
+            <Overview isAnimated={isAnimated} />
+          </Route>
+          <Route path="/about">
+            <About isAnimated={isAnimated} />
+          </Route>
+          <Route exact path="/projects">
+            <Projects isAnimated={isAnimated} />
+          </Route>
           {projectsData.map((project) => (
             <Route key={project.title} path={project.path}>
-              <ProjectDetails title={project.title} slides={project.slides} />
+              <ProjectDetails isAnimated={isAnimated} title={project.title} slides={project.slides} />
             </Route>
           ))}
         </Switch>

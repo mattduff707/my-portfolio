@@ -3,6 +3,7 @@ import Header from './layout/Header';
 import MainBody from './layout/MainBody';
 import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -87,12 +88,18 @@ const GridWrapper = styled.div`
 `;
 
 function App() {
+  const [isAnimated, setIsAnimated] = useState(true);
+
+  const handleToggle = () => {
+    setIsAnimated(() => !isAnimated);
+  };
+
   return (
     <Router>
       <GridWrapper>
         <GlobalStyle />
-        <Header />
-        <MainBody />
+        <Header isAnimated={isAnimated} handleToggle={handleToggle} />
+        <MainBody isAnimated={isAnimated} />
       </GridWrapper>
     </Router>
   );

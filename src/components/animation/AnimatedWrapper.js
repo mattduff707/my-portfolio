@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion, useReducedMotion } from 'framer-motion';
 
-const variants = {
+const onVariants = {
   initial: {
     transform: 'translateY(-100%)',
+  },
+  testInitial: {
+    transform: 'translateY(0%)',
   },
 
   enter: {
@@ -15,18 +18,31 @@ const variants = {
     transform: 'translateY(-100%)',
     transition: { duration: 1, delay: 0.1 },
   },
+  testExit: {
+    transform: 'translateY(0%)',
+  },
+};
+const offVariants = {
+  initial: {
+    transform: 'translateY(0%)',
+  },
+  enter: {
+    transform: 'translateY(0%)',
+  },
+  exit: {
+    transform: 'translateY(0%)',
+  },
 };
 
-const childVariants = {
+const childOnVariants = {
   initial: { opacity: 0 },
-  bottomInitial: { opacity: 0 },
+
   enter: { opacity: 1 },
-  bottomEnter: { opacity: 1 },
+
   exit: { opacity: 0, transition: { delay: 0.2 } },
-  bottomExit: { opacity: 0, transition: { delay: 0.2 } },
 };
 
-const AnimatedWrapper = ({ children, tag, className }) => {
+const AnimatedWrapper = ({ children, tag, className, isAnimated }) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -35,9 +51,9 @@ const AnimatedWrapper = ({ children, tag, className }) => {
       animate="enter"
       as={tag}
       exit="exit"
-      variants={shouldReduceMotion ? false : variants}
+      variants={shouldReduceMotion ? false : isAnimated ? onVariants : offVariants}
     >
-      <FadeWrapper className={className} variants={childVariants}>
+      <FadeWrapper className={className} variants={childOnVariants}>
         {children}
       </FadeWrapper>
     </StyledWrapper>

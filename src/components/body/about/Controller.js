@@ -5,7 +5,7 @@ import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
 import { ReactComponent as NextArrowIcon } from '../../../icons/nextArrow.svg';
 const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClick, activeIndex }) => {
   return (
-    <ControlContainer aria-controls="carousel" aria-label="carousel buttons">
+    <ControlContainer aria-controls="carousel" ariaLabel="carousel buttons">
       <ArrowButton ariaLabel="previous slide" handleClick={handleDecrement}>
         <BackArrowIcon style={{ display: 'block' }} />
       </ArrowButton>

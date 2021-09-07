@@ -6,7 +6,7 @@ import { aboutData } from '../../constants';
 import AboutImage from './about/AboutImage';
 import AboutContent from './about/AboutContent';
 
-const About = () => {
+const About = ({ isAnimated }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeAbout, setActiveAbout] = useState(aboutData[activeIndex]);
 
@@ -34,7 +34,7 @@ const About = () => {
   };
 
   return (
-    <AnimatedWrapper>
+    <AnimatedWrapper isAnimated={isAnimated}>
       <ContentContainer>
         <PageHeader>About</PageHeader>
         <AboutContainer aria-live="polite">

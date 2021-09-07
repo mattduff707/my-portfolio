@@ -13,10 +13,12 @@ const Contact = ({ className }) => {
       <StyledHeading>Contact</StyledHeading>
       <FlexWrap>
         <Container>
-          <StyledCoolButton tabIndex="-1">
-            <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
-            <Text>GitHub</Text>
-          </StyledCoolButton>
+          <a href="https://github.com/mattduff707" target="_blank" rel="noreferrer">
+            <StyledCoolButton tabIndex="-1">
+              <GithubIcon style={{ marginRight: '5px', marginTop: '1px' }} />
+              <Text>GitHub</Text>
+            </StyledCoolButton>
+          </a>
         </Container>
         <Container>
           <a href={pdf} target="_blank" rel="noreferrer">

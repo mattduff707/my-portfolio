@@ -5,9 +5,9 @@ import PageHeader from '../PageHeader';
 import AnimatedWrapper from '../animation/AnimatedWrapper';
 import { projectsData } from '../../constants';
 
-const Projects = () => {
+const Projects = ({ isAnimated }) => {
   return (
-    <AnimatedWrapper>
+    <AnimatedWrapper isAnimated={isAnimated}>
       <ContentContainer>
         <PageHeader>Projects</PageHeader>
         <ProjectList>

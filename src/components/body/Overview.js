@@ -54,9 +54,9 @@ const StyledContact = styled(Contact)`
   }
 `;
 
-const Overview = () => {
+const Overview = ({ isAnimated }) => {
   return (
-    <AnimatedWrapper>
+    <AnimatedWrapper isAnimated={isAnimated}>
       <ContentWrapper>
         <PageHeader>Overview</PageHeader>
         <ContentFlexItem noDisplayAt={'1025px'} flex={'flex'} justify={'center'}>

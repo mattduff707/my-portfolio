@@ -15,7 +15,7 @@ const HeadingContainer = styled.div`
   background-color: var(--color-primary);
   display: flex;
   justify-content: center;
-  border: 3px solid var(--color-secondary);
+  border: 4px solid var(--color-secondary);
 
   border-radius: 25px;
   box-shadow: 0px -8px 8px -8px var(--shadow-color);

@@ -41,6 +41,13 @@ const childOnVariants = {
 
   exit: { opacity: 0, transition: { delay: 0.2 } },
 };
+const childOffVariants = {
+  initial: { opacity: 1 },
+
+  enter: { opacity: 1 },
+
+  exit: { opacity: 1 },
+};
 
 const AnimatedWrapper = ({ children, tag, className, isAnimated }) => {
   const shouldReduceMotion = useReducedMotion();
@@ -51,9 +58,9 @@ const AnimatedWrapper = ({ children, tag, className, isAnimated }) => {
       animate="enter"
       as={tag}
       exit="exit"
-      variants={shouldReduceMotion ? false : isAnimated ? onVariants : offVariants}
+      variants={shouldReduceMotion ? offVariants : isAnimated ? onVariants : offVariants}
     >
-      <FadeWrapper className={className} variants={childOnVariants}>
+      <FadeWrapper className={className} variants={isAnimated ? childOnVariants : childOffVariants}>
         {children}
       </FadeWrapper>
     </StyledWrapper>

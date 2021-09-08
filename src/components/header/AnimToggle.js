@@ -31,6 +31,28 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  &:hover:before {
+    content: 'Animations';
+    position: absolute;
+    top: 50%;
+    left: -200%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary);
+    /* box-shadow: var(--shadow-card); */
+    border: 4px solid var(--color-secondary);
+    border-right: none;
+    border-radius: 20px 0px 0px 20px;
+    /* padding: 5px 7px 2px; */
+    padding-top: 2px;
+    padding-left: 2px;
+    font-family: var(--font-family-secondary);
+    color: var(--color-alternative);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100px;
+  }
 `;
 const HiddenCheckbox = styled.input`
   position: absolute;
@@ -39,6 +61,7 @@ const HiddenCheckbox = styled.input`
 const AnimationToggler = styled(CoolToggle)`
   /* border-radius: 50%; */
   padding: 5px;
+  width: 32px;
 `;
 
 export default AnimToggle;

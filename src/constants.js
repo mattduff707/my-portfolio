@@ -86,6 +86,7 @@ export const projectsData = [
 
     title: '5/3/1 Calculator',
     showcase: true,
+    live: 'https://focused-mestorf-79f5dc.netlify.app/',
     subtitle: 'Lifting protocol calculator',
     stack: ['React', 'styled components'],
     description: `A calculator for the famous 5/3/1 lifting program, my personal favorite.
@@ -125,8 +126,9 @@ export const projectsData = [
   },
 
   {
-    path: '/projects/duffy-web-brain-three',
+    path: '/projects/duffy-web-brain',
     github: 'https://github.com/mattduff707/matt-blog',
+    live: 'https://www.duffy-web-brain.com/posts',
     title: 'Duffy Web Brain',
     subtitle: 'Personal notes app',
     stack: ['React', 'Gatsbyjs', 'PrismJs'],

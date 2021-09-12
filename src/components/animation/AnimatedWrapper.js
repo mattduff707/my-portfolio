@@ -6,9 +6,6 @@ const onVariants = {
   initial: {
     transform: 'translateY(-100%)',
   },
-  testInitial: {
-    transform: 'translateY(0%)',
-  },
 
   enter: {
     transform: 'translateY(0%)',

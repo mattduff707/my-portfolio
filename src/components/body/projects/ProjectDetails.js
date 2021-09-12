@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 import DetailCard from './projectDetails/DetailCard';
 import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
 
-const ProjectDetails = ({ title, slides }) => {
+const ProjectDetails = ({ title, slides, isAnimated }) => {
   return (
-    <AnimatedWrapper>
+    <AnimatedWrapper isAnimated={isAnimated}>
       <ContentContainer>
         <PageHeader title={title}>Project Details</PageHeader>
         <BtnLinkWrap to="/projects">

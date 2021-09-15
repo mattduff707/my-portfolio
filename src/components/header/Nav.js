@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import styled from 'styled-components';
 import CoolToggle from '../CoolToggle';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 
 const NavWrapper = styled.nav`
   display: flex;

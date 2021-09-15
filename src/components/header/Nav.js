@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import styled from 'styled-components';
 import CoolToggle from '../CoolToggle';
+import { useEffect } from 'react/cjs/react.development';
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -87,6 +88,11 @@ const Nav = () => {
 
     setCurrentPath(() => path);
   };
+  useEffect(() => {
+    window.onpopstate = () => {
+      setCurrentPath(() => window.location.pathname);
+    };
+  }, []);
 
   return (
     <NavWrapper>

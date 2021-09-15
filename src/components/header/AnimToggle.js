@@ -7,10 +7,16 @@ import VisuallyHidden from '../VisuallyHidden';
 const AnimToggle = ({ isAnimated, handleToggle, className }) => {
   return (
     <Wrapper aria-live="polite" className={className}>
-      <label onClick={handleToggle} htmlFor="animation-toggle">
+      <label htmlFor="animation-toggle">
         <AnimationIcon />
       </label>
-      <HiddenCheckbox onClick={handleToggle} tabIndex="-1" checked={isAnimated} type="checkbox" id="animation-toggle" />
+      <HiddenCheckbox
+        onChange={handleToggle}
+        tabIndex="-1"
+        checked={isAnimated}
+        type="checkbox"
+        id="animation-toggle"
+      />
 
       <AnimationToggler aria-checked={isAnimated} role="checkbox" handleClick={handleToggle} isActive={isAnimated}>
         <VisuallyHidden>Toggle Animation</VisuallyHidden>

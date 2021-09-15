@@ -15,9 +15,6 @@ const onVariants = {
     transform: 'translateY(-100%)',
     transition: { duration: 1, delay: 0.1 },
   },
-  testExit: {
-    transform: 'translateY(0%)',
-  },
 };
 const offVariants = {
   initial: {

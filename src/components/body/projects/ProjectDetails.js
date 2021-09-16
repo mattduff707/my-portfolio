@@ -5,7 +5,7 @@ import PageHeader from '../../PageHeader';
 import CoolButton from '../../CoolButton';
 import { Link } from 'react-router-dom';
 import DetailCard from './projectDetails/DetailCard';
-import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
+import BackArrowIcon from '../../../icons/BackArrow';
 
 const ProjectDetails = ({ title, slides, isAnimated }) => {
   return (

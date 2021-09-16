@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Heading from '../../Heading';
-import { ReactComponent as SmileIcon } from '../../../icons/smile.svg';
+import SmileIcon from '../../../icons/Smile';
 
 const DescriptionContainer = styled.div`
   width: 100%;

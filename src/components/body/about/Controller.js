@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import CoolButton from '../../CoolButton';
-import { ReactComponent as BackArrowIcon } from '../../../icons/backArrow.svg';
-import { ReactComponent as NextArrowIcon } from '../../../icons/nextArrow.svg';
+import BackArrowIcon from '../../../icons/BackArrow.js';
+import NextArrowIcon from '../../../icons/NextArrow.js';
 const Controller = ({ aboutData, handleIncrement, handleDecrement, handleDotClick, activeIndex }) => {
   return (
     <ControlContainer aria-controls="carousel" ariaLabel="carousel buttons">

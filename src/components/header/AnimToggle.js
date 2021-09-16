@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as AnimationIcon } from '../../icons/animation.svg';
+import AnimationIcon from '../../icons/Animation';
 import CoolToggle from '../CoolToggle';
 import VisuallyHidden from '../VisuallyHidden';
 

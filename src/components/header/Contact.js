@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import CoolButton from '../CoolButton';
 import Heading from '../Heading';
-import { ReactComponent as LinkedInIcon } from '../../icons/linkedIn.svg';
-import { ReactComponent as ResumeIcon } from '../../icons/resume.svg';
-import { ReactComponent as GithubIcon } from '../../icons/github.svg';
+import LinkedInIcon from '../../icons/LinkedIn.js';
+import ResumeIcon from '../../icons/Resume.js';
+import GithubIcon from '../../icons/Github.js';
 import pdf from '../../resume/resume2021.pdf';
 
 const Contact = ({ className }) => {

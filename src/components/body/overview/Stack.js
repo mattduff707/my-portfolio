@@ -2,20 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import MainImage from './MainImage';
 import Heading from '../../Heading';
-import { ReactComponent as GatsbyIcon } from '../../../icons/gatsby.svg';
-import { ReactComponent as ReactIcon } from '../../../icons/react.svg';
-import { ReactComponent as JavascriptIcon } from '../../../icons/javascript.svg';
-import { ReactComponent as CssIcon } from '../../../icons/css.svg';
-import { ReactComponent as HtmlIcon } from '../../../icons/html.svg';
-import { ReactComponent as StyledIcon } from '../../../icons/styled.svg';
-import { ReactComponent as SassIcon } from '../../../icons/sass.svg';
-import { ReactComponent as OopIcon } from '../../../icons/oop.svg';
-import { ReactComponent as AccessibilityIcon } from '../../../icons/accessibility.svg';
-import { ReactComponent as GitIcon } from '../../../icons/git.svg';
-import { ReactComponent as TasksIcon } from '../../../icons/tasks.svg';
-import { ReactComponent as ScrumIcon } from '../../../icons/scrum.svg';
-import { ReactComponent as ResponsiveIcon } from '../../../icons/responsive.svg';
-import { ReactComponent as SolvingIcon } from '../../../icons/solving.svg';
+import GatsbyIcon from '../../../icons/Gatsby.js';
+import ReactIcon from '../../../icons/ReactIcon.js';
+import JavascriptIcon from '../../../icons/Javascript.js';
+import CssIcon from '../../../icons/Css.js';
+import HtmlIcon from '../../../icons/Html.js';
+import StyledIcon from '../../../icons/Styled.js';
+import SassIcon from '../../../icons/Sass.js';
+import OopIcon from '../../../icons/Oop.js';
+import AccessibilityIcon from '../../../icons/Accessibility';
+import GitIcon from '../../../icons/Git';
+import TasksIcon from '../../../icons/Tasks';
+import ScrumIcon from '../../../icons/Scrum';
+import ResponsiveIcon from '../../../icons/Responsive';
+import SolvingIcon from '../../../icons/Solving';
 
 const Stack = () => {
   const IconStyle = {
@@ -63,7 +63,7 @@ const Stack = () => {
           <StackList>
             <StackItem>
               <OopIcon style={IconStyle} />
-              Object-Oriented Programming
+              Object-Oriented Design
             </StackItem>
             <StackItem>
               <GitIcon style={IconStyle} />

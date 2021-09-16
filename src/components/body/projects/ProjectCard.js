@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import CoolButton from '../../CoolButton';
 import Heading from '../../Heading';
-import { ReactComponent as DetailsIcon } from '../../../icons/details.svg';
-import { ReactComponent as GithubIcon } from '../../../icons/github.svg';
-import { ReactComponent as StarIcon } from '../../../icons/star.svg';
-import { ReactComponent as DemoIcon } from '../../../icons/demo.svg';
+import DetailsIcon from '../../../icons/Details.js';
+import GithubIcon from '../../../icons/Github.js';
+import StarIcon from '../../../icons/Star.js';
+import DemoIcon from '../../../icons/Demo.js';
 
 const ProjectCard = ({ title, subtitle, description, stack, path, isShowcase, github, slides, live }) => {
   return (

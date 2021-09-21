@@ -6,8 +6,9 @@ import CoolButton from '../../CoolButton';
 import { Link } from 'react-router-dom';
 import DetailCard from './projectDetails/DetailCard';
 import BackArrowIcon from '../../../icons/BackArrow';
+import ButtonTray from './projectDetails/ButtonTray';
 
-const ProjectDetails = ({ title, slides, isAnimated }) => {
+const ProjectDetails = ({ title, slides, isAnimated, github, demo }) => {
   return (
     <AnimatedWrapper isAnimated={isAnimated}>
       <ContentContainer>
@@ -19,7 +20,7 @@ const ProjectDetails = ({ title, slides, isAnimated }) => {
           </StyledCoolButton>
         </BtnLinkWrap>
         <DetailsContainer>
-          {slides.map((slide, index, arr) => {
+          {slides.map((slide) => {
             return (
               <DetailCard
                 key={slide.title}
@@ -31,17 +32,12 @@ const ProjectDetails = ({ title, slides, isAnimated }) => {
             );
           })}
         </DetailsContainer>
+        <ButtonTray github={github} demo={demo} />
       </ContentContainer>
     </AnimatedWrapper>
   );
 };
-// const FlexWrapper = styled.section`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-end;
-//   height: 100%;
-//   width: 100%;
-// `;
+
 
 const ContentContainer = styled.div`
   display: flex;

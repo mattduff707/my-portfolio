@@ -34,7 +34,7 @@ const MainBody = ({ isAnimated }) => {
           </Route>
           {projectsData.map((project) => (
             <Route key={project.title} path={project.path}>
-              <ProjectDetails isAnimated={isAnimated} title={project.title} slides={project.slides} />
+              <ProjectDetails isAnimated={isAnimated} title={project.title} slides={project.slides} github={project.github} demo={project.live} />
             </Route>
           ))}
         </Switch>

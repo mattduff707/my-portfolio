@@ -7,6 +7,9 @@ import fiveAppImage from './images/fiveApp.png';
 import fiveSketch from './images/fiveSketch.jpg';
 import alissaDog from './images/alissaDog.jpg';
 import computerDog from './images/computerDog.jpg';
+import timelineChart from './images/timelineChart.jpg';
+import timelineSketch from './images/timelineSketch.jpg';
+import timelineLive from './images/timelineLive.png';
 
 export const aboutData = [
   {
@@ -43,7 +46,7 @@ export const projectsData = [
   {
     path: '/projects/the-hub',
     github: 'https://github.com/mattduff707/the-hub',
-    live: 'https://peaceful-rosalind-3ff916.netlify.app',
+    live: 'https://musing-mirzakhani-92616b.netlify.app',
     showcase: true,
     title: 'The Hub',
     subtitle: 'Sci-fi landing page',
@@ -64,19 +67,58 @@ export const projectsData = [
       },
       {
         title: 'Key Feature',
-        text: `This app is built for productivity, that's why I have built-in a task management system.
-         It is fairly simple for now but this project will continue to expand.
-          As of now tasks can be created and edited with the state saved to window.localStorage so tasks persist between sessions.
-          I plan to add an ordering system, a time tracker and a history system.
-           I have also set up a nifty search feature for the bookmark section that allows you to quickly search anything on the MDN Docs!`,
+        text: `I have a weird affinity for mental math, it's a fun challenge and promotes critical focused thought patterns.
+         Creating a game for it is a lot easier than continuing to pester my partner for two numbers to multiply.
+          With several challenges to tackle, this has been my favorite implementation yet!
+           Multiple settings to choose from, a countdown timer, dynamic scoring, instant feedback on answer, and cursor control were the main set of features I wanted in this first iteration of the game.`,
         image: hubDesignImage,
       },
       {
         title: `What's Next`,
-        text: `I have a lot in store for this app.
-         A snippets library, mental math game to keep the mind sharp, and a bug report library so no problems trip me up twice.
-          I plan to continue to work on this app until I have built it into what I had imagined from the start!`,
+        text: `I am currently in the process of implementing an express/node backend and MongoDB to make this a full stack application.
+         I am more than excited for the future of this app, my productivity will only grow as this tool becomes more powerful.
+          Stay tuned because the snippets library is already well underway!`,
         image: hubLiveImage,
+      },
+    ],
+  },
+  {
+    path: '/projects/actor-timeline',
+    github: 'https://github.com/mattduff707/actor-timeline',
+    live: 'https://gracious-kalam-94632e.netlify.app/',
+    showcase: true,
+    title: 'Actor Timeline',
+    subtitle: `Timeline of an actor's movie career`,
+    stack: ['React', 'styled components', 'TMDB API', 'Responsive'],
+    description: `As a film enthusiast, I had been eager to create an app that utilizes a movie database API.
+     This was a fun chance to showcase my proficiency working with a third party API and manipulating the data fetched from it. `,
+    slides: [
+      {
+        title: 'The Process',
+        text: `Movies are one of my favorite topics of discussion and something I consider to be a hobby of mine.
+        So when I decided to create an app that was meant to showcase my proficiency with API's I naturally gravitated toward a movie database.
+         I followed my usual process of drawing a rough sketch then creating a simple design on figma.
+          From there I mapped out the flow of data from the top level, down to the bottom of the tree. 
+          This was great practice for my software design and architecture process.
+         `,
+        image: timelineSketch,
+      },
+      {
+        title: 'Key Feature',
+        text: `The feature set of this app is pretty straight forward, but I would like to shine a spotlight on the yearly navigation.
+         This was achieved by comparing each movie role release date to the previous role's release date when mapping over the array of movie roles.
+          Then conditionally render a "year" component if the previous role was released during an earlier year.
+           The navbar was simply created by iterating over that same movie roles array to filter out all but one instance of each year, then sorting that array by ascending value.
+           Finally we map the remaining array into navigation link components!
+           `,
+        image: timelineChart,
+      },
+      {
+        title: `What's Next`,
+        text: `If I end up jumping back into this project I would like to figure out a way to include an actor's TV credits into the timeline.
+         Based on the API it didn't seem possible since the TV credits query returned the release date of the show and not the date of the actors appearance on the show.
+         But who knows what is possible as my scope of knowledge continues to expand in the field. `,
+        image: timelineLive,
       },
     ],
   },

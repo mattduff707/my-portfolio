@@ -159,7 +159,7 @@ export const projectsData = [
   {
     path: '/projects/portfolio',
     github: 'https://github.com/mattduff707/my-portfolio',
-    showcase: true,
+    showcase: false,
     title: 'Portfolio',
     subtitle: 'This darling portfolio',
     stack: ['React', 'Framer Motion', 'styled components', 'Responsive'],

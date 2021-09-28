@@ -7,6 +7,8 @@ import fiveAppImage from './images/fiveApp.png';
 import fiveSketch from './images/fiveSketch.jpg';
 import alissaDog from './images/alissaDog.jpg';
 import computerDog from './images/computerDog.jpg';
+import timelineChart from './images/timelineChart.jpg';
+import timelineSketch from './images/timelineSketch.jpg';
 
 export const aboutData = [
   {
@@ -70,6 +72,41 @@ export const projectsData = [
           I plan to add an ordering system, a time tracker and a history system.
            I have also set up a nifty search feature for the bookmark section that allows you to quickly search anything on the MDN Docs!`,
         image: hubDesignImage,
+      },
+      {
+        title: `What's Next`,
+        text: `I have a lot in store for this app.
+         A snippets library, mental math game to keep the mind sharp, and a bug report library so no problems trip me up twice.
+          I plan to continue to work on this app until I have built it into what I had imagined from the start!`,
+        image: hubLiveImage,
+      },
+    ],
+  },
+  {
+    path: '/projects/actor-timeline',
+    github: 'https://github.com/mattduff707/actor-timeline',
+    live: 'https://gracious-kalam-94632e.netlify.app/',
+    showcase: true,
+    title: 'Actor Timeline',
+    subtitle: `Timeline of an actor's movie career`,
+    stack: ['React', 'styled components', 'TMDB API', 'Responsive'],
+    description: `As a film enthusiast, I had been eager to create an app that utilizes a movie database API.
+     This was a fun chance to showcase my proficiency working with a third party API and manipulating the data fetched from it. `,
+    slides: [
+      {
+        title: 'The Process',
+        text: `Movies are one of my favorite topics of discussion and something I consider to be a hobby of mine.
+        So when I decided to create an app that was meant to showcase my proficiency with API's I naturally gravitated toward a movie database.
+         I followed my usual process of drawing a rough sketch then creating a simple design on figma.
+          From there I mapped out the flow of data from the top level, down to the bottom of the tree. 
+          This was great practice for my software design and architecture process.
+         `,
+        image: timelineSketch,
+      },
+      {
+        title: 'Key Feature',
+        text: `The feature set of this app is pretty straight forward, but I would like to shine a spotlight on`,
+        image: timelineChart,
       },
       {
         title: `What's Next`,

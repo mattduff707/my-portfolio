@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Heading from '../../Heading';
-import SmileIcon from '../../../icons/Smile';
+import React from "react";
+import styled from "styled-components";
+import Heading from "../../Heading";
+import SmileIcon from "../../../icons/Smile";
 
 const DescriptionContainer = styled.div`
   width: 100%;
@@ -67,11 +67,14 @@ const Description = () => {
       <DescriptionWrapper>
         <Heading>Matthew Duffy</Heading>
         <DescriptionText>
-          A fresh new face to the world of Web Development. I am a self-taught developer who loves to build apps that
-          fulfill a meaningful purpose. I am a patient learner, motivated collaborator, dedicated employee, and gradient
-          aficionado. Currently, I operate in the front-end with a desire to transition into full-stack development down
-          the line. I primarily use React due to its popularity and massive catalog of educational material. Enjoy your
-          stay!
+          Howdy! A fresh new face to the world of Web Development. I am a
+          self-taught developer who loves to build apps that fulfill a
+          meaningful purpose. As a colleague, I am a growth focused developer
+          who likes to collaborate with his teammates to help build each other
+          up. Currently, I operate in the front-end with a desire to transition
+          into full-stack development down the line. I primarily use React due
+          to its popularity and massive catalog of educational material. Enjoy
+          your stay!
           <StyledSmile />
         </DescriptionText>
       </DescriptionWrapper>

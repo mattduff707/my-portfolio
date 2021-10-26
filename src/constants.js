@@ -50,10 +50,19 @@ export const projectsData = [
     showcase: true,
     title: 'The Hub',
     subtitle: 'Sci-fi landing page',
-    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'styled components', 'React Testing Library', 'NASA APOD API'],
+    stack: [
+      'React',
+      'Node.js',
+      'Express',
+      'MongoDB',
+      'Redux',
+      'styled components',
+      'React Testing Library',
+      'NASA APOD API',
+    ],
     description: `MERN stack browser landing page created to increase my productivity as a developer.
-    This is the project I am most proud of and it is in continuous development right now. 
-     Task management, NASA's APOD, and a mental math game are the current feature set.`,
+    This is the project I am most proud of and it is in the process of development right now. 
+     Task management, NASA's APOD, and a mental math game is the current feature set.`,
     slides: [
       {
         title: 'The Process',

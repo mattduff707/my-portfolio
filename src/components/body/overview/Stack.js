@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import MainImage from './MainImage';
 import Heading from '../../Heading';
-import GatsbyIcon from '../../../icons/Gatsby.js';
+import NodeIcon from '../../../icons/Node.js';
 import ReactIcon from '../../../icons/ReactIcon.js';
 import JavascriptIcon from '../../../icons/Javascript.js';
 import CssIcon from '../../../icons/Css.js';
@@ -52,8 +52,8 @@ const Stack = () => {
               React
             </StackItem>
             <StackItem>
-              <GatsbyIcon style={IconStyle} />
-              Gatsby
+              <NodeIcon style={IconStyle} />
+              Node.js/Express
             </StackItem>
           </StackList>
         </StackWrapper>

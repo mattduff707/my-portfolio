@@ -50,18 +50,17 @@ export const projectsData = [
     showcase: true,
     title: 'The Hub',
     subtitle: 'Sci-fi landing page',
-    stack: ['React', 'styled components', 'React Testing Library', 'NASA APOD API'],
-    description: `This is my browser landing page with all sorts of fun features built in already with more planned for the future.
-     Task management, Search the MDN Docs, and NASA's picture of the day are just a few features of this app.
-
-     `,
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'styled components', 'React Testing Library', 'NASA APOD API'],
+    description: `MERN stack browser landing page created to increase my productivity as a developer.
+    This is the project I am most proud of and it is in continuous development right now. 
+     Task management, NASA's APOD, and a mental math game are the current feature set.`,
     slides: [
       {
         title: 'The Process',
         text: `A love for sci-fi and the educational YouTube channel Kurzgesagt – In a Nutshell is what inspired this project.
          The concept of a feature rich browser homepage stems from my desire to take existing ideas and tailor them to my needs to increase my own productivity.
          I sketched a ROUGH design on paper then jumped on Figma to create a simple design.
-          From there I broke it down into tasks to create a consistant productive workflow.
+          From there I broke it down into tasks to create a consistent productive workflow.
          `,
         image: hubDrawingImage,
       },
@@ -77,7 +76,7 @@ export const projectsData = [
         title: `What's Next`,
         text: `I am currently in the process of implementing an express/node backend and MongoDB to make this a full stack application.
          I am more than excited for the future of this app, my productivity will only grow as this tool becomes more powerful.
-          Stay tuned because the snippets library is already well underway!`,
+        The architecture of the bookmarks feature is currently being designed!`,
         image: hubLiveImage,
       },
     ],

@@ -6,7 +6,7 @@ const MainImage = ({ noDisplayAt }) => {
   return (
     <>
       <ImageContainer noDisplayAt={noDisplayAt}>
-        <Image src={picture} alt="Matt duffy looking like michael cera" />
+        <Image src={picture} alt="Matt duffy holding a cute dog" />
       </ImageContainer>
     </>
   );

@@ -8,7 +8,7 @@ import JavascriptIcon from '../../../icons/Javascript.js';
 import CssIcon from '../../../icons/Css.js';
 import HtmlIcon from '../../../icons/Html.js';
 import StyledIcon from '../../../icons/Styled.js';
-import SassIcon from '../../../icons/Sass.js';
+import ReduxIcon from '../../../icons/Redux.js';
 import OopIcon from '../../../icons/Oop.js';
 import AccessibilityIcon from '../../../icons/Accessibility';
 import GitIcon from '../../../icons/Git';
@@ -20,6 +20,7 @@ import SolvingIcon from '../../../icons/Solving';
 const Stack = () => {
   const IconStyle = {
     marginRight: '8px',
+    transform: 'translateY(-2px)',
   };
   return (
     <>
@@ -40,16 +41,16 @@ const Stack = () => {
               styled-components
             </StackItem>
             <StackItem>
-              <SassIcon style={IconStyle} />
-              SASS
-            </StackItem>
-            <StackItem>
               <JavascriptIcon style={IconStyle} />
               Javascript
             </StackItem>
             <StackItem>
               <ReactIcon style={IconStyle} />
               React
+            </StackItem>
+            <StackItem>
+              <ReduxIcon style={IconStyle} />
+              Redux
             </StackItem>
             <StackItem>
               <NodeIcon style={IconStyle} />
@@ -82,7 +83,7 @@ const Stack = () => {
               Agile / Scrum
             </StackItem>
             <StackItem>
-              <TasksIcon style={{ marginRight: '6px' }} />
+              <TasksIcon style={{ marginRight: '6px', transform: 'translateY(-2px)' }} />
               Task Management
             </StackItem>
             <StackItem>
